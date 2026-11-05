@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -28,6 +29,12 @@ import com.mudita.mmd.components.text.TextMMD
  *
  * Kept together, as a printer would: a heading with the first two lines under it (no heading
  * alone at a foot), and the last two lines of a paragraph (no line alone at a head).
+ *
+ * Selectable, a row at a time. A long press that stays put selects; a swipe that moves first turns
+ * the page as before, and once a selection has begun the drag that widens it is the text's (it
+ * consumes the moves, so the list's swipe-to-turn lets the gesture go). A row hidden at the foot
+ * takes no press at all, so nothing unseen is selected. Pages turn on swipes and the page bar only,
+ * never on a tap in the text, so a tap that clears a selection turns nothing.
  */
 
 /**
@@ -83,7 +90,12 @@ fun LazyListScope.passage(key: String, heading: AnnotatedString?, body: String, 
                         Spacer(Modifier.padding(top = 12.dp))
                     }
                 }
-                BookLines(chunk)
+                // Legge's words can be selected, so an archaic one can be taken to Define or
+                // Translate. The heading cannot. One container to a row: the rows come and go with
+                // the page. The menu over a selection is the shop's, with its ⋮ given back; it sits
+                // on the screen's list ([textActions] there), so the apps are looked up once, not
+                // once a row.
+                SelectionContainer { BookLines(chunk) }
             }
         }
     }

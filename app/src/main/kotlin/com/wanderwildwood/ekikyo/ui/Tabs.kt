@@ -55,7 +55,7 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
     val set = rememberSetter()
     val kept = state.entries.firstOrNull { it.daily && it.epochDay == today && it.lines == lines }
     val methodLabel = stringResource(methodName(method))
-    PagedColumn(Modifier.fillMaxSize().testTag("today")) {
+    PagedColumn(Modifier.fillMaxSize().testTag("today").textActions()) {
         item(key = "date") { ReadingHead(today, methodLabel, "") }
         readingItems(Reading(lines), state.book, words, set, go)
         item(key = "keep") {

@@ -10,6 +10,12 @@
             <category android:name="android.intent.category.BROWSABLE" />
             <data android:scheme="https" />
         </intent>
+        <!-- The other apps that act on selected text (Define, Translate), so the menu over a
+             selection in Legge's text can list them behind its ⋮. -->
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT" />
+            <data android:mimeType="text/plain" />
+        </intent>
     </queries>
 
     <application
