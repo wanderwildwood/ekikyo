@@ -94,8 +94,9 @@ fun LazyListScope.passage(key: String, heading: AnnotatedString?, body: String, 
                 // Translate. The heading cannot. One container to a row: the rows come and go with
                 // the page. The menu over a selection is the shop's, with its ⋮ given back; it sits
                 // on the screen's list ([textActions] there), so the apps are looked up once, not
-                // once a row.
-                SelectionContainer { BookLines(chunk) }
+                // once a row. The Column inside: a SelectionContainer lays its children one on
+                // top of another, so a row of two lines needs its own column to stack them.
+                SelectionContainer { Column { BookLines(chunk) } }
             }
         }
     }
