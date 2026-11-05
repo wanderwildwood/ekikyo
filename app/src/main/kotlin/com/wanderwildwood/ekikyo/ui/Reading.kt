@@ -67,7 +67,7 @@ fun rememberReadingWords(): ReadingWords = ReadingWords(
  * image, the changing lines only, and the judgment of the hexagram it becomes. Each paragraph
  * is its own item, so pages turn between paragraphs and never cut one.
  */
-fun LazyListScope.readingItems(reading: Reading, book: Book, w: ReadingWords, go: (Screen) -> Unit) {
+fun LazyListScope.readingItems(reading: Reading, book: Book, w: ReadingWords, set: Setter, go: (Screen) -> Unit) {
     val primary = reading.primary
     val relating = reading.relating
     val text = book.text(primary.number)
@@ -87,25 +87,22 @@ fun LazyListScope.readingItems(reading: Reading, book: Book, w: ReadingWords, go
             }
         }
     }
-    item(key = "j") { Passage(w.judgment, text.judgment) }
-    item(key = "i") { Passage(w.image, text.image) }
+    passage("j", w.judgment, text.judgment, set)
+    passage("i", w.image, text.image, set)
     if (relating != null) {
-        // The heading goes with the first changing line, so a page never ends on it alone.
         reading.changing.forEachIndexed { k, i ->
-            item(key = "l$i") {
-                if (k == 0) Passage(w.changingHead, text.lines[i]) else Body(text.lines[i])
-            }
+            passage("l$i", if (k == 0) w.changingHead else null, text.lines[i], set)
         }
-        if (reading.changing.size == 6 && text.allLines != null) item(key = "all") { Body(text.allLines) }
-        item(key = "b") {
-            Passage(
-                buildAnnotatedString {
-                    append("${w.becomesHead} ${relating.number}, ${w.names.of(relating)}  ")
-                    hanzi(relating.hanzi)
-                },
-                book.text(relating.number).judgment,
-            )
-        }
+        if (reading.changing.size == 6 && text.allLines != null) passage("all", null as String?, text.allLines, set)
+        passage(
+            "b",
+            buildAnnotatedString {
+                append("${w.becomesHead} ${relating.number}, ${w.names.of(relating)}  ")
+                hanzi(relating.hanzi)
+            },
+            book.text(relating.number).judgment,
+            set,
+        )
     }
     item(key = "end") { Spacer(Modifier.height(12.dp)) }
 }
@@ -161,30 +158,6 @@ fun ReadingHead(epochDay: Long, method: String, question: String) {
     }
 }
 
-@Composable
-fun Passage(heading: String, body: String) = Passage(AnnotatedString(heading), body)
-
-/** A heading in the book's italic over a paragraph of Legge, kept together as one row. */
-@Composable
-fun Passage(heading: AnnotatedString, body: String) {
-    Column(Modifier.fillMaxWidth().padding(horizontal = SIDE)) {
-        Rule(Modifier.padding(top = 18.dp, bottom = 10.dp))
-        TextMMD(text = heading, style = rubricStyle, modifier = Modifier.padding(bottom = 6.dp))
-        TextMMD(text = body, style = bookStyle)
-        Spacer(Modifier.height(4.dp))
-    }
-}
-
-/** A paragraph of Legge under the one before, with the same heading. */
-@Composable
-fun Body(body: String) {
-    TextMMD(
-        text = body,
-        style = bookStyle,
-        modifier = Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 12.dp, bottom = 4.dp),
-    )
-}
-
 /** A short line of ink at the head of a section, the way a book marks one. */
 @Composable
 fun Rule(modifier: Modifier = Modifier) {
@@ -202,6 +175,7 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
         return
     }
     val words = rememberReadingWords()
+    val set = rememberSetter()
     var editing by remember { mutableStateOf(false) }
     val method = stringResource(methodName(entry.method))
 
@@ -216,7 +190,7 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
     ) { padding ->
         PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading")) {
             item(key = "date") { ReadingHead(entry.epochDay, method, entry.question) }
-            readingItems(entry.reading, state.book, words, go)
+            readingItems(entry.reading, state.book, words, set, go)
             item(key = "note") {
                 Column(Modifier.padding(horizontal = SIDE)) {
                     if (entry.note.isNotBlank()) {
@@ -254,6 +228,7 @@ fun HexagramScreen(state: AppState, number: Int, onBack: () -> Unit, go: (Screen
     val judgment = stringResource(R.string.head_judgment)
     val image = stringResource(R.string.head_image)
     val legge = stringResource(R.string.legge_name, text.name)
+    val set = rememberSetter()
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.surface,
@@ -283,10 +258,10 @@ fun HexagramScreen(state: AppState, number: Int, onBack: () -> Unit, go: (Screen
                     TrigramRow(below, h.lower, names)
                 }
             }
-            item(key = "j") { Passage(judgment, text.judgment) }
-            item(key = "i") { Passage(image, text.image) }
-            text.lines.forEachIndexed { i, l -> item(key = "l$i") { if (i == 0) Passage(lines, l) else Body(l) } }
-            text.allLines?.let { item(key = "all") { Body(it) } }
+            passage("j", judgment, text.judgment, set)
+            passage("i", image, text.image, set)
+            text.lines.forEachIndexed { i, l -> passage("l$i", if (i == 0) lines else null, l, set) }
+            text.allLines?.let { passage("all", null as String?, it, set) }
             item(key = "foot") { Spacer(Modifier.height(24.dp)) }
         }
     }
