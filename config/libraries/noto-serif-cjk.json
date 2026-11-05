@@ -1,0 +1,8 @@
+{
+  "uniqueId": "noto-serif-cjk-tc",
+  "name": "Noto Serif CJK TC",
+  "description": "The Chinese characters of the hexagram and trigram names, 71 glyphs cut from the typeface (tools/make-font.py).",
+  "developers": [{ "name": "Adobe and Google" }],
+  "website": "https://github.com/notofonts/noto-cjk",
+  "licenses": ["OFL-1.1"]
+}

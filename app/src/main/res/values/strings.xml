@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">I Ching</string>
+
+    <!-- Read aloud by a screen reader -->
+    <string name="cd_back">Back</string>
+    <string name="cd_about">About</string>
+    <string name="cd_settings">Settings</string>
+
+    <!-- ============================================================ -->
+    <!-- The four tabs -->
+
+    <string name="tab_today">Today</string>
+    <string name="tab_cast">Cast</string>
+    <string name="tab_journal">Journal</string>
+    <string name="tab_book">All 64</string>
+
+    <!-- ============================================================ -->
+    <!-- The names. Short English names written for this app, in King Wen order -->
+
+    <string-array name="hexagram_names">
+        <item>Heaven</item>
+        <item>Earth</item>
+        <item>Sprouting</item>
+        <item>Inexperience</item>
+        <item>Waiting</item>
+        <item>Dispute</item>
+        <item>The Army</item>
+        <item>Joining</item>
+        <item>Small Restraint</item>
+        <item>Treading</item>
+        <item>Peace</item>
+        <item>Stagnation</item>
+        <item>Fellowship</item>
+        <item>Great Possession</item>
+        <item>Modesty</item>
+        <item>Delight</item>
+        <item>Following</item>
+        <item>Decay</item>
+        <item>Approach</item>
+        <item>Viewing</item>
+        <item>Biting Through</item>
+        <item>Adornment</item>
+        <item>Stripping Away</item>
+        <item>Return</item>
+        <item>Without Falsehood</item>
+        <item>Great Restraint</item>
+        <item>Nourishment</item>
+        <item>Great Excess</item>
+        <item>Water</item>
+        <item>Fire</item>
+        <item>Feeling</item>
+        <item>Constancy</item>
+        <item>Retreat</item>
+        <item>Great Strength</item>
+        <item>Advance</item>
+        <item>Light Hidden</item>
+        <item>Household</item>
+        <item>Opposition</item>
+        <item>Hard Going</item>
+        <item>Release</item>
+        <item>Decrease</item>
+        <item>Increase</item>
+        <item>Resolve</item>
+        <item>Meeting</item>
+        <item>Gathering</item>
+        <item>Rising</item>
+        <item>Exhaustion</item>
+        <item>The Well</item>
+        <item>Revolution</item>
+        <item>The Cauldron</item>
+        <item>Thunder</item>
+        <item>Mountain</item>
+        <item>Gradual Advance</item>
+        <item>The Marrying Maiden</item>
+        <item>Abundance</item>
+        <item>The Traveler</item>
+        <item>Wind</item>
+        <item>Lake</item>
+        <item>Dispersion</item>
+        <item>Measure</item>
+        <item>Inner Trust</item>
+        <item>Small Excess</item>
+        <item>Already Across</item>
+        <item>Not Yet Across</item>
+    </string-array>
+    <!-- The eight trigrams' images, in the order Earth, Thunder, Water, Lake, Mountain, Fire, Wind, Heaven -->
+    <string-array name="trigram_names">
+        <item>Earth</item>
+        <item>Thunder</item>
+        <item>Water</item>
+        <item>Lake</item>
+        <item>Mountain</item>
+        <item>Fire</item>
+        <item>Wind</item>
+        <item>Heaven</item>
+    </string-array>
+
+    <!-- ============================================================ -->
+    <!-- A reading -->
+
+    <string name="reading_title">Reading</string>
+    <string name="reading_daily">Hexagram of the day</string>
+    <string name="head_judgment">The judgment</string>
+    <string name="head_image">The image</string>
+    <string name="head_changing">Changing lines</string>
+    <!-- Over the judgment of the hexagram the changing lines make -->
+    <string name="head_becomes">Becomes</string>
+    <string name="head_lines">The lines</string>
+    <string name="trigram_above">Above</string>
+    <string name="trigram_below">Below</string>
+    <!-- %1$s is the hexagram's name as Legge spelled it -->
+    <string name="legge_name">Legge: %1$s</string>
+    <string name="method_coins">three coins</string>
+    <string name="method_yarrow">yarrow-stalk odds</string>
+
+    <string name="note">Note</string>
+    <string name="note_add">Add a note</string>
+    <string name="note_edit">Change the note</string>
+    <string name="note_hint">What came to mind</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_reading">Delete this reading</string>
+    <string name="delete_reading_armed">Delete — tap again</string>
+    <string name="deleted_done">The reading was deleted.</string>
+    <string name="deleted_undo">Undo</string>
+
+    <!-- ============================================================ -->
+    <!-- Today -->
+
+    <string name="today_intro">One hexagram for the day, cast once and kept until midnight.</string>
+    <string name="today_cast">Cast today’s hexagram</string>
+    <string name="today_keep">Keep in the journal</string>
+    <string name="today_kept">In the journal</string>
+
+    <!-- ============================================================ -->
+    <!-- Cast -->
+
+    <string name="cast_intro">Hold a question in mind, or write it above. Each press casts one line, from the bottom up. When all six are cast, the reading opens and is kept in the journal.</string>
+    <string name="cast_question_hint">Your question (optional)</string>
+    <!-- %1$s is the line's number, 1 to 6 -->
+    <string name="cast_line">Line %1$s of 6</string>
+    <string name="cast_all">Cast all six</string>
+    <string name="cast_rest">Cast the rest</string>
+    <string name="cast_read">Read the cast</string>
+    <string name="cast_over">Start over</string>
+    <!-- %1$s is three coins or yarrow-stalk odds -->
+    <string name="cast_method_note">Casting with %1$s. Change it in Settings.</string>
+
+    <!-- ============================================================ -->
+    <!-- Journal -->
+
+    <string name="journal_empty">Every cast is kept here with its date, its question and any note. There are none yet.</string>
+    <string name="journal_empty_cast">Cast a hexagram</string>
+
+    <!-- ============================================================ -->
+    <!-- Settings -->
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_yarrow">Yarrow-stalk odds</string>
+    <string name="settings_yarrow_note">Cast with the odds of the old yarrow-stalk method instead of three coins. Whole lines then change more often than broken ones.</string>
+    <string name="settings_guide">Guide</string>
+    <string name="settings_export">Export the journal</string>
+    <string name="settings_export_note">Every reading with its date, lines, question and note, as a JSON file saved where you choose.</string>
+    <string name="settings_restore">Restore a journal</string>
+    <string name="settings_restore_note">Reads a file made by Export the journal and adds the readings that are not here yet. Readings already in the journal are not changed or removed.</string>
+    <!-- %1$d readings added, %2$d already here -->
+    <string name="restore_done">Restored. %1$d readings added, %2$d already here.</string>
+    <string name="restore_not_ours">That file is not a journal from this app. Nothing was changed.</string>
+    <string name="restore_newer">That journal was made by a newer version of this app. Update the app and try again. Nothing was changed.</string>
+    <string name="restore_damaged">That journal file is damaged, so none of it was used. Nothing was changed.</string>
+    <string name="restore_unreadable">That file could not be read. Nothing was changed.</string>
+    <string name="export_done">The journal is saved.</string>
+    <string name="export_failed">The journal could not be saved there.</string>
+    <string name="export_file_name">iching-journal.json</string>
+
+    <!-- ============================================================ -->
+    <!-- Guide -->
+
+    <string name="guide_title">Guide</string>
+
+    <string name="guide_book">The book</string>
+    <string name="guide_book_1">The I Ching, the Classic of Changes, is one of the oldest books of China. At its heart are 64 figures called hexagrams, each made of six lines, whole or broken, counted from the bottom up.</string>
+    <string name="guide_book_2">Each hexagram is two trigrams of three lines, one above the other. The eight trigrams are Heaven, Lake, Fire, Thunder, Wind, Water, Mountain and Earth.</string>
+    <string name="guide_book_3">Each hexagram has a judgment on the figure as a whole, a short text for each of its six lines, and an image drawn from its two trigrams. The hexagrams are in the book’s own order, traditionally credited to King Wen.</string>
+
+    <string name="guide_cast">Casting</string>
+    <string name="guide_cast_1">Hold a question in mind, or write it down. An open question works better than a yes or no one. No question is fine too.</string>
+    <string name="guide_cast_2">Each line is cast with three coins: heads count three, tails two, so the total is 6, 7, 8 or 9. Seven is a whole line and eight a broken one. Nine is a whole line and six a broken one that are both about to change: these are the changing lines.</string>
+    <string name="guide_cast_3">Cast the lines from the bottom up, one press each, or all at once. The phone tosses the coins with a secure random source.</string>
+    <string name="guide_cast_4">The older method, counting out yarrow stalks, has slightly different odds: whole lines change more often than broken ones. Turn on Yarrow-stalk odds in Settings to cast with them.</string>
+
+    <string name="guide_read">Reading</string>
+    <string name="guide_read_1">Start with the judgment and the image of the hexagram you cast. They speak to the situation as a whole.</string>
+    <string name="guide_read_2">If any lines are changing, read the texts for those lines. They are marked beside the figure: a circle on a whole line, a cross on a broken one.</string>
+    <string name="guide_read_3">The changing lines turn into their opposites and make a second hexagram. Its judgment suggests where things are heading. With no changing lines, the first hexagram is the whole answer.</string>
+    <string name="guide_read_4">Hexagrams 1 and 2 have a seventh text, for when all six lines change. It is shown when that happens.</string>
+
+    <string name="guide_text">The text</string>
+    <string name="guide_text_1">The translation is James Legge’s, published in 1882 in The Sacred Books of the East, volume 16. It is in the public domain and is given here as he wrote it.</string>
+    <string name="guide_text_2">Legge puts words in parentheses to carry the sense of the terse Chinese. His spelling of the Chinese names is an old one, Khien for Qián, Khwan for Kūn; the characters and the pinyin are shown beside them.</string>
+    <string name="guide_text_3">The short English names of the hexagrams are written for this app.</string>
+
+    <!-- ============================================================ -->
+    <!-- About -->
+
+    <string name="about_title">I Ching %1$s</string>
+    <string name="about_what">The Book of Changes: cast a hexagram with three coins or yarrow-stalk odds, read it in James Legge’s translation, and keep a journal of your readings.</string>
+    <string name="about_privacy_title">Privacy</string>
+    <string name="about_privacy">Everything you put in this app stays on this phone. It has no internet access, so nothing is sent anywhere, and nothing is collected about you. There are no ads, no analytics and no tracking. Backups and exports go only where you choose to save them. The addresses below open in your browser, and the address under How to contact us opens your email app, only when you press them.</string>
+    <string name="about_terms_title">Terms</string>
+    <string name="about_terms">This app is free software under the GNU General Public License v3. It comes with no warranty: use it at your own risk. I Ching is for reflection. It does not predict, and it is no substitute for medical, legal or financial advice.</string>
+    <string name="about_open_title">Open source</string>
+    <string name="about_licence">I Ching: GNU General Public License v3 only, copyright wander wildwood</string>
+    <string name="about_text">Text: James Legge, The Yî King, The Sacred Books of the East, volume 16 (1882), public domain</string>
+    <!-- %1$s is a web address -->
+    <string name="about_no_browser_address">There is no browser on this phone to open that with. The address is %1$s.</string>
+    <string name="about_feed_the_llamas">Feed the llamas</string>
+    <string name="about_close">Close</string>
+    <string name="about_licences">Licenses</string>
+    <string name="licences_title">Licenses</string>
+    <string name="licences_source_head">Source code</string>
+    <string name="licences_no_text">%s needs no license text here.</string>
+    <string name="licences_licence">I Ching is free software: GPL-3.0-only, copyright wander wildwood. What it is built on keeps its own licenses, listed below.</string>
+    <string name="licences_back">Back</string>
+    <string name="licences_full_head">Full texts</string>
+    <string name="licences_full_gpl">GNU General Public License v3 (full text)</string>
+    <string name="licences_full_apache">Apache License 2.0 (full text)</string>
+    <string name="licences_full_ofl">SIL Open Font License 1.1 (full text)</string>
+    <!-- shared-about: contact row + privacy section (edit in /opt/projects/shared-about) -->
+    <string name="about_write_to">Write to %1$s</string>
+    <string name="about_no_mail_app">No email app is installed. The address is %1$s.</string>
+    <!-- shared-about: what a screen reader says for an About drawer, the heading passed in -->
+    <string name="about_open_drawer">Open %1$s</string>
+    <string name="about_close_drawer">Close %1$s</string>
+    <string name="about_intro_head">What it does</string>
+    <string name="about_contact_head">Contact</string>
+    <string name="about_links_head">Links</string>
+    <string name="privacy_who_title">Who we are</string>
+    <string name="privacy_who">This app is made by wander wildwood, an independent developer: one person, not a company. That makes wander wildwood the data controller for anything the app itself handles, and that is very little: what you put in stays on this phone unless you send it somewhere yourself, and nothing comes to the developer.</string>
+    <string name="privacy_contact_title">How to contact us</string>
+    <string name="privacy_contact">Write to email@wanderthe.dev, about your data or anything else.</string>
+    <string name="privacy_rights_title">Your rights</string>
+    <string name="privacy_rights">Under the GDPR you can ask to see the data held about you, to have it corrected or deleted, to limit or object to its use, to take a copy with you, to withdraw consent, and to complain to a data protection authority. Since the app keeps what it stores only on your phone, you can do most of this yourself: edit a reading\'s note or delete a reading in the app, save a copy with Export the journal, clear the app\'s data in Android\'s settings, or uninstall the app.</string>
+    <!-- /shared-about -->
+</resources>

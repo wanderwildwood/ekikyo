@@ -1,0 +1,8 @@
+{
+  "uniqueId": "legge-yi-king",
+  "name": "The Yî King, translated by James Legge (1882)",
+  "description": "The text of the book: the judgments, the lines and the Great Image of all 64 hexagrams, from The Sacred Books of the East, volume 16 (Oxford, 1882), as Legge wrote it. The short English names of the hexagrams are written for this app.",
+  "developers": [{ "name": "James Legge" }],
+  "website": "https://en.wikisource.org/wiki/Sacred_Books_of_the_East/Volume_16",
+  "licenses": ["public-domain"]
+}
