@@ -1,0 +1,8 @@
+{
+  "uniqueId": "noto-serif",
+  "name": "Noto Serif",
+  "description": "The face Legge's text is set in, regular and italic, cut to the characters the app uses (tools/make-book-font.py).",
+  "developers": [{ "name": "Google" }],
+  "website": "https://github.com/notofonts/latin-greek-cyrillic",
+  "licenses": ["OFL-1.1"]
+}

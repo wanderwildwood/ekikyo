@@ -18,7 +18,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.text.TextMMD
@@ -34,11 +36,16 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
     val today = LocalDate.now().toEpochDay()
     val daily = state.daily(today)
     if (daily == null) {
-        Column(Modifier.padding(horizontal = SIDE, vertical = 16.dp).testTag("today_empty")) {
-            TextMMD(text = longDate(today), style = MaterialTheme.typography.labelSmall)
-            Spacer(Modifier.height(10.dp))
-            TextMMD(text = stringResource(R.string.today_intro), style = MaterialTheme.typography.bodyMedium)
-            Spacer(Modifier.height(12.dp))
+        Column(
+            Modifier.fillMaxWidth().padding(horizontal = SIDE, vertical = 16.dp).testTag("today_empty"),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            TextMMD(text = longDate(today), style = MaterialTheme.typography.labelSmall, textAlign = TextAlign.Center)
+            Spacer(Modifier.height(20.dp))
+            Figure(emptyList(), 96.dp, marks = false, slots = true)
+            Spacer(Modifier.height(20.dp))
+            TextMMD(text = stringResource(R.string.today_intro), style = bookStyle, textAlign = TextAlign.Center)
+            Spacer(Modifier.height(16.dp))
             HouseButton(stringResource(R.string.today_cast), on = true, modifier = WideRow, onClick = { state.castDaily(today) })
         }
         return
@@ -48,16 +55,10 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
     val kept = state.entries.firstOrNull { it.daily && it.epochDay == today && it.lines == lines }
     val methodLabel = stringResource(methodName(method))
     PagedColumn(Modifier.fillMaxSize().testTag("today")) {
-        item(key = "date") {
-            TextMMD(
-                text = "${longDate(today)} · $methodLabel",
-                style = MaterialTheme.typography.labelSmall,
-                modifier = Modifier.padding(horizontal = SIDE).padding(top = 10.dp),
-            )
-        }
+        item(key = "date") { ReadingHead(today, methodLabel, "") }
         readingItems(Reading(lines), state.book, words, go)
         item(key = "keep") {
-            Column(Modifier.padding(horizontal = SIDE, vertical = 12.dp)) {
+            Column(Modifier.padding(horizontal = SIDE).padding(top = 8.dp, bottom = 16.dp)) {
                 if (kept == null) {
                     HouseButton(stringResource(R.string.today_keep), modifier = WideRow, onClick = { state.keepDaily(today, lines, method) })
                 } else {
@@ -86,37 +87,41 @@ fun CastTab(state: AppState, go: (Screen) -> Unit) {
                 modifier = Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 6.dp).testTag("question_field"),
             )
         }
-        // The figure beside its buttons, so a cast in progress and the next press share one page
-        // on a small screen.
+        // The figure over its buttons, so a cast in progress and the next press share one page.
         item(key = "cast") {
-            Row(
-                Modifier.fillMaxWidth().padding(horizontal = SIDE, vertical = 12.dp),
-                verticalAlignment = Alignment.CenterVertically,
+            Column(
+                Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 18.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Box(Modifier.width(100.dp), contentAlignment = Alignment.Center) {
-                    Figure(state.building.toList(), 76.dp, modifier = Modifier.testTag("building"))
+                Figure(state.building.toList(), 88.dp, slots = true, modifier = Modifier.testTag("building"))
+                Spacer(Modifier.height(18.dp))
+                if (n < 6) {
+                    HouseButton(
+                        stringResource(R.string.cast_line, (n + 1).toString()),
+                        on = true, modifier = WideRow.testTag("cast_line"),
+                        onClick = { state.castLine() },
+                    )
+                } else {
+                    HouseButton(
+                        stringResource(R.string.cast_read),
+                        on = true, modifier = WideRow.testTag("cast_read"),
+                        onClick = { go(Screen.Reading(state.finish().id)) },
+                    )
                 }
-                Spacer(Modifier.width(12.dp))
-                Column(Modifier.weight(1f)) {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     if (n < 6) {
                         HouseButton(
-                            stringResource(R.string.cast_line, (n + 1).toString()),
-                            on = true, modifier = WideRow.testTag("cast_line"),
-                            onClick = { state.castLine() },
-                        )
-                        HouseButton(
                             stringResource(if (n == 0) R.string.cast_all else R.string.cast_rest),
-                            modifier = WideRow.testTag("cast_all"),
+                            modifier = WideRow.weight(1f).testTag("cast_all"), compact = true,
                             onClick = { state.castRest() },
                         )
-                    } else {
+                    }
+                    if (n > 0) {
                         HouseButton(
-                            stringResource(R.string.cast_read),
-                            on = true, modifier = WideRow.testTag("cast_read"),
-                            onClick = { go(Screen.Reading(state.finish().id)) },
+                            stringResource(R.string.cast_over), modifier = WideRow.weight(1f), compact = true,
+                            onClick = { state.building.clear() },
                         )
                     }
-                    if (n > 0) HouseButton(stringResource(R.string.cast_over), modifier = WideRow, onClick = { state.building.clear() })
                 }
             }
         }
@@ -124,14 +129,15 @@ fun CastTab(state: AppState, go: (Screen) -> Unit) {
             TextMMD(
                 text = stringResource(R.string.cast_method_note, stringResource(methodName(state.method))),
                 style = MaterialTheme.typography.labelSmall,
-                modifier = Modifier.padding(horizontal = SIDE),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 8.dp),
             )
         }
         item(key = "intro") {
             TextMMD(
                 text = stringResource(R.string.cast_intro),
-                style = MaterialTheme.typography.labelSmall,
-                modifier = Modifier.padding(horizontal = SIDE, vertical = 12.dp),
+                style = bookStyle,
+                modifier = Modifier.padding(horizontal = SIDE, vertical = 16.dp),
             )
         }
     }
@@ -150,15 +156,11 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
         }
         return
     }
-    val daily = stringResource(R.string.reading_daily)
+    val daily = stringResource(R.string.journal_daily)
     PagedColumn(state = rememberLazyListState(), modifier = Modifier.fillMaxSize().testTag("journal")) {
         for (e in entries) {
             item(key = e.id) {
                 val r = e.reading
-                val hexes = buildString {
-                    append("${r.primary.number} ${names.of(r.primary)}")
-                    r.relating?.let { append(" → ${it.number} ${names.of(it)}") }
-                }
                 Row(
                     Modifier
                         .fillMaxWidth()
@@ -166,17 +168,31 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
                         .padding(horizontal = SIDE, vertical = 12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Figure(e.lines, SmallFigure, marks = false)
+                    Box(Modifier.width(SmallFigure), contentAlignment = Alignment.Center) {
+                        Figure(e.lines, SmallFigure, marks = false)
+                    }
                     Spacer(Modifier.width(16.dp))
-                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Column(Modifier.weight(1f)) {
                         TextMMD(
                             text = if (e.daily) "${shortDate(e.epochDay)} · $daily" else shortDate(e.epochDay),
-                            style = MaterialTheme.typography.labelSmall,
+                            style = MaterialTheme.typography.labelSmall, maxLines = 1,
                         )
-                        TextMMD(text = hexes, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                        TextMMD(
+                            text = "${r.primary.number} ${names.of(r.primary)}", style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                        )
+                        r.relating?.let {
+                            TextMMD(
+                                text = "→ ${it.number} ${names.of(it)}", style = MaterialTheme.typography.bodyMedium,
+                                maxLines = 1, overflow = TextOverflow.Ellipsis,
+                            )
+                        }
                         val second = e.question.ifBlank { e.note }
                         if (second.isNotBlank()) {
-                            TextMMD(text = second, style = MaterialTheme.typography.labelSmall, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                            TextMMD(
+                                text = second, style = MaterialTheme.typography.labelSmall.copy(fontFamily = BookFont, fontStyle = FontStyle.Italic),
+                                maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 2.dp),
+                            )
                         }
                     }
                     Chevron()
@@ -201,10 +217,15 @@ fun BookTab(go: (Screen) -> Unit) {
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Figure(youngLines(h.bits), SmallFigure, marks = false)
-                    Spacer(Modifier.width(16.dp))
+                    Spacer(Modifier.width(8.dp))
+                    TextMMD(
+                        text = h.hanzi, style = MaterialTheme.typography.titleLarge, fontFamily = HanziFont,
+                        textAlign = TextAlign.Center, maxLines = 1, modifier = Modifier.width(40.dp),
+                    )
+                    Spacer(Modifier.width(6.dp))
                     Column(Modifier.weight(1f)) {
-                        TextMMD(text = names.title(h), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
-                        TextMMD(text = names.of(h), style = MaterialTheme.typography.bodyMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                        TextMMD(text = names.of(h), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                        TextMMD(text = "${h.number} · ${h.pinyin}", style = MaterialTheme.typography.labelSmall, maxLines = 1)
                     }
                     Chevron()
                 }

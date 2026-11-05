@@ -1,5 +1,6 @@
 package com.wanderwildwood.ekikyo.ui
 
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
@@ -7,7 +8,10 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.withStyle
 import com.wanderwildwood.ekikyo.R
 import com.wanderwildwood.ekikyo.iching.Hexagram
@@ -36,14 +40,25 @@ class Names(private val hexagrams: Array<String>, private val trigrams: Array<St
  */
 val HanziFont = FontFamily(Font(R.font.noto_serif_tc_hexagrams))
 
-fun AnnotatedString.Builder.hanzi(text: String) = withStyle(SpanStyle(fontFamily = HanziFont)) { append(text) }
+/**
+ * Legge's words are set in a book face, Noto Serif cut to the characters the app uses
+ * (tools/make-book-font.py), so the classic reads as a page of a book and the app's own words,
+ * in the house Lato, read as the frame around it. Its line is a little looser than the house's.
+ */
+val BookFont = FontFamily(
+    Font(R.font.noto_serif_book),
+    Font(R.font.noto_serif_book_italic, style = FontStyle.Italic),
+)
 
-/** "坎 Kǎn, Water": a trigram by its character, pinyin and image. */
-fun trigramLine(label: String, t: Trigram, names: Names): AnnotatedString = buildAnnotatedString {
-    append("$label: ")
-    hanzi(t.hanzi)
-    append(" ${t.pinyin}, ${names.of(t)}")
-}
+/** Legge's text: the house body size in the book face, with room between the lines. */
+val bookStyle: TextStyle
+    @Composable get() = MaterialTheme.typography.bodyMedium.copy(fontFamily = BookFont, lineHeight = 27.sp)
+
+/** A heading over Legge's text: the book face in italic, a step up. */
+val rubricStyle: TextStyle
+    @Composable get() = MaterialTheme.typography.bodyLarge.copy(fontFamily = BookFont, fontStyle = FontStyle.Italic)
+
+fun AnnotatedString.Builder.hanzi(text: String) = withStyle(SpanStyle(fontFamily = HanziFont)) { append(text) }
 
 @Composable
 fun rememberNames(): Names {

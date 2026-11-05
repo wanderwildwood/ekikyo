@@ -101,6 +101,7 @@
 
     <string name="reading_title">Reading</string>
     <string name="reading_daily">Hexagram of the day</string>
+    <string name="journal_daily">daily</string>
     <string name="head_judgment">The judgment</string>
     <string name="head_image">The image</string>
     <string name="head_changing">Changing lines</string>
@@ -145,7 +146,7 @@
     <string name="cast_read">Read the cast</string>
     <string name="cast_over">Start over</string>
     <!-- %1$s is three coins or yarrow-stalk odds -->
-    <string name="cast_method_note">Casting with %1$s. Change it in Settings.</string>
+    <string name="cast_method_note">Casting with %1$s · change it in Settings</string>
 
     <!-- ============================================================ -->
     <!-- Journal -->

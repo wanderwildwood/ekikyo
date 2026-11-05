@@ -1,7 +1,8 @@
 package com.wanderwildwood.ekikyo.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,8 +26,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.text.TextMMD
 import com.mudita.mmd.components.text_field.TextFieldMMD
@@ -36,6 +40,7 @@ import com.wanderwildwood.ekikyo.iching.Book
 import com.wanderwildwood.ekikyo.iching.Hexagram
 import com.wanderwildwood.ekikyo.iching.KingWen
 import com.wanderwildwood.ekikyo.iching.Reading
+import com.wanderwildwood.ekikyo.iching.Trigram
 
 internal val SIDE = 20.dp
 
@@ -67,17 +72,18 @@ fun LazyListScope.readingItems(reading: Reading, book: Book, w: ReadingWords, go
     val relating = reading.relating
     val text = book.text(primary.number)
     item(key = "figures") {
-        Row(
-            Modifier.fillMaxWidth().padding(horizontal = SIDE, vertical = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.Top,
-        ) {
-            FigureWithName(reading.lines, primary, w.names, Modifier.weight(1f), go)
-            if (relating != null) {
-                TextMMD(text = "→", style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(top = 22.dp))
-                FigureWithName(youngLines(relating.bits), relating, w.names, Modifier.weight(1f), go)
-            } else {
-                Spacer(Modifier.weight(1f))
+        if (relating == null) {
+            Box(Modifier.fillMaxWidth().padding(vertical = 10.dp), contentAlignment = Alignment.Center) {
+                FigureWithName(reading.lines, primary, w.names, 96.dp, Modifier.width(200.dp), go)
+            }
+        } else {
+            Row(
+                Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.Top,
+            ) {
+                FigureWithName(reading.lines, primary, w.names, 80.dp, Modifier.weight(1f), go)
+                TextMMD(text = "→", style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(top = 36.dp))
+                FigureWithName(youngLines(relating.bits), relating, w.names, 80.dp, Modifier.weight(1f), go)
             }
         }
     }
@@ -94,53 +100,95 @@ fun LazyListScope.readingItems(reading: Reading, book: Book, w: ReadingWords, go
         item(key = "b") {
             Passage(
                 buildAnnotatedString {
-                    append("${w.becomesHead} · ${relating.number} ")
+                    append("${w.becomesHead} ${relating.number}, ${w.names.of(relating)}  ")
                     hanzi(relating.hanzi)
-                    append(" ${relating.pinyin}, ${w.names.of(relating)}")
                 },
                 book.text(relating.number).judgment,
             )
         }
     }
+    item(key = "end") { Spacer(Modifier.height(12.dp)) }
 }
 
+/**
+ * A figure over its character, its English name and its number and pinyin, all centered; a press
+ * opens the hexagram's own page. Both figures of a pair keep room for the marks (a figure of young
+ * lines draws none), so they stand level.
+ */
 @Composable
-private fun FigureWithName(lines: List<Int>, h: Hexagram, names: Names, modifier: Modifier, go: (Screen) -> Unit) {
+private fun FigureWithName(
+    lines: List<Int>, h: Hexagram, names: Names, size: Dp, modifier: Modifier, go: (Screen) -> Unit,
+) {
     Column(
-        modifier.clickable { go(Screen.Hexagram(h.number)) }.testTag("figure_${h.number}"),
+        modifier.clickable { go(Screen.Hexagram(h.number)) }.padding(vertical = 4.dp).testTag("figure_${h.number}"),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Figure(lines, 78.dp, description = "${h.number} ${names.of(h)}")
-        Spacer(Modifier.height(10.dp))
-        TextMMD(text = names.title(h), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
-        TextMMD(text = names.of(h), style = MaterialTheme.typography.bodyMedium)
+        Figure(lines, size, description = "${h.number} ${names.of(h)}")
+        Spacer(Modifier.height(12.dp))
+        HexagramName(h, names)
+    }
+}
+
+/** 屯 over "Sprouting" over "3 · Zhūn", centered. */
+@Composable
+fun HexagramName(h: Hexagram, names: Names, hanziStyle: TextStyle = MaterialTheme.typography.headlineMedium) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        TextMMD(text = h.hanzi, style = hanziStyle, fontFamily = HanziFont, textAlign = TextAlign.Center)
+        Spacer(Modifier.height(2.dp))
+        TextMMD(
+            text = names.of(h), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center, maxLines = 2,
+        )
+        TextMMD(text = "${h.number} · ${h.pinyin}", style = MaterialTheme.typography.labelSmall, textAlign = TextAlign.Center)
+    }
+}
+
+/** The date and how the cast was made on one quiet line, then the question if there was one. */
+@Composable
+fun ReadingHead(epochDay: Long, method: String, question: String) {
+    Column(
+        Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 12.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        TextMMD(
+            text = "${shortDate(epochDay)} · $method", style = MaterialTheme.typography.labelSmall,
+            textAlign = TextAlign.Center, maxLines = 1,
+        )
+        if (question.isNotBlank()) {
+            Spacer(Modifier.height(6.dp))
+            TextMMD(text = question, style = rubricStyle, textAlign = TextAlign.Center)
+        }
     }
 }
 
 @Composable
 fun Passage(heading: String, body: String) = Passage(AnnotatedString(heading), body)
 
+/** A heading in the book's italic over a paragraph of Legge, kept together as one row. */
 @Composable
 fun Passage(heading: AnnotatedString, body: String) {
     Column(Modifier.fillMaxWidth().padding(horizontal = SIDE)) {
-        TextMMD(
-            text = heading,
-            style = MaterialTheme.typography.labelSmall,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(top = 18.dp, bottom = 4.dp),
-        )
-        TextMMD(text = body, style = MaterialTheme.typography.bodyMedium)
-        Spacer(Modifier.height(6.dp))
+        Rule(Modifier.padding(top = 18.dp, bottom = 10.dp))
+        TextMMD(text = heading, style = rubricStyle, modifier = Modifier.padding(bottom = 6.dp))
+        TextMMD(text = body, style = bookStyle)
+        Spacer(Modifier.height(4.dp))
     }
 }
 
+/** A paragraph of Legge under the one before, with the same heading. */
 @Composable
 fun Body(body: String) {
     TextMMD(
         text = body,
-        style = MaterialTheme.typography.bodyMedium,
-        modifier = Modifier.fillMaxWidth().padding(horizontal = SIDE, vertical = 6.dp),
+        style = bookStyle,
+        modifier = Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 12.dp, bottom = 4.dp),
     )
+}
+
+/** A short line of ink at the head of a section, the way a book marks one. */
+@Composable
+fun Rule(modifier: Modifier = Modifier) {
+    Box(modifier.width(28.dp).height(2.dp).background(MaterialTheme.colorScheme.onSurface))
 }
 
 /** A reading from the journal: its date and question, the reading, the note, and the way to let it go. */
@@ -167,23 +215,16 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
         },
     ) { padding ->
         PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading")) {
-            item(key = "date") {
-                Column(Modifier.padding(horizontal = SIDE).padding(top = 10.dp)) {
-                    TextMMD(text = "${longDate(entry.epochDay)} · $method", style = MaterialTheme.typography.labelSmall)
-                    if (entry.question.isNotBlank()) {
-                        Spacer(Modifier.height(6.dp))
-                        TextMMD(text = entry.question, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
-                    }
-                }
-            }
+            item(key = "date") { ReadingHead(entry.epochDay, method, entry.question) }
             readingItems(entry.reading, state.book, words, go)
             item(key = "note") {
                 Column(Modifier.padding(horizontal = SIDE)) {
                     if (entry.note.isNotBlank()) {
-                        Heading(stringResource(R.string.note))
+                        Rule(Modifier.padding(top = 18.dp, bottom = 10.dp))
+                        TextMMD(text = stringResource(R.string.note), style = rubricStyle, modifier = Modifier.padding(bottom = 6.dp))
                         TextMMD(text = entry.note, style = MaterialTheme.typography.bodyMedium)
                     }
-                    Spacer(Modifier.height(8.dp))
+                    Spacer(Modifier.height(20.dp))
                     HouseButton(stringResource(if (entry.note.isBlank()) R.string.note_add else R.string.note_edit), onClick = { editing = true }, modifier = WideRow)
                     ArmedRow(stringResource(R.string.delete_reading), stringResource(R.string.delete_reading_armed)) {
                         state.delete(entry.id)
@@ -225,23 +266,21 @@ fun HexagramScreen(state: AppState, number: Int, onBack: () -> Unit, go: (Screen
     ) { padding ->
         PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("hexagram")) {
             item(key = "head") {
-                Row(
-                    Modifier.fillMaxWidth().padding(horizontal = SIDE, vertical = 14.dp),
-                    verticalAlignment = Alignment.CenterVertically,
+                Column(
+                    Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 16.dp, bottom = 4.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Figure(youngLines(h.bits), 96.dp, marks = false, description = names.of(h))
-                    Spacer(Modifier.width(20.dp))
-                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                        TextMMD(text = buildAnnotatedString { hanzi(h.hanzi) }, style = MaterialTheme.typography.headlineMedium)
-                        TextMMD(text = h.pinyin, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
-                        TextMMD(text = legge, style = MaterialTheme.typography.labelSmall)
-                    }
+                    Spacer(Modifier.height(14.dp))
+                    HexagramName(h, names, MaterialTheme.typography.headlineLarge)
+                    TextMMD(text = legge, style = MaterialTheme.typography.labelSmall, textAlign = TextAlign.Center)
                 }
             }
             item(key = "trigrams") {
-                Column(Modifier.padding(horizontal = SIDE)) {
-                    TextMMD(text = trigramLine(above, h.upper, names), style = MaterialTheme.typography.bodyMedium)
-                    TextMMD(text = trigramLine(below, h.lower, names), style = MaterialTheme.typography.bodyMedium)
+                Column(Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 14.dp)) {
+                    TrigramRow(above, h.upper, names)
+                    Spacer(Modifier.height(10.dp))
+                    TrigramRow(below, h.lower, names)
                 }
             }
             item(key = "j") { Passage(judgment, text.judgment) }
@@ -249,6 +288,21 @@ fun HexagramScreen(state: AppState, number: Int, onBack: () -> Unit, go: (Screen
             text.lines.forEachIndexed { i, l -> item(key = "l$i") { if (i == 0) Passage(lines, l) else Body(l) } }
             text.allLines?.let { item(key = "all") { Body(it) } }
             item(key = "foot") { Spacer(Modifier.height(24.dp)) }
+        }
+    }
+}
+
+/** A trigram's three lines beside "Above · Water" and "坎 Kǎn". */
+@Composable
+private fun TrigramRow(label: String, t: Trigram, names: Names) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Box(Modifier.width(56.dp), contentAlignment = Alignment.Center) {
+            Figure(youngLines(t.bits, rows = 3), 48.dp, marks = false, rows = 3)
+        }
+        Spacer(Modifier.width(12.dp))
+        Column {
+            TextMMD(text = "$label · ${names.of(t)}", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
+            TextMMD(text = buildAnnotatedString { hanzi(t.hanzi); append(" ${t.pinyin}") }, style = MaterialTheme.typography.labelSmall)
         }
     }
 }

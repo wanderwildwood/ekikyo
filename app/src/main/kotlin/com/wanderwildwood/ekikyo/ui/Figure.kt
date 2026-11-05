@@ -15,18 +15,29 @@ import androidx.compose.ui.unit.dp
 import com.wanderwildwood.ekikyo.iching.Line
 
 /**
- * A hexagram drawn as six solid bars, the first line at the foot. [lines] are cast values (6 to
- * 9) from the bottom up, and may be fewer than six while a cast is under way: the places not
- * cast yet are left empty. [marks] puts the old lines' signs to the right, ○ on a whole line
- * that will change and × on a broken one. Nothing but black on white, no grey, for the panel.
+ * A hexagram (or, with [rows] = 3, a trigram) drawn as solid bars, the first line at the foot.
+ * [lines] are cast values (6 to 9) from the bottom up, and may be fewer than [rows] while a cast
+ * is under way: with [slots] the places not cast yet are drawn as thin outlines, so the shape of
+ * what is coming shows; without, they are left empty. [marks] puts the old lines' signs to the
+ * right, ○ on a whole line that will change and × on a broken one. Black on white only, for the
+ * panel. The gap between bars is as tall as a bar and the break in a broken line a quarter of its
+ * width, so even a small figure reads as lines and not as stripes.
  */
 @Composable
-fun Figure(lines: List<Int>, width: Dp, modifier: Modifier = Modifier, marks: Boolean = true, description: String? = null) {
+fun Figure(
+    lines: List<Int>,
+    width: Dp,
+    modifier: Modifier = Modifier,
+    marks: Boolean = true,
+    description: String? = null,
+    rows: Int = 6,
+    slots: Boolean = false,
+) {
     val ink = MaterialTheme.colorScheme.onSurface
     val bar = width / 9f
-    val gap = bar * 0.8f
-    val markRoom = if (marks) bar * 2.2f else 0.dp
-    val height = bar * 6 + gap * 5
+    val gap = bar
+    val markRoom = if (marks) bar * 2.4f else 0.dp
+    val height = bar * rows + gap * (rows - 1)
     Canvas(
         modifier
             .size(width + markRoom, height)
@@ -35,10 +46,17 @@ fun Figure(lines: List<Int>, width: Dp, modifier: Modifier = Modifier, marks: Bo
         val w = width.toPx()
         val t = bar.toPx()
         val g = gap.toPx()
-        val split = w * 0.2f
-        for (i in lines.indices) {
-            val v = lines[i]
-            val top = (5 - i) * (t + g)
+        val split = w * 0.24f
+        val hair = 1.dp.toPx()
+        for (i in 0 until rows) {
+            val top = (rows - 1 - i) * (t + g)
+            val v = lines.getOrNull(i)
+            if (v == null) {
+                if (slots) {
+                    drawRect(ink, Offset(hair / 2, top + hair / 2), Size(w - hair, t - hair), style = Stroke(hair))
+                }
+                continue
+            }
             if (Line.yang(v)) {
                 drawRect(ink, Offset(0f, top), Size(w, t))
             } else {
@@ -47,10 +65,10 @@ fun Figure(lines: List<Int>, width: Dp, modifier: Modifier = Modifier, marks: Bo
                 drawRect(ink, Offset(w - half, top), Size(half, t))
             }
             if (marks && Line.changing(v)) {
-                val cx = w + markRoom.toPx() * 0.62f
+                val cx = w + markRoom.toPx() * 0.6f
                 val cy = top + t / 2
-                val r = t * 0.62f
-                val stroke = Stroke(width = t * 0.28f)
+                val r = t * 0.6f
+                val stroke = Stroke(width = t * 0.26f)
                 if (v == Line.OLD_YANG) {
                     drawCircle(ink, r, Offset(cx, cy), style = stroke)
                 } else {
@@ -62,8 +80,9 @@ fun Figure(lines: List<Int>, width: Dp, modifier: Modifier = Modifier, marks: Bo
     }
 }
 
-/** Lines of a hexagram by its bits, all young: for a hexagram shown on its own. */
-fun youngLines(bits: Int): List<Int> = List(6) { if ((bits shr it) and 1 == 1) Line.YOUNG_YANG else Line.YOUNG_YIN }
+/** Lines of a hexagram (or trigram) by its bits, all young: for a figure shown on its own. */
+fun youngLines(bits: Int, rows: Int = 6): List<Int> =
+    List(rows) { if ((bits shr it) and 1 == 1) Line.YOUNG_YANG else Line.YOUNG_YIN }
 
 /** A small figure for lists. */
-val SmallFigure: Dp = 36.dp
+val SmallFigure: Dp = 40.dp

@@ -31,7 +31,7 @@ class LicencesTest {
         "com.mudita:MMD", "androidx.compose.ui:ui", "androidx.compose.material3:material3",
         "androidx.activity:activity-compose", "org.jetbrains.kotlin:kotlin-stdlib",
         "org.jetbrains.kotlinx:kotlinx-coroutines-core", "Lato typeface", "Material Symbols icons",
-        "The Yî King, translated by James Legge (1882)", "Noto Serif CJK TC",
+        "The Yî King, translated by James Legge (1882)", "Noto Serif CJK TC", "Noto Serif",
     )
 
     @Test fun mmdIsShownAsMudita() {
