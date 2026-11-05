@@ -2,7 +2,18 @@
 
 The I Ching, the Classic of Changes, for the [Mudita Kompakt](https://mudita.com/products/kompakt/):
 a hexagram for the day, casts of your own with a question, a journal of readings, and all 64
-hexagrams to read through. Made for the Kompakt's e-ink screen, in black and white.
+hexagrams to read through. Made for the Kompakt's e-ink screen, in black and white. It will
+install on any Android 12 device.
+
+| | |
+|---|---|
+| ![A reading: the hexagram cast, the one it becomes, and Legge's text](screenshots/1-reading.png) | ![A cast in progress, line by line](screenshots/2-cast.png) |
+| ![The journal of readings](screenshots/3-journal.png) | ![A hexagram on its own page, with its two trigrams](screenshots/4-hexagram.png) |
+
+## Install
+
+Download `ekikyo.apk` from the [latest release](https://github.com/wanderwildwood/ekikyo/releases/latest)
+and open it on the phone. Its SHA-256 is published beside it as `ekikyo.apk.sha256`.
 
 ## What it does
 
@@ -13,6 +24,9 @@ hexagrams to read through. Made for the Kompakt's e-ink screen, in black and whi
 - **Journal**: every cast with its date, question, lines and a note of your own. Export and
   restore it as a JSON file.
 - **All 64**: each hexagram with its two trigrams, judgment, image and all six lines.
+
+Legge's text is set in Noto Serif, line by line, so pages turn the way a book's do: each page
+full, a paragraph running on over the turn.
 
 ## The text
 
