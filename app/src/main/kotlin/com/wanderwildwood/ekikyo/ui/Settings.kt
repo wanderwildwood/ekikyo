@@ -95,6 +95,13 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
                     note = stringResource(R.string.settings_yarrow_note),
                 ) { state.method = if (it) Method.YARROW else Method.COINS }
             }
+            item(key = "text") {
+                SwitchRow(
+                    stringResource(R.string.settings_german_text),
+                    state.germanText,
+                    note = stringResource(R.string.settings_german_text_note),
+                ) { state.germanText = it }
+            }
             item(key = "guide") { SettingRow(stringResource(R.string.settings_guide), null, onGuide) }
             item(key = "export") {
                 SettingRow(stringResource(R.string.settings_export), stringResource(R.string.settings_export_note)) {

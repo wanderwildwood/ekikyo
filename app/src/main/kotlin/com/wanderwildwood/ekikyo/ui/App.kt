@@ -39,13 +39,21 @@ sealed interface Screen {
 }
 
 /** The journal, the setting, the day's cast and a cast in progress, held so a change redraws what shows them. */
-class AppState(val store: Store, val book: Book) {
+class AppState(val store: Store, val book: Book, val germanBook: Book) {
     var version by mutableIntStateOf(0)
         private set
     val entries get() = version.let { store.entries() }
     var method: Method
         get() = version.let { store.method }
         set(v) { store.method = v; version++ }
+
+    /** The text chosen in Settings: Wilhelm's German, or Legge's English. */
+    var germanText: Boolean
+        get() = version.let { store.germanText }
+        set(v) { store.germanText = v; version++ }
+
+    /** The book the readings and the 64 pages show. */
+    val textBook: Book get() = if (germanText) germanBook else book
 
     fun entry(id: Long) = entries.firstOrNull { it.id == id }
 
@@ -108,7 +116,11 @@ class AppState(val store: Store, val book: Book) {
 fun IChingApp(store: Store) {
     val context = LocalContext.current
     val state = remember {
-        AppState(store, Book.parse(context.assets.open("legge.json").bufferedReader().use { it.readText() }))
+        AppState(
+            store,
+            Book.parse(context.assets.open("legge.json").bufferedReader().use { it.readText() }),
+            Book.parse(context.assets.open("wilhelm.json").bufferedReader().use { it.readText() }),
+        )
     }
     val stack = remember { mutableStateListOf<Screen>(Screen.Tabs) }
     var tab by remember { mutableIntStateOf(0) }

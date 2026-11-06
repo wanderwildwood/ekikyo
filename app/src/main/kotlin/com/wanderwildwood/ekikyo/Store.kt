@@ -6,6 +6,7 @@ import com.wanderwildwood.ekikyo.iching.JournalCodec
 import com.wanderwildwood.ekikyo.iching.Line
 import com.wanderwildwood.ekikyo.iching.Method
 import java.io.File
+import java.util.Locale
 
 /**
  * What the app keeps, all of it on the phone: the setting and the day's cast in a preferences
@@ -19,6 +20,11 @@ class Store(context: Context) {
     var method: Method
         get() = Method.of(prefs.getString("method", null) ?: "") ?: Method.COINS
         set(v) { prefs.edit().putString("method", v.key).apply() }
+
+    /** The I Ging text in German (Wilhelm) rather than English (Legge). */
+    var germanText: Boolean
+        get() = prefs.getBoolean("german_text", Locale.getDefault().language == "de")
+        set(v) { prefs.edit().putBoolean("german_text", v).apply() }
 
     /** The hexagram cast for [epochDay], if it has been; kept so it is the same all day. */
     fun daily(epochDay: Long): Pair<List<Int>, Method>? {

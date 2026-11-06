@@ -190,7 +190,7 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
     ) { padding ->
         PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading").textActions()) {
             item(key = "date") { ReadingHead(entry.epochDay, method, entry.question) }
-            readingItems(entry.reading, state.book, words, set, go)
+            readingItems(entry.reading, state.textBook, words, set, go)
             item(key = "note") {
                 Column(Modifier.padding(horizontal = SIDE)) {
                     if (entry.note.isNotBlank()) {
@@ -220,14 +220,14 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
 @Composable
 fun HexagramScreen(state: AppState, number: Int, onBack: () -> Unit, go: (Screen) -> Unit) {
     val h = KingWen.number(number)
-    val text = state.book.text(number)
+    val text = state.textBook.text(number)
     val names = rememberNames()
     val above = stringResource(R.string.trigram_above)
     val below = stringResource(R.string.trigram_below)
     val lines = stringResource(R.string.head_lines)
     val judgment = stringResource(R.string.head_judgment)
     val image = stringResource(R.string.head_image)
-    val legge = stringResource(R.string.legge_name, text.name)
+    val translator = stringResource(if (state.germanText) R.string.wilhelm_name else R.string.legge_name, text.name)
     val set = rememberSetter()
 
     Scaffold(
@@ -248,7 +248,7 @@ fun HexagramScreen(state: AppState, number: Int, onBack: () -> Unit, go: (Screen
                     Figure(youngLines(h.bits), 96.dp, marks = false, description = names.of(h))
                     Spacer(Modifier.height(14.dp))
                     HexagramName(h, names, MaterialTheme.typography.headlineLarge)
-                    TextMMD(text = legge, style = MaterialTheme.typography.labelSmall, textAlign = TextAlign.Center)
+                    TextMMD(text = translator, style = MaterialTheme.typography.labelSmall, textAlign = TextAlign.Center)
                 }
             }
             item(key = "trigrams") {

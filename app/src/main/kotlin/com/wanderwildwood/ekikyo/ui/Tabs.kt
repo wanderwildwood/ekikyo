@@ -57,7 +57,7 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
     val methodLabel = stringResource(methodName(method))
     PagedColumn(Modifier.fillMaxSize().testTag("today").textActions()) {
         item(key = "date") { ReadingHead(today, methodLabel, "") }
-        readingItems(Reading(lines), state.book, words, set, go)
+        readingItems(Reading(lines), state.textBook, words, set, go)
         item(key = "keep") {
             Column(Modifier.padding(horizontal = SIDE).padding(top = 8.dp, bottom = 16.dp)) {
                 if (kept == null) {
