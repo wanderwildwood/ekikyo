@@ -63,8 +63,8 @@ fun rememberReadingWords(): ReadingWords = ReadingWords(
 )
 
 /**
- * A cast read out: the hexagram and the one it becomes side by side, then Legge's judgment and
- * image, the changing lines only, and the judgment of the hexagram it becomes. Each paragraph
+ * A cast read out: the hexagram and the one it becomes side by side, then the chosen text's judgment
+ * and image, the changing lines only, and the judgment of the hexagram it becomes. Each paragraph
  * is its own item, so pages turn between paragraphs and never cut one.
  */
 fun LazyListScope.readingItems(reading: Reading, book: Book, w: ReadingWords, set: Setter, go: (Screen) -> Unit) {
@@ -215,7 +215,7 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
     }
 }
 
-/** One of the 64 on its own page: its figure, its two trigrams, and all of Legge's text for it. */
+/** One of the 64 on its own page: its figure, its two trigrams, and all of the chosen text for it. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HexagramScreen(state: AppState, number: Int, onBack: () -> Unit, go: (Screen) -> Unit) {

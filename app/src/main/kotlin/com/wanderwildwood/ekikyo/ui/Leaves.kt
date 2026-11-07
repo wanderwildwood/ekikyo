@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.text.TextMMD
 
 /*
- * Legge's text set as a book is: broken into lines here, once, at the width the page gives, and
+ * The text set as a book is: broken into lines here, once, at the width the page gives, and
  * each line (or a few kept together) handed to the list as a row of its own. Whole-row pages then
  * fill to the foot and a paragraph runs on over the turn, where a paragraph as one row left half
  * a page blank when it did not fit, and a paragraph taller than a page was cut through a line.
@@ -69,7 +69,7 @@ fun rememberSetter(): Setter {
 }
 
 /**
- * A paragraph of Legge as rows: under [heading] when given (a rule and the italic heading),
+ * A paragraph of the text as rows: under [heading] when given (a rule and the italic heading),
  * otherwise a paragraph's space above it. Keys start with [key].
  */
 fun LazyListScope.passage(key: String, heading: AnnotatedString?, body: String, set: Setter) {
@@ -90,7 +90,7 @@ fun LazyListScope.passage(key: String, heading: AnnotatedString?, body: String, 
                         Spacer(Modifier.padding(top = 12.dp))
                     }
                 }
-                // Legge's words can be selected, so an archaic one can be taken to Define or
+                // The words can be selected, so an archaic one can be taken to Define or
                 // Translate. The heading cannot. One container to a row: the rows come and go with
                 // the page. The menu over a selection is the shop's, with its ⋮ given back; it sits
                 // on the screen's list ([textActions] there), so the apps are looked up once, not

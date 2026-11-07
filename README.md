@@ -25,14 +25,16 @@ and open it on the phone. Its SHA-256 is published beside it as `ekikyo.apk.sha2
   restore it as a JSON file.
 - **All 64**: each hexagram with its two trigrams, judgment, image and all six lines.
 
-Legge's text is set in Noto Serif, line by line, so pages turn the way a book's do: each page
+The text is set in Noto Serif, line by line, so pages turn the way a book's do: each page
 full, a paragraph running on over the turn.
 
 ## The text
 
 James Legge's translation, *The Yî King*, from *The Sacred Books of the East*, volume 16
-(Oxford, 1882), in the public domain, given as he wrote it. The short English names of the
-hexagrams are written for this app.
+(Oxford, 1882), and Richard Wilhelm's German, *I Ging: Das Buch der Wandlungen* (Jena, 1924),
+chosen in Settings and German by default on a German phone. Both are in the public domain and
+given as their translators wrote them. The short names of the hexagrams are written for this
+app.
 
 ## Privacy
 
