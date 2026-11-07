@@ -34,7 +34,8 @@ James Legge's translation, *The Yî King*, from *The Sacred Books of the East*, 
 (Oxford, 1882), and Richard Wilhelm's German, *I Ging: Das Buch der Wandlungen* (Jena, 1924),
 chosen in Settings and German by default on a German phone. Both are in the public domain and
 given as their translators wrote them. The short names of the hexagrams are written for this
-app.
+app. Thanks to [baud-9600](https://github.com/baud-9600) for bringing in the German text
+([#1](https://github.com/wanderwildwood/ekikyo/pull/1)).
 
 ## Privacy
 
