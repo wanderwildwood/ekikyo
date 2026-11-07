@@ -188,7 +188,7 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
             )
         },
     ) { padding ->
-        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading").textActions()) {
+        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading").textActions(), showCutRow = true) {
             item(key = "date") { ReadingHead(entry.epochDay, method, entry.question) }
             readingItems(entry.reading, state.textBook, words, set, go)
             item(key = "note") {
@@ -239,7 +239,7 @@ fun HexagramScreen(state: AppState, number: Int, onBack: () -> Unit, go: (Screen
             )
         },
     ) { padding ->
-        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("hexagram").textActions()) {
+        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("hexagram").textActions(), showCutRow = true) {
             item(key = "head") {
                 Column(
                     Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 16.dp, bottom = 4.dp),

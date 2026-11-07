@@ -55,7 +55,7 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
     val set = rememberSetter()
     val kept = state.entries.firstOrNull { it.daily && it.epochDay == today && it.lines == lines }
     val methodLabel = stringResource(methodName(method))
-    PagedColumn(Modifier.fillMaxSize().testTag("today").textActions()) {
+    PagedColumn(Modifier.fillMaxSize().testTag("today").textActions(), showCutRow = true) {
         item(key = "date") { ReadingHead(today, methodLabel, "") }
         readingItems(Reading(lines), state.textBook, words, set, go)
         item(key = "keep") {
@@ -78,7 +78,7 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
 @Composable
 fun CastTab(state: AppState, go: (Screen) -> Unit) {
     val n = state.building.size
-    PagedColumn(Modifier.fillMaxSize().testTag("cast")) {
+    PagedColumn(Modifier.fillMaxSize().testTag("cast"), showCutRow = true) {
         item(key = "question") {
             TextFieldMMD(
                 value = state.question,
@@ -158,7 +158,7 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
         return
     }
     val daily = stringResource(R.string.journal_daily)
-    PagedColumn(state = rememberLazyListState(), modifier = Modifier.fillMaxSize().testTag("journal")) {
+    PagedColumn(state = rememberLazyListState(), modifier = Modifier.fillMaxSize().testTag("journal"), showCutRow = true) {
         for (e in entries) {
             item(key = e.id) {
                 val r = e.reading
@@ -207,7 +207,7 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
 @Composable
 fun BookTab(go: (Screen) -> Unit) {
     val names = rememberNames()
-    PagedColumn(state = rememberLazyListState(), modifier = Modifier.fillMaxSize().testTag("book")) {
+    PagedColumn(state = rememberLazyListState(), modifier = Modifier.fillMaxSize().testTag("book"), showCutRow = true) {
         for (h in KingWen.all) {
             item(key = h.number) {
                 Row(
