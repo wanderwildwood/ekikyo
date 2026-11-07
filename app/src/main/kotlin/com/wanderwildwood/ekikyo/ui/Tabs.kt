@@ -225,7 +225,7 @@ fun BookTab(go: (Screen) -> Unit) {
                     )
                     Spacer(Modifier.width(6.dp))
                     Column(Modifier.weight(1f)) {
-                        TextMMD(text = names.of(h), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                        TextMMD(text = names.of(h), style = nameStyle, fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis)
                         TextMMD(text = "${h.number} · ${h.pinyin}", style = MaterialTheme.typography.labelSmall, maxLines = 1)
                     }
                     Chevron()

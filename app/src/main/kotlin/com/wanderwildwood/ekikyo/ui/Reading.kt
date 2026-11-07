@@ -133,7 +133,7 @@ fun HexagramName(h: Hexagram, names: Names, hanziStyle: TextStyle = MaterialThem
         TextMMD(text = h.hanzi, style = hanziStyle, fontFamily = HanziFont, textAlign = TextAlign.Center)
         Spacer(Modifier.height(2.dp))
         TextMMD(
-            text = names.of(h), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold,
+            text = names.of(h), style = nameStyle, fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center, maxLines = 2,
         )
         TextMMD(text = "${h.number} · ${h.pinyin}", style = MaterialTheme.typography.labelSmall, textAlign = TextAlign.Center)

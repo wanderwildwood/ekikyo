@@ -11,6 +11,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.withStyle
 import com.wanderwildwood.ekikyo.R
@@ -54,7 +55,15 @@ val BookFont = FontFamily(
 val bookStyle: TextStyle
     @Composable get() = MaterialTheme.typography.bodyMedium.copy(fontFamily = BookFont, lineHeight = 27.sp)
 
-/** A heading over Legge's text: the book face in italic, a step up. */
+/**
+ * A hexagram's short name under its figure or in the list. Hyphenated in the phone's language, so a
+ * long German word (Unerfahrenheit, Zurückhaltung) breaks where a reader expects in a narrow column
+ * instead of at whatever letter the width ran out on.
+ */
+val nameStyle: TextStyle
+    @Composable get() = MaterialTheme.typography.bodyMedium.copy(hyphens = Hyphens.Auto)
+
+/** A heading over the text: the book face in italic, a step up. */
 val rubricStyle: TextStyle
     @Composable get() = MaterialTheme.typography.bodyLarge.copy(fontFamily = BookFont, fontStyle = FontStyle.Italic)
 
