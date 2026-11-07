@@ -3,9 +3,9 @@ package com.wanderwildwood.ekikyo.iching
 import org.json.JSONObject
 
 /**
- * Legge's words for one hexagram: king Wăn's judgment, the duke of Kâu's six lines from the
- * bottom up, the seventh paragraph that hexagrams 1 and 2 have for when all six lines change,
- * and the Great Image from the Treatise on the Symbolism. [name] is Legge's spelling.
+ * One translator's words for one hexagram: the judgment, the six lines from the bottom up, the
+ * seventh paragraph that hexagrams 1 and 2 have for when all six lines change, and the image.
+ * [name] is the translator's spelling.
  */
 class Text(
     val number: Int,
@@ -16,7 +16,7 @@ class Text(
     val image: String,
 )
 
-/** The whole of Legge's text as the app carries it, in assets/legge.json. */
+/** The whole of a translation as the app carries it, in assets/legge.json or assets/wilhelm.json. */
 class Book(val source: String, val texts: List<Text>) {
     fun text(number: Int): Text = texts[number - 1]
 

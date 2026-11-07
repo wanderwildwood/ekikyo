@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">I Ging</string>
+
+    <!-- Read aloud by a screen reader -->
+    <string name="cd_back">Zurück</string>
+    <string name="cd_about">Über</string>
+    <string name="cd_settings">Einstellungen</string>
+
+    <!-- ============================================================ -->
+    <!-- The four tabs -->
+
+    <string name="tab_today">Heute</string>
+    <string name="tab_cast">Werfen</string>
+    <string name="tab_journal">Journal</string>
+    <string name="tab_book">Alle 64</string>
+
+    <!-- ============================================================ -->
+    <!-- The names. Short English names written for this app, in King Wen order -->
+
+    <string-array name="hexagram_names">
+        <item>Himmel</item>
+        <item>Erde</item>
+        <item>Keimen</item>
+        <item>Unerfahrenheit</item>
+        <item>Warten</item>
+        <item>Streit</item>
+        <item>Das Heer</item>
+        <item>Zusammenhalten</item>
+        <item>Kleine Zurückhaltung</item>
+        <item>Wandeln</item>
+        <item>Frieden</item>
+        <item>Stockung</item>
+        <item>Gemeinschaft</item>
+        <item>Großer Besitz</item>
+        <item>Bescheidenheit</item>
+        <item>Freude</item>
+        <item>Nachfolge</item>
+        <item>Verfall</item>
+        <item>Annäherung</item>
+        <item>Betrachtung</item>
+        <item>Durchbeißen</item>
+        <item>Schmuck</item>
+        <item>Abstreifen</item>
+        <item>Rückkehr</item>
+        <item>Ohne Täuschung</item>
+        <item>Große Zurückhaltung</item>
+        <item>Nahrung</item>
+        <item>Großer Überfluss</item>
+        <item>Wasser</item>
+        <item>Feuer</item>
+        <item>Empfindung</item>
+        <item>Beständigkeit</item>
+        <item>Rückzug</item>
+        <item>Große Stärke</item>
+        <item>Fortschritt</item>
+        <item>Verborgenes Licht</item>
+        <item>Haushalt</item>
+        <item>Gegensatz</item>
+        <item>Hemmnis</item>
+        <item>Befreiung</item>
+        <item>Abnahme</item>
+        <item>Zunahme</item>
+        <item>Entschlossenheit</item>
+        <item>Begegnung</item>
+        <item>Sammlung</item>
+        <item>Aufstieg</item>
+        <item>Erschöpfung</item>
+        <item>Der Brunnen</item>
+        <item>Umwälzung</item>
+        <item>Der Tiegel</item>
+        <item>Donner</item>
+        <item>Berg</item>
+        <item>Allmählicher Fortschritt</item>
+        <item>Die heiratende Jungfrau</item>
+        <item>Fülle</item>
+        <item>Der Wanderer</item>
+        <item>Wind</item>
+        <item>See</item>
+        <item>Auflösung</item>
+        <item>Maß</item>
+        <item>Inneres Vertrauen</item>
+        <item>Kleiner Überfluss</item>
+        <item>Schon hindurch</item>
+        <item>Noch nicht hindurch</item>
+    </string-array>
+    <!-- The eight trigrams' images, in the order Earth, Thunder, Water, Lake, Mountain, Fire, Wind, Heaven -->
+    <string-array name="trigram_names">
+        <item>Erde</item>
+        <item>Donner</item>
+        <item>Wasser</item>
+        <item>See</item>
+        <item>Berg</item>
+        <item>Feuer</item>
+        <item>Wind</item>
+        <item>Himmel</item>
+    </string-array>
+
+    <!-- ============================================================ -->
+    <!-- A reading -->
+
+    <string name="reading_title">Lesung</string>
+    <string name="reading_daily">Hexagramm des Tages</string>
+    <string name="journal_daily">täglich</string>
+    <string name="head_judgment">Das Urteil</string>
+    <string name="head_image">Das Bild</string>
+    <string name="head_changing">Wandelnde Linien</string>
+    <!-- Over the judgment of the hexagram the changing lines make -->
+    <string name="head_becomes">Wird zu</string>
+    <string name="head_lines">Die Linien</string>
+    <string name="trigram_above">Oben</string>
+    <string name="trigram_below">Unten</string>
+    <!-- %1$s is the hexagram's name as Legge spelled it -->
+    <string name="legge_name">Legge: %1$s</string>
+    <!-- %1$s is the hexagram's name as Wilhelm spelled it -->
+    <string name="wilhelm_name">Wilhelm: %1$s</string>
+    <string name="method_coins">drei Münzen</string>
+    <string name="method_yarrow">Schafgarben-Wahrscheinlichkeiten</string>
+
+    <string name="note">Notiz</string>
+    <string name="note_add">Notiz hinzufügen</string>
+    <string name="note_edit">Notiz ändern</string>
+    <string name="note_hint">Was dir in den Sinn kam</string>
+    <string name="save">Speichern</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="delete_reading">Diese Lesung löschen</string>
+    <string name="delete_reading_armed">Löschen — noch einmal tippen</string>
+    <string name="deleted_done">Die Lesung wurde gelöscht.</string>
+    <string name="deleted_undo">Rückgängig</string>
+
+    <!-- ============================================================ -->
+    <!-- Today -->
+
+    <string name="today_intro">Ein Hexagramm für den Tag, einmal geworfen und bis Mitternacht behalten.</string>
+    <string name="today_cast">Das heutige Hexagramm werfen</string>
+    <string name="today_keep">Im Journal behalten</string>
+    <string name="today_kept">Im Journal</string>
+
+    <!-- ============================================================ -->
+    <!-- Cast -->
+
+    <string name="cast_intro">Halte eine Frage im Sinn oder schreibe sie oben auf. Jeder Druck wirft eine Linie, von unten nach oben. Wenn alle sechs geworfen sind, öffnet sich die Lesung und wird im Journal behalten.</string>
+    <string name="cast_question_hint">Deine Frage (optional)</string>
+    <!-- %1$s is the line's number, 1 to 6 -->
+    <string name="cast_line">Linie %1$s von 6</string>
+    <string name="cast_all">Alle sechs werfen</string>
+    <string name="cast_rest">Den Rest werfen</string>
+    <string name="cast_read">Den Wurf lesen</string>
+    <string name="cast_over">Neu beginnen</string>
+    <!-- %1$s is three coins or yarrow-stalk odds -->
+    <string name="cast_method_note">Werfen mit %1$s · in den Einstellungen änderbar</string>
+
+    <!-- ============================================================ -->
+    <!-- Journal -->
+
+    <string name="journal_empty">Jeder Wurf bleibt hier mit seinem Datum, seiner Frage und einer eventuellen Notiz. Noch gibt es keinen.</string>
+    <string name="journal_empty_cast">Ein Hexagramm werfen</string>
+
+    <!-- ============================================================ -->
+    <!-- Settings -->
+
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_yarrow">Schafgarben-Wahrscheinlichkeiten</string>
+    <string name="settings_yarrow_note">Wirft mit den Wahrscheinlichkeiten der alten Schafgarben-Methode statt mit drei Münzen. Ganze Linien wandeln sich dann häufiger als gebrochene.</string>
+    <string name="settings_german_text">Deutscher Text</string>
+    <string name="settings_german_text_note">Richard Wilhelms Übersetzung von 1924. Aus zeigt James Legges englischen Text von 1882.</string>
+    <string name="settings_guide">Anleitung</string>
+    <string name="settings_export">Das Journal exportieren</string>
+    <string name="settings_export_note">Jede Lesung mit Datum, Linien, Frage und Notiz als JSON-Datei, gespeichert, wo du willst.</string>
+    <string name="settings_restore">Ein Journal wiederherstellen</string>
+    <string name="settings_restore_note">Liest eine mit „Das Journal exportieren“ erstellte Datei und fügt die Lesungen hinzu, die noch nicht hier sind. Lesungen, die schon im Journal stehen, werden nicht geändert oder entfernt.</string>
+    <!-- %1$d readings added, %2$d already here -->
+    <string name="restore_done">Wiederhergestellt. %1$d Lesungen hinzugefügt, %2$d schon vorhanden.</string>
+    <string name="restore_not_ours">Diese Datei ist kein Journal aus dieser App. Es wurde nichts geändert.</string>
+    <string name="restore_newer">Dieses Journal wurde mit einer neueren Version dieser App erstellt. Aktualisiere die App und versuche es erneut. Es wurde nichts geändert.</string>
+    <string name="restore_damaged">Diese Journaldatei ist beschädigt, deshalb wurde nichts daraus verwendet. Es wurde nichts geändert.</string>
+    <string name="restore_unreadable">Diese Datei konnte nicht gelesen werden. Es wurde nichts geändert.</string>
+    <string name="export_done">Das Journal ist gespeichert.</string>
+    <string name="export_failed">Das Journal konnte dort nicht gespeichert werden.</string>
+    <string name="export_file_name">iching-journal.json</string>
+
+    <!-- ============================================================ -->
+    <!-- Guide -->
+
+    <string name="guide_title">Anleitung</string>
+
+    <string name="guide_book">Das Buch</string>
+    <string name="guide_book_1">Das I Ging, das Buch der Wandlungen, ist eines der ältesten Bücher Chinas. Im Zentrum stehen 64 Figuren, Hexagramme genannt, jede aus sechs Linien, ganz oder gebrochen, von unten nach oben gezählt.</string>
+    <string name="guide_book_2">Jedes Hexagramm besteht aus zwei Trigrammen zu je drei Linien, eines über dem anderen. Die acht Trigramme sind Himmel, See, Feuer, Donner, Wind, Wasser, Berg und Erde.</string>
+    <string name="guide_book_3">Jedes Hexagramm hat ein Urteil über die Figur als Ganzes, einen kurzen Text für jede seiner sechs Linien und ein Bild, das aus seinen beiden Trigrammen gewonnen ist. Die Hexagramme stehen in der eigenen Ordnung des Buches, die traditionell König Wen zugeschrieben wird.</string>
+
+    <string name="guide_cast">Das Werfen</string>
+    <string name="guide_cast_1">Halte eine Frage im Sinn oder schreibe sie auf. Eine offene Frage eignet sich besser als eine, die sich mit Ja oder Nein beantworten lässt. Auch ohne Frage geht es.</string>
+    <string name="guide_cast_2">Jede Linie wird mit drei Münzen geworfen: Kopf zählt drei, Zahl zwei, die Summe ist also 6, 7, 8 oder 9. Sieben ist eine ganze Linie und acht eine gebrochene. Neun ist eine ganze und sechs eine gebrochene Linie, die beide im Begriff sind, sich zu wandeln: das sind die wandelnden Linien.</string>
+    <string name="guide_cast_3">Wirf die Linien von unten nach oben, einen Druck pro Linie, oder alle auf einmal. Das Telefon wirft die Münzen mit einer sicheren Zufallsquelle.</string>
+    <string name="guide_cast_4">Die ältere Methode, bei der Schafgarbenstängel abgezählt werden, hat etwas andere Wahrscheinlichkeiten: Ganze Linien wandeln sich häufiger als gebrochene. Schalte in den Einstellungen „Schafgarben-Wahrscheinlichkeiten“ ein, um damit zu werfen.</string>
+
+    <string name="guide_read">Das Lesen</string>
+    <string name="guide_read_1">Beginne mit dem Urteil und dem Bild des Hexagramms, das du geworfen hast. Sie sprechen zur Lage als Ganzes.</string>
+    <string name="guide_read_2">Wenn Linien sich wandeln, lies die Texte für diese Linien. Sie sind neben der Figur markiert: ein Kreis an einer ganzen Linie, ein Kreuz an einer gebrochenen.</string>
+    <string name="guide_read_3">Die wandelnden Linien werden zu ihren Gegenteilen und bilden ein zweites Hexagramm. Sein Urteil deutet an, wohin es geht. Ohne wandelnde Linien ist das erste Hexagramm die ganze Antwort.</string>
+    <string name="guide_read_4">Die Hexagramme 1 und 2 haben einen siebten Text für den Fall, dass sich alle sechs Linien wandeln. Er wird gezeigt, wenn das geschieht.</string>
+
+    <string name="guide_text">Der Text</string>
+    <string name="guide_text_1">Der deutsche Text ist Richard Wilhelms Übersetzung, erschienen 1924 in Jena. Der englische ist James Legges, erschienen 1882 in The Sacred Books of the East, Band 16. Beide sind gemeinfrei und stehen hier so, wie ihre Übersetzer sie geschrieben haben. In den Einstellungen wählst du zwischen ihnen.</string>
+    <string name="guide_text_2">Legge setzt Wörter in Klammern, um den Sinn des knappen Chinesischen zu tragen. Seine Schreibweise der chinesischen Namen ist eine alte, Khien für Qián, Khwan für Kūn; die Schriftzeichen und die Pinyin-Umschrift stehen daneben.</string>
+    <string name="guide_text_3">Die kurzen deutschen Namen der Hexagramme wurden für diese App geschrieben.</string>
+
+    <!-- ============================================================ -->
+    <!-- About -->
+
+    <string name="about_title">I Ging %1$s</string>
+    <string name="about_what">Das Buch der Wandlungen: Wirf ein Hexagramm mit drei Münzen oder Schafgarben-Wahrscheinlichkeiten, lies es in Richard Wilhelms deutscher oder James Legges englischer Übersetzung und führe ein Journal deiner Lesungen.</string>
+    <string name="about_privacy_title">Datenschutz</string>
+    <string name="about_privacy">Alles, was du in diese App eingibst, bleibt auf diesem Telefon. Sie hat keinen Internetzugang, deshalb wird nichts gesendet und nichts über dich gesammelt. Es gibt keine Werbung, keine Analysen und kein Tracking. Sicherungen und Exporte gehen nur dorthin, wo du sie zu speichern wählst. Die Adressen unten öffnen deinen Browser, und die Adresse unter „So erreichst du uns“ öffnet deine E-Mail-App, nur wenn du sie drückst.</string>
+    <string name="about_terms_title">Bedingungen</string>
+    <string name="about_terms">Diese App ist freie Software unter der GNU General Public License v3. Sie kommt ohne Gewährleistung: Nutze sie auf eigenes Risiko. Das I Ging ist zum Nachdenken da. Es sagt nichts voraus und ist kein Ersatz für medizinische, rechtliche oder finanzielle Beratung.</string>
+    <string name="about_open_title">Open Source</string>
+    <string name="about_licence">I Ging: ausschließlich GNU General Public License v3, Copyright wander wildwood</string>
+    <string name="about_text">Text: Richard Wilhelm, I Ging (Jena 1924), und James Legge, The Yî King (1882); beide gemeinfrei</string>
+    <!-- %1$s is a web address -->
+    <string name="about_no_browser_address">Auf diesem Telefon gibt es keinen Browser, um das zu öffnen. Die Adresse ist %1$s.</string>
+    <string name="about_feed_the_llamas">Füttere die Lamas</string>
+    <string name="about_close">Schließen</string>
+    <string name="about_licences">Lizenzen</string>
+    <string name="licences_title">Lizenzen</string>
+    <string name="licences_source_head">Quellcode</string>
+    <string name="licences_no_text">%s braucht hier keinen Lizenztext.</string>
+    <string name="licences_licence">Das I Ging ist freie Software: GPL-3.0-only, Copyright wander wildwood. Was ihm zugrunde liegt, behält seine eigenen Lizenzen, unten aufgeführt.</string>
+    <string name="licences_back">Zurück</string>
+    <string name="licences_full_head">Vollständige Texte</string>
+    <string name="licences_full_gpl">GNU General Public License v3 (vollständiger Text)</string>
+    <string name="licences_full_apache">Apache License 2.0 (vollständiger Text)</string>
+    <string name="licences_full_ofl">SIL Open Font License 1.1 (vollständiger Text)</string>
+    <!-- shared-about: contact row + privacy section (edit in /opt/projects/shared-about) -->
+    <string name="about_write_to">Schreibe an %1$s</string>
+    <string name="about_no_mail_app">Es ist keine E-Mail-App installiert. Die Adresse ist %1$s.</string>
+    <!-- shared-about: what a screen reader says for an About drawer, the heading passed in -->
+    <string name="about_open_drawer">%1$s öffnen</string>
+    <string name="about_close_drawer">%1$s schließen</string>
+    <string name="about_intro_head">Was sie tut</string>
+    <string name="about_contact_head">Kontakt</string>
+    <string name="about_links_head">Links</string>
+    <string name="privacy_who_title">Wer wir sind</string>
+    <string name="privacy_who">Diese App wird von wander wildwood gemacht, einem unabhängigen Entwickler: eine Person, kein Unternehmen. Damit ist wander wildwood der Verantwortliche für alles, was die App selbst verarbeitet, und das ist sehr wenig: Was du eingibst, bleibt auf diesem Telefon, es sei denn, du schickst es selbst irgendwohin, und beim Entwickler kommt nichts an.</string>
+    <string name="privacy_contact_title">So erreichst du uns</string>
+    <string name="privacy_contact">Schreibe an email@wanderthe.dev, wegen deiner Daten oder aus jedem anderen Grund.</string>
+    <string name="privacy_rights_title">Deine Rechte</string>
+    <string name="privacy_rights">Nach der DSGVO kannst du Auskunft über die zu dir gespeicherten Daten verlangen, ihre Berichtigung oder Löschung, die Einschränkung ihrer Verwendung oder Widerspruch dagegen, eine Kopie zur Mitnahme, den Widerruf einer Einwilligung und Beschwerde bei einer Datenschutzbehörde einlegen. Da die App ihre Daten nur auf deinem Telefon speichert, kannst du das meiste selbst tun: die Notiz einer Lesung ändern oder eine Lesung in der App löschen, eine Kopie mit „Das Journal exportieren“ speichern, die Daten der App in Androids Einstellungen löschen oder die App deinstallieren.</string>
+    <!-- /shared-about -->
+</resources>

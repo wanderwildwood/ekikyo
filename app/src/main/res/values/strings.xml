@@ -112,6 +112,8 @@
     <string name="trigram_below">Below</string>
     <!-- %1$s is the hexagram's name as Legge spelled it -->
     <string name="legge_name">Legge: %1$s</string>
+    <!-- %1$s is the hexagram's name as Wilhelm spelled it -->
+    <string name="wilhelm_name">Wilhelm: %1$s</string>
     <string name="method_coins">three coins</string>
     <string name="method_yarrow">yarrow-stalk odds</string>
 
@@ -160,6 +162,8 @@
     <string name="settings_title">Settings</string>
     <string name="settings_yarrow">Yarrow-stalk odds</string>
     <string name="settings_yarrow_note">Cast with the odds of the old yarrow-stalk method instead of three coins. Whole lines then change more often than broken ones.</string>
+    <string name="settings_german_text">German text</string>
+    <string name="settings_german_text_note">Richard Wilhelm’s translation of 1924. Off shows James Legge’s English text of 1882.</string>
     <string name="settings_guide">Guide</string>
     <string name="settings_export">Export the journal</string>
     <string name="settings_export_note">Every reading with its date, lines, question and note, as a JSON file saved where you choose.</string>
@@ -198,7 +202,7 @@
     <string name="guide_read_4">Hexagrams 1 and 2 have a seventh text, for when all six lines change. It is shown when that happens.</string>
 
     <string name="guide_text">The text</string>
-    <string name="guide_text_1">The translation is James Legge’s, published in 1882 in The Sacred Books of the East, volume 16. It is in the public domain and is given here as he wrote it.</string>
+    <string name="guide_text_1">The German is Richard Wilhelm’s translation, published in 1924 in Jena. The English is James Legge’s, published in 1882 in The Sacred Books of the East, volume 16. Both are in the public domain and are given here as their translators wrote them. Choose between them in Settings.</string>
     <string name="guide_text_2">Legge puts words in parentheses to carry the sense of the terse Chinese. His spelling of the Chinese names is an old one, Khien for Qián, Khwan for Kūn; the characters and the pinyin are shown beside them.</string>
     <string name="guide_text_3">The short English names of the hexagrams are written for this app.</string>
 
@@ -206,14 +210,14 @@
     <!-- About -->
 
     <string name="about_title">I Ching %1$s</string>
-    <string name="about_what">The Book of Changes: cast a hexagram with three coins or yarrow-stalk odds, read it in James Legge’s translation, and keep a journal of your readings.</string>
+    <string name="about_what">The Book of Changes: cast a hexagram with three coins or yarrow-stalk odds, read it in Richard Wilhelm’s German or James Legge’s English translation, and keep a journal of your readings.</string>
     <string name="about_privacy_title">Privacy</string>
     <string name="about_privacy">Everything you put in this app stays on this phone. It has no internet access, so nothing is sent anywhere, and nothing is collected about you. There are no ads, no analytics and no tracking. Backups and exports go only where you choose to save them. The addresses below open in your browser, and the address under How to contact us opens your email app, only when you press them.</string>
     <string name="about_terms_title">Terms</string>
     <string name="about_terms">This app is free software under the GNU General Public License v3. It comes with no warranty: use it at your own risk. I Ching is for reflection. It does not predict, and it is no substitute for medical, legal or financial advice.</string>
     <string name="about_open_title">Open source</string>
     <string name="about_licence">I Ching: GNU General Public License v3 only, copyright wander wildwood</string>
-    <string name="about_text">Text: James Legge, The Yî King, The Sacred Books of the East, volume 16 (1882), public domain</string>
+    <string name="about_text">Text: Richard Wilhelm, I Ging (Jena 1924), and James Legge, The Yî King (1882); both public domain</string>
     <!-- %1$s is a web address -->
     <string name="about_no_browser_address">There is no browser on this phone to open that with. The address is %1$s.</string>
     <string name="about_feed_the_llamas">Feed the llamas</string>

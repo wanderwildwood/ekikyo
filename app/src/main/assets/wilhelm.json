@@ -1,0 +1,903 @@
+{
+  "source": "Richard Wilhelm, I Ging. Das Buch der Wandlungen (Jena 1924). Public domain.",
+  "hexagrams": [
+    {
+      "n": 1,
+      "name": "Kiën",
+      "judgment": "Das Schöpferische wirkt erhabenes Gelingen, fördernd durch Beharrlichkeit.",
+      "lines": [
+        "Verdeckter Drache. Handle nicht.",
+        "Erscheinender Drache auf dem Feld. Fördernd ist es, den großen Mann zu sehen.",
+        "Der Edle ist den ganzen Tag schöpferisch tätig. Des Abends noch ist er voll innerer Sorge. Gefahr. Kein Makel.",
+        "Schwankender Aufschwung über die Tiefe. Kein Makel.",
+        "Fliegender Drache am Himmel. Fördernd ist es, den großen Mann zu sehen.",
+        "Hochmütiger Drache wird zu bereuen haben."
+      ],
+      "image": "Des Himmels Bewegung ist kraftvoll. So macht der Edle sich stark und unermüdlich.",
+      "allLines": "Es erscheint eine Schar von Drachen ohne Haupt. Heil!"
+    },
+    {
+      "n": 2,
+      "name": "Kun",
+      "judgment": "Das Empfangende wirkt erhabenes Gelingen, fördernd durch die Beharrlichkeit einer Stute. Hat der Edle etwas zu unternehmen und will voraus, so geht er irre; doch folgt er nach, so findet er Leitung. Fördernd ist es, im Westen und Süden Freunde zu finden, im Osten und Norden der Freunde zu entraten. Ruhige Beharrlichkeit bringt Heil.",
+      "lines": [
+        "Tritt man auf Reif, so naht das feste Eis.",
+        "Gerade, rechtwinklig, groß. Ohne Absicht bleibt doch nichts ungefördert.",
+        "Verborgene Linien; man vermag beharrlich zu bleiben. Folgst du etwa eines Königs Diensten, so suche nicht Werke, aber vollende!",
+        "Zugebundener Sack. Kein Makel; kein Lob.",
+        "Gelbes Untergewand bringt erhabenes Heil.",
+        "Drachen kämpfen auf dem Anger. Ihr Blut ist schwarz und gelb."
+      ],
+      "image": "Der Zustand der Erde ist die empfangende Hingebung. So trägt der Edle weiträumigen Wesens die Außenwelt.",
+      "allLines": "Fördernd ist dauernde Beharrlichkeit."
+    },
+    {
+      "n": 3,
+      "name": "Dschun",
+      "judgment": "Die Anfangsschwierigkeit wirkt erhabenes Gelingen. Fördernd durch Beharrlichkeit. Man soll nichts unternehmen. Fördernd ist es, Gehilfen einzusetzen.",
+      "lines": [
+        "Zögern und Hemmung. Fördernd ist es, beharrlich zu bleiben. Fördernd ist es, Gehilfen einzusetzen.",
+        "Schwierigkeiten türmen sich. Pferd und Wagen trennen sich. Nicht Räuber er ist, Will freien zur Frist. Das Mädchen ist keusch, verspricht sich nicht. Zehn Jahre, dann verspricht sie sich.",
+        "Wer den Hirsch jagt ohne Förster, der verirrt sich nur im Wald. Der Edle versteht die Zeichen der Zeit und steht lieber ab. Weitermachen bringt Beschämung.",
+        "Pferd und Wagen trennen sich. Suche nach Vereinigung. Hingehen bringt Heil. Alles wirkt fördernd.",
+        "Schwierigkeiten im Segnen. Kleine Beharrlichkeit bringt Heil, große Beharrlichkeit bringt Unheil.",
+        "Pferd und Wagen trennen sich. Blutige Tränen ergießen sich."
+      ],
+      "image": "Wolken und Donner: das Bild der Anfangsschwierigkeit. So wirkt der Edle entwirrend und ordnend."
+    },
+    {
+      "n": 4,
+      "name": "Mong",
+      "judgment": "Jugendtorheit hat Gelingen. Nicht ich suche den jungen Toren, der junge Tor sucht mich. Beim ersten Orakel gebe ich Auskunft. Fragt er zwei-, dreimal, so ist das Belästigung. Wenn er belästigt, so gebe ich keine Auskunft. Fördernd ist Beharrlichkeit.",
+      "lines": [
+        "Um den Toren zu entwickeln, ist es fördernd, den Menschen in Zucht zu nehmen. Man soll die Fesseln abnehmen. So weitermachen bringt Beschämung.",
+        "Die Toren ertragen in Milde, bringt Heil. Die Frauen zu nehmen wissen, bringt Heil. Der Sohn ist dem Hauswesen gewachsen.",
+        "Nicht sollst du ein Mädchen nehmen, das einen ehernen Mann sieht und sich nicht im Besitz behält. Nichts ist fördernd.",
+        "Beschränkte Torheit bringt Beschämung.",
+        "Kindliche Torheit bringt Heil.",
+        "Beim Bestrafen der Torheit ist es nicht fördernd, Übergriffe zu begehen. Fördernd ist nur, Übergriffe abzuwehren."
+      ],
+      "image": "Unten am Berg kommt ein Quell hervor: das Bild der Jugend. So nährt der Edle durch gründliches Handeln seinen Charakter."
+    },
+    {
+      "n": 5,
+      "name": "Sü",
+      "judgment": "Das Warten. Wenn du wahrhaftig bist, so hast du Licht und Gelingen. Beharrlichkeit bringt Heil. Fördernd ist es, das große Wasser zu durchqueren.",
+      "lines": [
+        "Warten auf dem Anger. Fördernd ist es, im Dauernden zu bleiben. Kein Makel.",
+        "Warten auf dem Sand. Es gibt ein wenig Gerede. Das Ende bringt Heil.",
+        "Warten im Schlamm bewirkt das Kommen des Feindes.",
+        "Warten im Blut. Heraus aus dem Loch.",
+        "Warten bei Wein und Speise. Beharrlichkeit bringt Heil.",
+        "Man gerät in das Loch. Da kommen ungebetener Gäste drei. Ehre sie, so kommt am Ende Heil."
+      ],
+      "image": "Wolken steigen am Himmel auf: das Bild des Wartens. So ißt und trinkt der Edle und ist heiter und guter Dinge."
+    },
+    {
+      "n": 6,
+      "name": "Sung",
+      "judgment": "Der Streit: Du bist wahrhaftig und wirst gehemmt. Sorgliches Innehalten auf halbem Weg bringt Heil. Zu Ende führen bringt Unheil. Fördernd ist es, den großen Mann zu sehen. Nicht fördernd ist es, das große Wasser zu durchqueren.",
+      "lines": [
+        "Wenn man die Sache nicht verewigt, so gibt es ein kleines Gerede. Am Ende kommt Heil.",
+        "Man kann nicht streiten, kehrt heim und weicht aus. Die Menschen seiner Stadt, dreihundert Häuser, bleiben frei von Schuld.",
+        "Von alter Tugend sich nähren, gibt Beharrlichkeit. Gefahr, am Ende kommt Heil. Folgst du etwa eines Königs Diensten, so suche nicht Werke.",
+        "Man kann nicht streiten, kehrt um und fügt sich dem Geschick, ändert sich und findet Frieden in Beharrlichkeit. Heil!",
+        "Streiten vor ihm bringt erhabenes Heil.",
+        "Wenn einem etwa auch ein Ledergürtel verliehen wird, am Ende eines Morgens wird er ihm dreimal entrissen."
+      ],
+      "image": "Himmel und Wasser gehen einander entgegengesetzt: das Bild des Streites. So überlegt der Edle bei allen Geschäften, die er tut, den Anfang."
+    },
+    {
+      "n": 7,
+      "name": "Schï",
+      "judgment": "Das Heer braucht Beharrlichkeit und einen starken Mann. Heil ohne Makel.",
+      "lines": [
+        "Ein Heer muß ausziehen nach der Ordnung. Ist die nicht gut, droht Unheil.",
+        "Inmitten des Heeres! Heil! Kein Makel! Der König verleiht dreifache Auszeichnung.",
+        "Das Heer führt etwa im Wagen Leichen. Unheil!",
+        "Das Heer zieht sich zurück. Kein Makel.",
+        "Im Feld ist ein Wild. Es ist fördernd, es zu fangen. Ohne Makel. Der Älteste führe das Heer. Der Jüngere fährt Leichen, da bringt Beharrlichkeit Unheil.",
+        "Der große Fürst erläßt Befehle, gründet Staaten, belehnt Familien. Gemeine Menschen soll man nicht benützen."
+      ],
+      "image": "Inmitten der Erde ist Wasser, das Bild des Heeres. So mehrt der Edle durch Weitherzigkeit gegen das Volk seine Massen."
+    },
+    {
+      "n": 8,
+      "name": "Bi",
+      "judgment": "Das Zusammenhalten bringt Heil. Ergründe das Orakel nochmals, ob du Erhabenheit, Dauer und Beharrlichkeit hast; dann ist kein Makel da. Die Unsicheren kommen allmählich herbei. Wer zu spät kommt, hat Unheil.",
+      "lines": [
+        "Halte wahr und treu zu ihm: das ist kein Makel. Wahrheit wie eine volle Tonschüssel: So kommt schließlich von außen her das Heil.",
+        "Halte zu ihm im Innern. Beharrlichkeit bringt Heil.",
+        "Du hältst zusammen mit Menschen, die nicht die rechten sind.",
+        "Auch äußerlich halte zu ihm. Beharrlichkeit bringt Heil.",
+        "Offenbarung des Zusammenhaltens. Der König läßt bei der Jagd nur von drei Seiten treiben und verzichtet auf das Wild, das vorne abbiegt. Die Bürger bedürfen nicht der Warnung. Heil!",
+        "Er findet zum Zusammenhalten kein Haupt. Unheil."
+      ],
+      "image": "Auf der Erde ist Wasser: das Bild des Zusammenhaltens. So haben die Könige der Vorzeit die einzelnen Staaten als Lehen vergeben und mit den Lehensfürsten freundlichen Verkehr gepflegt."
+    },
+    {
+      "n": 9,
+      "name": "Siau Tschu",
+      "judgment": "Des Kleinen Zähmungskraft hat Gelingen. Dichte Wolken, kein Regen von unserm westlichen Gebiet.",
+      "lines": [
+        "Wiederkehr auf den Weg. Wie wäre das ein Makel! Heil!",
+        "Läßt sich mitziehen zur Wiederkehr. Heil!",
+        "Dem Wagen springen die Speichen ab. Mann und Frau verdrehen die Augen.",
+        "Bist du wahrhaftig, so schwindet Blut und weicht Angst. Kein Makel.",
+        "Bist du wahrhaftig und treu verbunden, so bist du reich in deinem Nächsten.",
+        "Es kommt zum Regen, es kommt zur Ruhe. Das ist der dauernden Wirkung des Charakters zu verdanken. Die Frau kommt durch Beharrlichkeit in Gefahr. Der Mond ist fast voll. Macht der Edle fort, so kommt Unheil."
+      ],
+      "image": "Der Wind fährt über den Himmel hin: das Bild der Zähmungskraft des Kleinen. So verfeinert der Edle die äußere Form seines Wesens."
+    },
+    {
+      "n": 10,
+      "name": "Lü",
+      "judgment": "Auftreten auf des Tigers Schwanz. Er beißt den Menschen nicht. Gelingen.",
+      "lines": [
+        "Einfaches Auftreten. Fortschreiten ohne Makel.",
+        "Auftreten auf schlichter, ebener Bahn. Eines dunkeln Mannes Beharrlichkeit bringt Heil.",
+        "Ein Einäugiger kann sehen, ein Lahmer kann auftreten. Er tritt auf des Tigers Schwanz. Der beißt den Menschen. Unheil! Ein Krieger handelt so für seinen großen Fürsten.",
+        "Er tritt auf des Tigers Schwanz. Vorsicht und Behutsamkeit führt endlich zum Heil.",
+        "Entschlossenes Auftreten. Beharrlichkeit bei Bewußtsein der Gefahr.",
+        "Blicke auf dein Auftreten und prüfe die günstigen Zeichen. Ist alles vollkommen, so kommt erhabenes Heil."
+      ],
+      "image": "Oben der Himmel, unten der See: das Bild des Auftretens. So unterscheidet der Edle hoch und niedrig und festigt dadurch den Sinn des Volkes."
+    },
+    {
+      "n": 11,
+      "name": "Tai",
+      "judgment": "Der Friede. Das Kleine geht hin, das Große kommt her. Heil! Gelingen!",
+      "lines": [
+        "Zieht man Bandgras aus, so geht der Rasen mit. Jeder nach seiner Art. Unternehmungen bringen Heil.",
+        "Die Ungebildeten in Milde tragen, entschlossen den Fluß durchschreiten, das Ferne nicht vernachlässigen, die Genossen nicht berücksichtigen: so mag man es fertigbringen, in der Mitte zu wandeln.",
+        "Keine Ebene, auf die nicht ein Abhang folgt, kein Hingang, auf den nicht die Wiederkehr folgt. Ohne Makel ist, wer beharrlich bleibt in Gefahr. Beklage dich nicht über diese Wahrheit, genieße das Glück, das du noch hast.",
+        "Er flattert hernieder, nicht pochend auf Reichtum, zusammen mit seinem Nächsten, arglos und wahrhaftig.",
+        "Der Herrscher I gibt seine Tochter in die Ehe. Das bringt Segen und erhabenes Heil.",
+        "Der Wall fällt wieder in den Graben. Jetzt brauche keine Heere. In der eigenen Stadt verkünde deine Befehle. Beharrlichkeit bringt Beschämung."
+      ],
+      "image": "Himmel und Erde vereinigen sich: das Bild des Friedens. So teilt und vollendet der Herrscher den Lauf von Himmel und Erde, fördert und ordnet die Gaben von Himmel und Erde und steht so dem Volke bei."
+    },
+    {
+      "n": 12,
+      "name": "Pi",
+      "judgment": "Die Stockung. Schlechte Menschen sind nicht fördernd für die Beharrlichkeit des Edlen. Das Große geht hin, das Kleine kommt herbei.",
+      "lines": [
+        "Zieht man Bandgras aus, so geht der Rasen mit. Jeder nach seiner Art. Beharrlichkeit bringt Heil und Gelingen.",
+        "Sie tragen und dulden, das bedeutet für die Gemeinen Heil. Dem großen Mann dient die Stockung zum Gelingen.",
+        "Sie tragen Scham.",
+        "Wer auf Befehl des Höchsten wirkt, bleibt ohne Makel. Die Gleichgesinnten genießen des Segens.",
+        "Die Stockung läßt nach. Dem großen Manne Heil! »Wenn es mißlänge, wenn es mißlänge!« Dadurch bindet er es an ein Bündel von Maulbeerstauden.",
+        "Die Stockung hört auf. Erst Stockung, dann Heil."
+      ],
+      "image": "Himmel und Erde vereinigen sich nicht: das Bild der Stockung. So zieht sich der Edle auf seinen innern Wert zurück, um den Schwierigkeiten zu entgehen. Er läßt sich nicht durch Einkünfte ehren."
+    },
+    {
+      "n": 13,
+      "name": "Tung Jen",
+      "judgment": "Gemeinschaft mit Menschen im Freien: Gelingen. Fördernd ist es, das große Wasser zu durchqueren. Fördernd ist des Edlen Beharrlichkeit.",
+      "lines": [
+        "Gemeinschaft mit Menschen im Tore. Kein Makel.",
+        "Gemeinschaft mit Menschen im Klan: Beschämung.",
+        "Versteckt Waffen im Dickicht, steigt auf den hohen Hügel davor. Drei Jahre lang erhebt er sich nicht.",
+        "Er steigt auf seine Mauer, er kann nicht angreifen. Heil!",
+        "Die gemeinsamen Menschen weinen erst und klagen, aber nachher lachen sie. Nach großen Kämpfen gelingt es ihnen, sich zu treffen.",
+        "Gemeinschaft mit Menschen auf dem Anger: keine Reue."
+      ],
+      "image": "Himmel zusammen mit Feuer: das Bild der Gemeinschaft mit Menschen. So gliedert der Edle die Stämme und unterscheidet die Dinge."
+    },
+    {
+      "n": 14,
+      "name": "Da Yu",
+      "judgment": "Der Besitz von Großem: Erhabenes Gelingen.",
+      "lines": [
+        "Keine Beziehung zu Schädlichem, das ist nicht ein Makel. Bleibt man der Schwierigkeit bewußt, so bleibt man ohne Makel.",
+        "Ein großer Wagen zum Beladen. Man mag etwas unternehmen. Kein Makel.",
+        "Ein Fürst bringt ihn dem Sohn des Himmels dar. Ein kleiner Mensch kann das nicht.",
+        "Er macht einen Unterschied zwischen sich und seinem Nächsten. Kein Makel.",
+        "Wessen Wahrheit umgänglich ist und doch würdig, der hat Heil.",
+        "Vom Himmel her wird er gesegnet, Heil! Nichts, das nicht fördernd ist."
+      ],
+      "image": "Das Feuer am Himmel oben: das Bild des Besitzes von Großem. So hemmt der Edle das Böse und fördert das Gute und gehorcht so des Himmels gutem Willen."
+    },
+    {
+      "n": 15,
+      "name": "Kiën",
+      "judgment": "Bescheidenheit schafft Gelingen. Der Edle bringt zu Ende.",
+      "lines": [
+        "Ein bescheiden-bescheidener Edler mag das große Wasser durchqueren. Heil!",
+        "Sich äußernde Bescheidenheit. Beharrlichkeit bringt Heil.",
+        "Ein verdienstvoll-bescheidener Edler bringt zu Ende. Heil!",
+        "Nichts, das nicht fördernd wäre für Bescheidenheit in der Bewegung.",
+        "Nicht pochen auf Reichtum seinem Nächsten gegenüber. Fördernd ist es, mit Gewalt anzugreifen. Nichts, das nicht fördernd wäre.",
+        "Sich äußernde Bescheidenheit. Fördernd ist es, Heere marschieren zu lassen, um die eigne Stadt und das eigene Land zu züchtigen."
+      ],
+      "image": "Inmitten der Erde ist ein Berg: das Bild der Bescheidenheit. So verringert der Edle, was zu viel ist, und vermehrt, was zu wenig ist. Er wägt die Dinge und macht sie gleich."
+    },
+    {
+      "n": 16,
+      "name": "Yü",
+      "judgment": "Die Begeisterung. Fördernd ist es, Gehilfen einzusetzen und Heere marschieren zu lassen.",
+      "lines": [
+        "Begeisterung, die sich äußert, bringt Unheil.",
+        "Fest wie ein Stein. Kein ganzer Tag. Beharrlichkeit bringt Heil.",
+        "Nach oben blickende Begeisterung schafft Reue. Zögern bringt Reue.",
+        "Der Ursprung der Begeisterung. Er erreicht Großes. Zweifle nicht. Die Freunde scharen sich um dich wie um eine Haarspange.",
+        "Beharrlich krank und stirbt doch immer nicht.",
+        "Verblendete Begeisterung. Aber wenn man nach der Vollendung zur Änderung kommt, so ist das kein Makel."
+      ],
+      "image": "Der Donner kommt aus der Erde hervorgetönt: das Bild der Begeisterung. So machten die alten Könige Musik, um die Verdienste zu ehren, und brachten sie herrlich dem höchsten Gotte dar, indem sie ihre Ahnen dazu einluden."
+    },
+    {
+      "n": 17,
+      "name": "Sui",
+      "judgment": "Die Nachfolge hat erhabenes Gelingen. Fördernd ist Beharrlichkeit. Kein Makel.",
+      "lines": [
+        "Das Maßgebende ändert sich. Beharrlichkeit bringt Heil. Zur Tür hinausgehen im Verkehr schafft Werke.",
+        "Hängt man sich an den kleinen Knaben, so verliert man den starken Mann.",
+        "Hängt man dem starken Mann an, so verliert man den kleinen Knaben. Durch Nachfolge findet man, was man sucht. Fördernd ist es, beharrlich zu bleiben.",
+        "Die Nachfolge schafft Erfolg. Beharrlichkeit bringt Unheil. Mit Wahrhaftigkeit auf dem Weg zu wandeln, bringt Klarheit. Wie könnte das ein Makel sein?",
+        "Wahrhaft im Guten. Heil!",
+        "Er findet feste Anhänglichkeit und wird noch dazu gebunden. Der König stellt ihn dem Westberg vor."
+      ],
+      "image": "Inmitten des Sees ist der Donner: das Bild der Nachfolge. So kehrt der Edle zur Zeit des Abenddunkels zu Erholung und Ruhe ein."
+    },
+    {
+      "n": 18,
+      "name": "Gu",
+      "judgment": "Die Arbeit am Verdorbenen hat erhabenes Gelingen. Fördernd ist es, das große Wasser zu durchqueren. Vor dem Anfangspunkt drei Tage, nach dem Anfangspunkt drei Tage.",
+      "lines": [
+        "Zurechtbringen des vom Vater Verdorbenen. Wenn ein Sohn da ist, bleibt auf dem heimgegangenen Vater kein Makel. Gefahr. Schließlich Heil.",
+        "Zurechtbringen des von der Mutter Verdorbenen. Man darf nicht zu beharrlich sein.",
+        "Zurechtbringen des vom Vater Verdorbenen. Ein wenig wird es Reue geben. Kein großer Makel.",
+        "Dulden des vom Vater Verdorbenen. Beim Fortmachen sieht man Beschämung.",
+        "Zurechtbringen des vom Vater Verdorbenen. Man findet Lob.",
+        "Dient nicht Königen und Fürsten. Steckt sich höhere Ziele."
+      ],
+      "image": "Unten am Berg weht der Wind: das Bild des Verderbens. So rüttelt der Edle die Leute auf und stärkt ihren Geist."
+    },
+    {
+      "n": 19,
+      "name": "Lin",
+      "judgment": "Die Annäherung hat erhabenes Gelingen. Fördernd ist Beharrlichkeit. Kommt der achte Monat, so gibt's Unheil.",
+      "lines": [
+        "Gemeinsame Annäherung. Beharrlichkeit bringt Heil.",
+        "Gemeinsame Annäherung. Heil! Alles ist fördernd.",
+        "Behagliche Annäherung. Nichts, das fördernd wäre. Erreicht man Trauer darüber, so wird man ohne Makel.",
+        "Vollkommene Annäherung. Kein Makel.",
+        "Weise Annäherung. Das ist recht für einen großen Fürsten. Heil!",
+        "Großherzige Annäherung. Heil. Kein Makel."
+      ],
+      "image": "Oberhalb des Sees ist die Erde: das Bild der Annäherung. So ist der Edle in seiner Absicht zu lehren unerschöpflich und im Ertragen und Schützen des Volkes ohne Grenzen."
+    },
+    {
+      "n": 20,
+      "name": "Guan",
+      "judgment": "Die Betrachtung. Die Waschung ist geschehen, aber noch nicht die Darbringung. Vertrauensvoll blicken sie zu ihm auf.",
+      "lines": [
+        "Knabenhaftes Betrachten. Für einen geringen Menschen kein Makel. Für einen Edlen beschämend.",
+        "Betrachtung durch die Türspalte. Fördernd für die Beharrlichkeit einer Frau.",
+        "Betrachtung meines Lebens entscheidet über Fortschritt oder Rückzug.",
+        "Betrachtung des Lichtes des Reichs. Fördernd ist es, als Gast eines Königs zu wirken.",
+        "Betrachtung meines Lebens. Der Edle ist ohne Makel.",
+        "Betrachtung seines Lebens. Der Edle ist ohne Makel."
+      ],
+      "image": "Der Wind geht über die Erde hin: das Bild der Betrachtung. So besuchten die alten Könige die Weltgegenden, betrachteten das Volk und spendeten Belehrung."
+    },
+    {
+      "n": 21,
+      "name": "Schï Ho",
+      "judgment": "Das Durchbeißen hat Gelingen. Fördernd ist es, Gericht walten zu lassen.",
+      "lines": [
+        "Steckt mit den Füßen im Block, daß die Zehen verschwinden. Kein Makel.",
+        "Beißt durch weiches Fleisch, daß die Nase verschwindet. Kein Makel.",
+        "Beißt auf altes Dörrfleisch und trifft auf Giftiges. Kleine Beschämung. Kein Makel.",
+        "Beißt auf getrocknetes Knorpelfleisch. Erhält Metallpfeile. Fördernd ist es, der Schwierigkeiten eingedenk und beharrlich zu sein. Heil!",
+        "Beißt auf getrocknetes Muskelfleisch. Erhält gelbes Gold. Beharrlich der Gefahr bewußt sein. Kein Makel.",
+        "Steckt mit dem Hals im hölzernen Kragen, daß die Ohren verschwinden. Unheil!"
+      ],
+      "image": "Donner und Blitz: das Bild des Durchbeißens. So festigten die früheren Könige die Gesetze durch klarbestimmte Strafen."
+    },
+    {
+      "n": 22,
+      "name": "Bi",
+      "judgment": "Anmut hat Gelingen. Im Kleinen ist es fördernd, etwas zu unternehmen.",
+      "lines": [
+        "Macht seine Zehen anmutig, verläßt den Wagen und geht.",
+        "Macht seinen Kinnbart anmutig.",
+        "Anmutig und feucht. Dauernde Beharrlichkeit bringt Heil.",
+        "Anmut oder Einfachheit? Ein weißes Pferd kommt wie geflogen: Nicht Räuber er ist, Will freien zur Frist.",
+        "Anmut in Hügeln und Gärten. Das Seidenbündel ist ärmlich und klein. Beschämung, doch schließlich Heil.",
+        "Schlichte Anmut. Kein Makel."
+      ],
+      "image": "Unten am Berg ist das Feuer: das Bild der Anmut. So verfährt der Edle bei der Klarstellung der laufenden Angelegenheiten, aber er wagt es nicht, danach Streitfragen zu entscheiden."
+    },
+    {
+      "n": 23,
+      "name": "Bo",
+      "judgment": "Die Zersplitterung. Nicht fördernd ist es, wohin zu gehen.",
+      "lines": [
+        "Das Bett wird zersplittert am Bein. Die Beharrlichen werden vernichtet. Unheil.",
+        "Das Bett wird zersplittert am Rand. Die Beharrlichen werden vernichtet. Unheil.",
+        "Er zersplittert sich mit ihnen. Kein Makel.",
+        "Das Bett wird zersplittert bis zur Haut. Unheil.",
+        "Ein Zug Fische. Durch die Palastdamen kommt Gunst. Alles ist förderlich.",
+        "Eine große Frucht ist noch ungegessen da. Der Edle erhält einen Wagen. Dem Gemeinen zersplittert sein Haus."
+      ],
+      "image": "Der Berg ruht auf der Erde: das Bild der Zersplitterung. So können die Oberen nur durch reiches Spenden an die Unteren ihre Stellung sichern."
+    },
+    {
+      "n": 24,
+      "name": "Fu",
+      "judgment": "Die Wiederkehr. Gelingen. Ausgang und Eingang ohne Fehl. Freunde kommen ohne Makel. Hin und her geht der Weg. Am siebten Tage kommt die Wiederkehr. Fördernd ist es, zu haben, wohin man geht.",
+      "lines": [
+        "Wiederkehr aus geringer Entfernung. Es bedarf keiner Reue. Großes Heil!",
+        "Ruhige Wiederkehr. Heil!",
+        "Mehrfache Wiederkehr. Gefahr. Kein Makel.",
+        "In der Mitte der andern wandelnd, kehrt man allein wieder.",
+        "Großzügige Wiederkehr. Keine Reue.",
+        "Verfehlung der Wiederkehr. Unheil. Unglück von außen und innen. Wenn man so Heere marschieren läßt, wird man schließlich eine große Niederlage erleiden, so daß es für den Landesherrn unheilvoll ist. Zehn Jahre lang ist man nicht mehr imstande anzugreifen."
+      ],
+      "image": "Der Donner inmitten der Erde: das Bild der Wendezeit. So schlössen die alten Könige zur Sonnwendzeit die Pässe. Händler und Fremdlinge wanderten nicht, und der Herrscher bereiste nicht die Gegenden."
+    },
+    {
+      "n": 25,
+      "name": "Wu Wang",
+      "judgment": "Die Unschuld. Erhabenes Gelingen. Fördernd ist Beharrlichkeit. Wenn jemand nicht recht ist, so hat er Unglück, und nicht fördernd ist es, irgend etwas zu unternehmen.",
+      "lines": [
+        "Unschuldiger Wandel bringt Heil!",
+        "Wenn man beim Pflügen nicht ans Ernten denkt und beim Roden nicht an das Benützen des Feldes: dann ist es fördernd, etwas zu unternehmen.",
+        "Unverschuldetes Unglück: Die Kuh, die von jemand angebunden war, ist des Wanderers Gewinn, des Bürgers Verlust.",
+        "Wer vermag beharrlich zu sein, bleibt ohne Makel.",
+        "Bei unverschuldeter Krankheit gebrauche keine Arznei. Es wird schon von selber gut werden.",
+        "Unschuldiges Handeln bringt Unglück. Nichts ist fördernd."
+      ],
+      "image": "Unter dem Himmel geht der Donner: Alle Dinge erlangen den Naturzustand der Unschuld. So pflegten und nährten die alten Könige, reich an Tugend und entsprechend der Zeit, alle Wesen."
+    },
+    {
+      "n": 26,
+      "name": "Da Tschu",
+      "judgment": "Des Großen Zähmungskraft. Fördernd ist Beharrlichkeit. Nicht zu Hause essen bringt Heil. Fördernd ist es, das große Wasser zu durchqueren.",
+      "lines": [
+        "Es ist Gefahr da. Fördernd ist es, abzustehen.",
+        "Dem Wagen werden die Achsenlager abgenommen.",
+        "Ein gutes Pferd, das andern folgt. Fördernd ist Bewußtsein der Gefahr und Beharrlichkeit. Täglich übe dich im Wagenfahren und Waffenschutz. Fördernd ist es, zu haben, wohin man geht.",
+        "Das Schutzbrett eines jungen Stieres. Großes Heil!",
+        "Eines verschnittenen Ebers Zahn. Heil!",
+        "Man erlangt den Himmelsweg. Gelingen."
+      ],
+      "image": "Der Himmel inmitten des Berges: das Bild von des Großen Zähmungskraft. So lernt der Edle viele Worte der Vorzeit und Taten der Vergangenheit kennen, um dadurch seinen Charakter zu festigen."
+    },
+    {
+      "n": 27,
+      "name": "I",
+      "judgment": "Die Mundwinkel. Beharrlichkeit bringt Heil. Sieh auf die Ernährung und womit einer selbst sucht seinen Mund zu füllen.",
+      "lines": [
+        "Du läßt Deine Zauberschildkröte fahren und blickst nach mir mit herabhängenden Mundwinkeln. Unheil!",
+        "Nach dem Gipfel sich wenden um Ernährung. Vom Wege abweichen, um von dem Hügel Ernährung zu suchen: Wenn man so fortmacht, bringt es Unheil.",
+        "Abweichen von der Ernährung. Beharrlichkeit bringt Unheil. Zehn Jahre handle nicht danach. Nichts ist fördernd.",
+        "Nach dem Gipfel sich wenden um Ernährung bringt Heil. Mit scharfen Augen wie ein Tiger umherspähen in unersättlichem Begehren. Kein Makel.",
+        "Abweichen vom Weg. Bleiben in Beharrlichkeit bringt Heil. Man soll nicht das große Wasser durchqueren.",
+        "Die Quelle der Ernährung. Bewußtsein der Gefahr bringt Heil. Fördernd ist es, das große Wasser zu durchqueren."
+      ],
+      "image": "Unten am Berg ist der Donner: das Bild der Ernährung. So hat der Edle acht auf seine Worte und ist mäßig im Essen und Trinken."
+    },
+    {
+      "n": 28,
+      "name": "Da Go",
+      "judgment": "Des Großen Übergewicht. Der Firstbalken biegt sich durch. Fördernd ist es, zu haben, wohin man gehe. Gelingen.",
+      "lines": [
+        "Unterlegen mit weißem Schilfgras. Kein Makel.",
+        "Ein trockener Pappelbaum treibt einen Wurzelsproß. Ein älterer Mann bekommt eine junge Frau. Alles ist fördernd.",
+        "Der Firstbalken biegt sich durch. Unheil.",
+        "Der Firstbalken wird gestützt. Heil. Sind Hintergedanken da, ist es beschämend.",
+        "Eine dürre Pappel treibt Blüten. Ein älteres Weib bekommt einen Mann. Kein Makel. Kein Lob.",
+        "Man muß durchs Wasser. Es geht über den Scheitel. Unheil. Kein Makel."
+      ],
+      "image": "Der See geht über die Bäume weg: das Bild des Übergewichts im Großen. So ist der Edle, wenn er allein steht, unbesorgt, und wenn er auf die Welt verzichten muß, unverzagt."
+    },
+    {
+      "n": 29,
+      "name": "Kan",
+      "judgment": "Das wiederholte Abgründige. Wenn du wahrhaftig bist, so hast du im Herzen Gelingen, und was du tust, hat Erfolg.",
+      "lines": [
+        "Wiederholung des Abgründigen. Man gerät im Abgrund in ein Loch. Unheil.",
+        "Der Abgrund hat Gefahr. Man soll nur Kleines zu erreichen streben.",
+        "Vorwärts und rückwärts, Abgrund über Abgrund. In solcher Gefahr halte zunächst inne, sonst kommst du im Abgrund in ein Loch. Handle nicht so.",
+        "Ein Krug Wein, eine Reisschale als Zugabe, Tongeschirr, einfach zum Fenster hineingereicht. Das ist durchaus kein Makel.",
+        "Der Abgrund wird nicht überfüllt, er wird nur bis zum Rand gefüllt. Kein Makel.",
+        "Mit Stricken und Tauen gebunden, eingeschlossen zwischen dornumhegten Kerkermauern; drei Jahre findet man sich nicht zurecht. Unheil!"
+      ],
+      "image": "Das Wasser fließt ununterbrochen und kommt ans Ziel: das Bild des wiederholten Abgründigen. So wandelt der Edle in dauernder Tugend und übt das Geschäft des Lehrens."
+    },
+    {
+      "n": 30,
+      "name": "Li",
+      "judgment": "Das Haftende. Fördernd ist Beharrlichkeit. Sie bringt Gelingen. Pflege der Kuh bringt Heil.",
+      "lines": [
+        "Die Fußspuren laufen kreuz und quer. Wenn man ernst dabei ist: kein Makel.",
+        "Gelber Schein. Erhabenes Heil.",
+        "Beim Schein der untergehenden Sonne schlagen die Menschen entweder auf den Topf und singen, oder sie seufzen laut über das nahende Greisenalter. Unheil.",
+        "Plötzlich ist sein Kommen; es brennt auf, erstirbt, wird weggeworfen.",
+        "Weinend in Strömen, seufzend und klagend. Heil!",
+        "Der König gebraucht ihn, auszuziehen und zu züchtigen. Am besten ist es dann, die Häupter zu töten und die Nachläufer gefangenzunehmen. Kein Makel."
+      ],
+      "image": "Die Helle erhebt sich zweimal: das Bild des Feuers. So erleuchtet der große Mann durch Fortsetzung dieser Helle die vier Weltgegenden."
+    },
+    {
+      "n": 31,
+      "name": "Hiën",
+      "judgment": "Die Einwirkung. Gelingen. Fördernd ist Beharrlichkeit. Ein Mädchen nehmen bringt Heil.",
+      "lines": [
+        "Die Einwirkung äußert sich in der großen Zehe.",
+        "Die Einwirkung äußert sich in den Waden. Unheil! Verweilen bringt Heil.",
+        "Die Einwirkung äußert sich in den Schenkeln. Hält sich an das, was ihm folgt. Weitermachen ist beschämend.",
+        "Beharrlichkeit bringt Heil. Die Reue schwindet. Wenn man aufgeregt hin und her denkt, so folgen nur die Freunde, auf die man bewußte Gedanken richtet.",
+        "Die Einwirkung äußert sich im Nacken. Keine Reue.",
+        "Die Einwirkung äußert sich in Kinnladen, Wangen und Zunge."
+      ],
+      "image": "Auf dem Berge ist ein See: das Bild der Einwirkung. So läßt der Edle durch Aufnahmebereitschaft die Menschen an sich herankommen."
+    },
+    {
+      "n": 32,
+      "name": "Hong",
+      "judgment": "Gelingen. Kein Makel. Fördernd ist Beharrlichkeit. Fördernd ist, zu haben, wohin man gehe.",
+      "lines": [
+        "Zu rasch Dauer wollen, bringt beharrlich Unheil. Nichts, was fördernd wäre.",
+        "Reue schwindet.",
+        "Wer seinem Charakter nicht Dauer gibt, dem bietet man Schande. Beharrliche Beschämung.",
+        "Im Feld ist kein Wild.",
+        "Seinem Charakter Dauer geben durch Beharrlichkeit, das ist für eine Frau von Heil, für einen Mann von Unheil.",
+        "Rastlosigkeit als dauernder Zustand bringt Unheil."
+      ],
+      "image": "Donner und Wind: das Bild der Dauer. So steht der Edle fest und wandelt seine Richtung nicht."
+    },
+    {
+      "n": 33,
+      "name": "Dun",
+      "judgment": "Der Rückzug. Gelingen. Im Kleinen ist fördernd Beharrlichkeit.",
+      "lines": [
+        "Beim Rückzug am Schwanz: das ist gefährlich. Man darf nicht etwas unternehmen wollen.",
+        "Er hält ihn fest mit gelbem Ochsenleder. Niemand vermag ihn loszureißen.",
+        "Aufgehaltener Rückzug ist peinlich und gefahrvoll. Die Menschen als Knechte und Mägde zu halten, bringt Heil.",
+        "Freiwilliger Rückzug bringt dem Edlen Heil, dem Gemeinen Niedergang.",
+        "Freundlicher Rückzug. Beharrlichkeit bringt Heil.",
+        "Heiterer Rückzug. Alles ist fördernd."
+      ],
+      "image": "Unter dem Himmel ist der Berg: das Bild des Rückzugs. So hält der Edle den Gemeinen fern, nicht zornig, sondern gemessen."
+    },
+    {
+      "n": 34,
+      "name": "Da Dschuang",
+      "judgment": "Des Großen Macht. Fördernd ist Beharrlichkeit.",
+      "lines": [
+        "Macht in den Zehen. Fortmachen bringt Unheil. Das ist gewißlich wahr.",
+        "Beharrlichkeit bringt Heil.",
+        "Der Gemeine wirkt durch Macht, der Edle wirkt nicht so. Fortmachen ist gefährlich. Ein Ziegenbock stößt gegen eine Hecke und verwickelt seine Hörner.",
+        "Beharrlichkeit bringt Heil. Die Reue schwindet. Die Hecke öffnet sich, es gibt keine Verwicklung. Die Macht beruht auf der Achse eines großen Wagens.",
+        "Verliert den Bock in Leichtigkeit. Keine Reue.",
+        "Ein Bock stößt gegen eine Hecke. Er kann nicht zurück, er kann nicht voran. Nichts ist fördernd. Merkt man die Schwierigkeit, so bringt das Heil."
+      ],
+      "image": "Der Donner ist am Himmel droben: das Bild der Macht des Großen. So tritt der Edle nicht auf Wege, die nicht der Ordnung entsprechen."
+    },
+    {
+      "n": 35,
+      "name": "Dsin",
+      "judgment": "Der Fortschritt: Der starke Fürst wird geehrt durch Pferde in großer Menge. An einem Tage wird er dreimal empfangen.",
+      "lines": [
+        "Fortschreitend, aber zurückgewiesen. Beharrlichkeit bringt Heil. Wenn man kein Vertrauen findet, so bleibe man gelassen. Kein Fehler.",
+        "Fortschreitend, aber in Trauer. Beharrlichkeit bringt Heil. Man bekommt dann großes Glück von seiner Ahnfrau.",
+        "Alle sind einverstanden. Die Reue schwindet.",
+        "Fortschritt wie ein Hamster. Beharrlichkeit bringt Gefahr.",
+        "Die Reue schwindet. Gewinn und Verlust nimm nicht zu Herzen. Unternehmungen bringen Heil. Alles ist fördernd.",
+        "Fortschreiten mit den Hörnern darf man nur, um sein eignes Gebiet zu strafen. Bewußtsein der Gefahr bringt Heil. Kein Makel. Beharrlichkeit bringt Beschämung."
+      ],
+      "image": "Die Sonne steigt über die Erde empor: das Bild des Fortschritts. So macht der Edle selbst seine klaren Anlagen hell."
+    },
+    {
+      "n": 36,
+      "name": "Ming I",
+      "judgment": "Die Verfinsterung des Lichts. Fördernd ist es, in der Not beharrlich zu sein.",
+      "lines": [
+        "Verfinsterung des Lichts im Fluge. Er senkt seine Flügel. Der Edle auf seiner Wanderschaft ißt drei Tage nichts. Aber er hat, wohin er geht. Der Wirt hat über ihn zu reden.",
+        "Die Verfinsterung des Lichts verletzt ihn am linken Schenkel. Er wirkt Hilfe mit der Macht eines Pferdes. Heil.",
+        "Die Verfinsterung des Lichts auf der Jagd im Süden. Man bekommt ihr großes Haupt. Man darf nicht zu eilig Beharrlichkeit erwarten.",
+        "Er dringt in die linke Bauchhöhle ein. Man erhält das Herz der Verfinsterung des Lichts und verläßt Tor und Hof.",
+        "Verfinsterung des Lichts wie beim Prinzen Gi. Fördernd ist Beharrlichkeit.",
+        "Nicht Licht, sondern Dunkel. Erst stieg er zum Himmel empor, dann stürzte er in die Tiefen der Erde hinunter."
+      ],
+      "image": "Das Licht ist in die Erde hineingesunken: das Bild der Verfinsterung des Lichts. So lebt der Edle mit der großen Menge: er verhüllt seinen Schein und bleibt doch hell."
+    },
+    {
+      "n": 37,
+      "name": "Gia Jen",
+      "judgment": "Die Sippe. Fördernd ist die Beharrlichkeit der Frau.",
+      "lines": [
+        "Fester Abschluß innerhalb der Sippe. Reue schwindet.",
+        "Sie soll nicht ihrer Laune folgen. Sie soll im Innern für Speise sorgen. Beharrlichkeit bringt Heil.",
+        "Wenn es in der Sippe hitzig zugeht, so entsteht Reue über zu große Strenge. Doch Heil! Wenn Weib und Kind tändeln und lachen, so führt das schließlich zur Beschämung.",
+        "Sie ist der Reichtum des Hauses. Großes Heil!",
+        "Ein König naht er seiner Sippe, fürchtet euch nicht. Heil!",
+        "Seine Arbeit ist ehrfurchtgebietend. Schließlich kommt Heil."
+      ],
+      "image": "Der Wind kommt aus dem Feuer hervor: das Bild der Sippe. So hat der Edle in seinen Worten die Sache und in seinem Wandel die Dauer."
+    },
+    {
+      "n": 38,
+      "name": "Kui",
+      "judgment": "Der Gegensatz. In kleinen Sachen Heil.",
+      "lines": [
+        "Die Reue schwindet. Wenn du dein Pferd verlierst, so lauf ihm nicht nach. Es kommt von selber wieder. Wenn du böse Menschen siehst, so hüte dich vor Fehlern.",
+        "Man begegnet seinem Herrn in enger Gasse. Kein Makel.",
+        "Man sieht den Wagen nach hinten gezerrt, die Rinder festgehalten, dem Menschen Haare und Nase abgeschnitten. Kein guter Anfang, aber ein gutes Ende.",
+        "Durch Gegensatz vereinsamt, trifft man auf einen Gleichgesinnten, mit dem man in Treuen verkehren kann. Trotz der Gefahr kein Makel.",
+        "Die Reue schwindet. Der Gefährte beißt sich durch die Hülle. Wenn man hingeht zu ihm, wie wäre das ein Fehler?",
+        "Durch Gegensatz vereinsamt, sieht man seinen Gefährten wie ein schmutzbeladenes Schwein, wie einen Wagen voll Teufel. Erst spannt man den Bogen nach ihm, dann legt man den Bogen weg. Nicht Räuber er ist, will freien zur Frist. Beim Hingehen fällt Regen, dann kommt Heil."
+      ],
+      "image": "Oben das Feuer, unten der See: das Bild des Gegensatzes. So behält der Edle bei aller Gemeinschaft seine Besonderheit."
+    },
+    {
+      "n": 39,
+      "name": "Giën",
+      "judgment": "Das Hemmnis. Fördernd ist der Südwesten. Nicht fördernd ist der Nordosten. Fördernd ist es, den großen Mann zu sehen. Beharrlichkeit ist von Heil.",
+      "lines": [
+        "Gehen führt in Hemmnis, Kommen findet Lob.",
+        "Des Königs Diener ist in Hemmnis über Hemmnis. Aber es ist nicht seine eigene Schuld.",
+        "Gehen führt in Hemmnisse; da kommt er zurück.",
+        "Gehen führt in Hemmnisse, Kommen führt zur Vereinigung.",
+        "Inmitten der größten Hemmnisse kommen Freunde.",
+        "Gehen führt in Hemmnisse, Kommen führt zu großem Heil. Fördernd ist es, den großen Mann zu sehen."
+      ],
+      "image": "Auf dem Berg ist das Wasser: das Bild des Hemmnisses. So wendet sich der Edle seiner eigenen Person zu und bildet seinen Charakter."
+    },
+    {
+      "n": 40,
+      "name": "Hië",
+      "judgment": "Die Befreiung. Fördernd ist der Südwesten. Wenn nichts mehr da ist, wohin man zu gehen hätte, ist das Wiederkommen von Heil. Wenn es noch etwas gibt, wohin man gehen muß, dann ist Raschheit von Heil.",
+      "lines": [
+        "Ohne Makel.",
+        "Auf dem Feld erlegt man drei Füchse und bekommt einen gelben Pfeil. Beharrlichkeit ist von Heil.",
+        "Wenn einer eine Last auf dem Rücken trägt und trotzdem auf dem Wagen fährt, veranlaßt er dadurch die Räuber, herbeizukommen. Beharrlichkeit führt zu Beschämung.",
+        "Befreie dich von deiner großen Zehe. Dann kommt der Gefährte herbei, und dem kannst du trauen.",
+        "Wenn der Edle sich nur befreien kann, das bringt Heil. Er zeigt so den Gemeinen, daß es ihm ernst ist.",
+        "Der Fürst schießt nach einem Habicht auf hoher Mauer. Er erlegt ihn. Alles ist fördernd."
+      ],
+      "image": "Donner und Regen erheben sich: das Bild der Befreiung. So verzeiht der Edle Fehler und vergibt die Schuld."
+    },
+    {
+      "n": 41,
+      "name": "Sun",
+      "judgment": "Minderung verbunden mit Wahrhaftigkeit wirkt erhabenes Heil ohne Makel. Man kann darin beharrlich sein. Fördernd ist es, etwas zu unternehmen. Wie übt man das aus? Zwei kleine Schüsselchen mag man benützen zum Opfer.",
+      "lines": [
+        "Wenn die Geschäfte fertig sind, rasch hingehen, ist kein Makel. Doch muß man überlegen, wie weit man andere mindern darf.",
+        "Fördernd ist Beharrlichkeit. Etwas zu unternehmen, ist von Unheil. Ohne sich selbst zu mindern, vermag man die andern zu mehren.",
+        "Wenn drei Menschen miteinander wandern, so vermindern sie sich um einen Menschen. Wenn ein Mensch wandert, so findet er seinen Gefährten.",
+        "Wenn man seine Mängel mindert, macht man, daß der andre eilig kommt und Freude hat. Kein Makel.",
+        "Es mehrt ihn wohl jemand. Zehn Paar Schildkröten können dem nicht widerstreben. Erhabenes Heil!",
+        "Wenn man ohne Minderung der anderen gemehrt wird, so ist das kein Makel. Beharrlichkeit bringt Heil. Fördernd ist es, etwas zu unternehmen. Man bekommt Diener, aber hat kein besonderes Heim mehr."
+      ],
+      "image": "Unten am Berg ist der See: das Bild der Minderung. So bändigt der Edle seinen Zorn und hemmt seine Triebe."
+    },
+    {
+      "n": 42,
+      "name": "I",
+      "judgment": "Die Mehrung. Fördernd ist es, etwas zu unternehmen. Fördernd ist es, das große Wasser zu durchqueren.",
+      "lines": [
+        "Fördernd ist es, große Taten zu vollbringen. Erhabenes Heil! Kein Makel.",
+        "Es mehrt ihn wohl jemand. Zehn Paar Schildkröten können dem nicht widerstreben. Dauernde Beharrlichkeit bringt Heil. Der König stellt ihn dar vor Gott. Heil!",
+        "Man wird gemehrt durch unheilvolle Ereignisse. Kein Makel, wenn du wahrhaftig bist und in der Mitte wandelst und dem Fürsten berichtest mit einem Siegel.",
+        "Wenn du in der Mitte wandelst und dem Fürsten berichtest, so wird er folgen. Fördernd ist es, benützt zu werden bei der Verlegung der Hauptstadt.",
+        "Wenn du wahrhaftig ein gütiges Herz hast, so frage nicht. Erhabenes Heil! Wahrhaftig wird Güte als deine Tugend anerkannt werden.",
+        "Er gereicht niemand zur Mehrung. Es schlägt ihn wohl gar jemand. Er hält sein Herz nicht dauernd fest. Unheil!"
+      ],
+      "image": "Wind und Donner: das Bild der Mehrung. So der Edle: Sieht er Gutes, so ahmt er es nach, hat er Fehler, so legt er sie ab."
+    },
+    {
+      "n": 43,
+      "name": "Guai",
+      "judgment": "Der Durchbruch. Entschlossen muß man am Hof des Königs die Sache bekanntmachen. Der Wahrheit gemäß muß sie verkündet werden. Gefahr! Man muß seine eigene Stadt benachrichtigen. Nicht fördernd ist es, zu den Waffen zu greifen. Fördernd ist es, etwas zu unternehmen.",
+      "lines": [
+        "Mächtig in den vorwärtsschreitenden Zehen. Geht man hin und ist der Sache nicht gewachsen, so macht man einen Fehler.",
+        "Alarmruf. Abends und nachts Waffen. Fürchte nichts.",
+        "Mächtig in den Backenknochen zu sein bringt Unheil. Der Edle ist fest entschlossen. Er wandelt einsam und kommt in den Regen. Er wird bespritzt, und man murrt wider ihn. Kein Makel.",
+        "An den Oberschenkeln ist keine Haut, und das Gehen fällt schwer. Ließe man sich führen wie ein Schaf, so würde die Reue schwinden. Wenn man aber diese Worte hört, so wird man sie nicht glauben.",
+        "Dem Unkraut gegenüber braucht es feste Entschlossenheit. In der Mitte wandeln bleibt frei von Makel.",
+        "Kein Ruf! Schließlich kommt Unheil."
+      ],
+      "image": "Der See ist an den Himmel emporgestiegen: das Bild des Durchbruchs. So spendet der Edle Reichtum nach unten hin und scheut es, bei seiner Tugend zu verweilen."
+    },
+    {
+      "n": 44,
+      "name": "Gou",
+      "judgment": "Das Entgegenkommen. Das Mädchen ist mächtig. Man soll ein solches Mädchen nicht heiraten.",
+      "lines": [
+        "Man muß es hemmen mit ehernem Radschuh. Beharrlichkeit ist von Heil. Wenn man es hingehen läßt, so erfährt man Unheil. Auch ein mageres Schwein hat die Anlage dazu, umherzutoben.",
+        "Im Behälter ist ein Fisch. Kein Makel! Nicht fördernd für Gäste.",
+        "An den Oberschenkeln ist keine Haut, und das Gehen fällt schwer. Wenn man der Gefahr eingedenk ist, macht man keinen großen Fehler.",
+        "Im Behälter ist kein Fisch. Daraus erhebt sich Unheil.",
+        "Mit Weidenblättern bedeckte Melone: verborgene Linien. Da fällt es einem vom Himmel herunter zu.",
+        "Er kommt mit seinen Hörnern entgegen. Beschämung. Kein Makel."
+      ],
+      "image": "Unter dem Himmel ist der Wind: das Bild des Entgegenkommens. So macht es der Fürst beim Verbreiten seiner Befehle und ihrer Verkündigung an die vier Himmelsgegenden."
+    },
+    {
+      "n": 45,
+      "name": "Tsui",
+      "judgment": "Die Sammlung. Gelingen. Der König naht sich seinem Tempel. Fördernd ist es, den großen Mann zu sehen. Das bringt Gelingen. Fördernd ist Beharrlichkeit. Große Opfer zu bringen schafft Heil. Fördernd ist es, etwas zu unternehmen.",
+      "lines": [
+        "Wenn du wahrhaftig bist, doch nicht bis zum Ende, so gibt es bald Verwirrung, bald Sammlung. Wenn du rufst, so kannst du nach einem Griff wieder lachen. Bedaure nichts. Hingehen ist ohne Makel.",
+        "Sich ziehen lassen bringt Heil und bleibt ohne Makel. Wenn man wahrhaftig ist, ist es auch fördernd, ein kleines Opfer zu bringen.",
+        "Sammlung unter Seufzen. Nichts, das fördernd wäre. Hingehen ist ohne Makel. Kleine Beschämung.",
+        "Großes Heil! Kein Makel.",
+        "Wenn man beim Sammeln die Stellung hat, so gibt das keinen Makel. Wenn manche noch nicht wahrhaft dabei sind, so bedarf es erhabener, dauernder Beharrlichkeit, dann schwindet die Reue.",
+        "Klagen und Seufzen, Tränen in Strömen. Kein Makel."
+      ],
+      "image": "Der See ist oberhalb der Erde: das Bild der Sammlung. So erneuert der Edle seine Waffen, um Unvorhergesehenem zu begegnen."
+    },
+    {
+      "n": 46,
+      "name": "Schong",
+      "judgment": "Das Empordringen hat erhabenes Gelingen. Man muß den großen Mann sehen. Fürchte dich nicht! Aufbruch nach Süden bringt Heil.",
+      "lines": [
+        "Empordringen, das Zutrauen findet, bringt großes Heil.",
+        "Wenn man wahrhaftig ist, so ist es auch fördernd, ein kleines Opfer zu bringen. Kein Makel.",
+        "Man dringt empor in eine leere Stadt.",
+        "Der König bringt ihn dem Berg Ki dar. Heil. Kein Makel.",
+        "Beharrlichkeit bringt Heil. Man dringt empor auf Stufen.",
+        "Empordringen im Dunkeln. Fördernd ist es, unablässig beharrlich zu sein."
+      ],
+      "image": "Inmitten der Erde wächst das Holz: das Bild des Empordringens. So häuft der Edle hingebenden Wesens Kleines, um es zu Hohem und Großem zu bringen."
+    },
+    {
+      "n": 47,
+      "name": "Kun",
+      "judgment": "Die Bedrängnis. Gelingen. Beharrlichkeit. Der große Mann wirkt Heil. Kein Makel. Wenn man etwas zu sagen hat, wird es nicht geglaubt.",
+      "lines": [
+        "Man sitzt bedrängt unter einem kahlen Baum und gerät in ein finsteres Tal. Drei Jahre lang sieht man nichts.",
+        "Man ist bedrängt bei Wein und Speisen. Der Mann mit den scharlachroten Kniebinden kommt eben. Fördernd ist es, Opfer darzubringen. Aufbrechen ist von Unheil. Kein Makel.",
+        "Man läßt sich bedrängen durch Stein und stützt sich auf Dornen und Disteln. Man geht in sein Haus und sieht nicht seine Frau. Unheil!",
+        "Er kommt ganz sachte, bedrängt in einem goldnen Wagen. Beschämung, aber man kommt zu Ende.",
+        "Es werden ihm Nase und Füße abgeschnitten. Man ist bedrängt von dem in purpurnen Kniebinden. Sachte kommt die Freude. Fördernd ist es, Opfer und Spenden zu bringen.",
+        "Er ist bedrängt von Ranken. Er bewegt sich unsicher und spricht: »Bewegung schafft Reue.« Wenn man darüber Reue empfindet und sich aufmacht, so hat man Heil."
+      ],
+      "image": "Im See ist kein Wasser: das Bild der Erschöpfung. So setzt der Edle sein Leben daran, um seinem Willen zu folgen."
+    },
+    {
+      "n": 48,
+      "name": "Dsing",
+      "judgment": "Der Brunnen. Man mag die Stadt wechseln, aber kann nicht den Brunnen wechseln. Er nimmt nicht ab und nimmt nicht zu. Sie kommen und gehen und schöpfen aus dem Brunnen. Wenn man beinahe das Brunnenwasser erreicht hat, aber noch nicht mit dem Seil drunten ist oder seinen Krug zerbricht, so bringt das Unheil.",
+      "lines": [
+        "Der Schlamm des Brunnens wird nicht getrunken. Zu einem alten Brunnen kommen keine Tiere.",
+        "Am Brunnenloch schießt man Fische. Der Krug ist zerbrochen und rinnt.",
+        "Der Brunnen ist gereinigt, aber man trinkt nicht daraus. Das ist meines Herzens Leid; denn man könnte daraus schöpfen. Wäre der König klar, so genösse man gemeinsam das Glück.",
+        "Der Brunnen wird ausgemauert, kein Makel.",
+        "Im Brunnen ist ein klarer, kühler Quell, den man trinken kann.",
+        "Man schöpft aus dem Brunnen ohne Hinderung. Er ist zuverlässig. Erhabenes Heil!"
+      ],
+      "image": "Über dem Holz ist Wasser: das Bild des Brunnens. So ermuntert der Edle das Volk bei der Arbeit und ermahnt es, einander zu helfen."
+    },
+    {
+      "n": 49,
+      "name": "Go",
+      "judgment": "Die Umwälzung. Am eigenen Tag, da findest du Glauben. Erhabenes Gelingen, fördernd durch Beharrlichkeit. Die Reue schwindet.",
+      "lines": [
+        "Man wird eingewickelt in das Fell einer gelben Kuh.",
+        "Am eigenen Tage, da mag man umwälzen. Aufbruch bringt Heil. Kein Makel.",
+        "Aufbruch bringt Unheil. Beharrlichkeit bringt Gefahr. Wenn die Rede von der Umwälzung dreimal ergangen ist, dann mag man sich ihm zuwenden und wird Glauben finden.",
+        "Die Reue schwindet. Man findet Glauben. Die Staatsordnung zu wechseln, bringt Heil.",
+        "Der große Mann ändert wie ein Tiger. Noch ehe er das Orakel fragt, findet er Glauben.",
+        "Der Edle ändert wie ein Panther. Der Geringe mausert sich im Gesicht. Aufbruch bringt Unheil. In Beharrlichkeit weilen bringt Heil."
+      ],
+      "image": "Im See ist Feuer: das Bild der Umwälzung. So ordnet der Edle die Zeitrechnung und macht die Zeiten klar."
+    },
+    {
+      "n": 50,
+      "name": "Ding",
+      "judgment": "Der Tiegel. Erhabenes Heil. Gelingen.",
+      "lines": [
+        "Ein Tiegel mit umgekippten Beinen. Fördernd zur Entfernung des Stockenden. Man nimmt eine Nebenfrau um ihres Sohns willen. Kein Makel.",
+        "Im Tiegel ist Nahrung. Meine Genossen haben Neid, aber sie können mir nichts anhaben. Heil!",
+        "Der Henkel des Tiegels ist verändert. Man ist behindert in seinem Wandel. Das Fett des Fasans wird nicht gegessen. Wenn erst der Regen fällt, dann erschöpft sich die Reue. Endlich kommt Heil.",
+        "Der Tiegel bricht die Beine. Das Mahl des Fürsten wird verschüttet, und die Gestalt wird befleckt. Unheil!",
+        "Der Tiegel hat gelbe Henkel, goldne Tragringe. Fördernd ist Beharrlichkeit.",
+        "Der Tiegel hat Nephritringe. Großes Heil! Nichts, das nicht fördernd wäre."
+      ],
+      "image": "Über dem Holz ist Feuer: das Bild des Tiegels. So festigt der Edle durch Richtigmachung der Stellung das Schicksal."
+    },
+    {
+      "n": 51,
+      "name": "Dschen",
+      "judgment": "Das Erschüttern bringt Gelingen. Das Erschüttern kommt: Hu, Hu! Lachende Worte: Ha, Ha! Das Erschüttern erschreckt hundert Meilen, und er läßt nicht Opferlöffel und Kelch fallen.",
+      "lines": [
+        "Das Erschüttern kommt: Hu, Hu! Darauf folgen lachende Worte: Ha, Ha! Heil!",
+        "Das Erschüttern kommt mit Gefahr. Hunderttausendfach verlierst du deine Schätze und mußt auf die neun Hügel steigen. Jage ihnen nicht nach. Nach sieben Tagen bekommst du sie wieder.",
+        "Das Erschüttern kommt und macht fassungslos. Wenn man infolge des Erschütterns handelt, so bleibt man frei von Unglück.",
+        "Das Erschüttern gerät in Schlamm.",
+        "Das Erschüttern geht hin und her: Gefahr. Aber man verliert durchaus nichts, nur gibt es Geschäfte.",
+        "Das Erschüttern bringt Verfall und ängstliches Umherblicken. Vorangehen bringt Unheil. Wenn es noch nicht den eignen Leib erreicht, sondern erst den Nachbar erreicht hat, so ist kein Makel. Die Genossen haben zu reden."
+      ],
+      "image": "Fortgesetzter Donner: das Bild des Erschütterns. So macht der Edle unter Furcht und Zittern sein Leben recht und erforscht sich selbst."
+    },
+    {
+      "n": 52,
+      "name": "Gen",
+      "judgment": "Stillehalten seines Rückens, so daß er seinen Leib nicht mehr empfindet. Er geht in seinen Hof und sieht nicht seine Menschen. Kein Makel.",
+      "lines": [
+        "Stillehalten seiner Zehen. Kein Makel. Fördernd ist dauernde Beharrlichkeit.",
+        "Stillehalten seiner Waden. Er kann den nicht retten, dem er folgt. Sein Herz ist nicht froh.",
+        "Stillehalten seiner Hüften. Steifmachen seines Kreuzbeins. Gefährlich. Das Herz erstickt.",
+        "Stillehalten seines Rumpfes. Kein Makel.",
+        "Stillehalten seiner Kinnladen. Die Worte haben Ordnung. Die Reue schwindet.",
+        "Großzügiges Stillehalten. Heil!"
+      ],
+      "image": "Zusammenstehende Berge: das Bild des Stillehaltens. So geht der Edle mit seinen Gedanken nicht über seine Lage hinaus."
+    },
+    {
+      "n": 53,
+      "name": "Dsien",
+      "judgment": "Die Entwicklung. Das Mädchen wird verheiratet. Heil! Fördernd ist Beharrlichkeit.",
+      "lines": [
+        "Die Wildgans zieht allmählich dem Ufer zu. Der junge Sohn ist in Gefahr. Es gibt Gerede. Kein Makel.",
+        "Die Wildgans zieht allmählich dem Felsen zu. Essen und Trinken in Frieden und Eintracht. Heil!",
+        "Die Wildgans zieht allmählich der Hochebene zu. Der Mann zieht aus und kehrt nicht wieder. Die Frau trägt ein Kind, aber bringt es nicht zur Welt. Unheil! Fördernd ist es, Räuber abzuwehren.",
+        "Die Wildgans zieht allmählich dem Baume zu. Vielleicht bekommt sie einen flachen Ast. Kein Makel.",
+        "Die Wildgans zieht allmählich dem Gipfel zu. Die Frau bekommt drei Jahre lang kein Kind. Endlich kann sie nichts verhindern. Heil!",
+        "Die Wildgans zieht allmählich den Wolkenhöhen zu. Ihre Federn können zum heiligen Tanz verwendet werden. Heil!"
+      ],
+      "image": "Auf dem Berge ist ein Baum: das Bild der Entwicklung. So weilt der Edle in würdiger Tugend, um die Sitten zu bessern."
+    },
+    {
+      "n": 54,
+      "name": "Gui me",
+      "judgment": "Das heiratende Mädchen. Unternehmungen bringen Unheil. Nichts, das fördernd wäre.",
+      "lines": [
+        "Das heiratende Mädchen als Nebenfrau. Ein Lahmer, der auftreten kann. Unternehmungen bringen Heil.",
+        "Ein Einäugiger, der sehen kann. Fördernd ist die Beharrlichkeit eines einsamen Menschen.",
+        "Das heiratende Mädchen als Sklavin. Sie heiratet als Nebenfrau.",
+        "Das heiratende Mädchen verzögert die Frist. Eine späte Heirat kommt zu ihrer Zeit.",
+        "Der Herrscher I verheiratet seine Tochter. Da waren die gestickten Kleider der Fürstin nicht so prächtig wie die der Dienerin. Der Mond, der fast voll ist, bringt Heil.",
+        "Die Frau hält den Korb, aber es sind keine Früchte darin. Der Mann sticht das Schaf, aber es fließt kein Blut. Nichts, das fördernd wäre."
+      ],
+      "image": "Oberhalb des Sees ist der Donner: das Bild des heiratenden Mädchens. So erkennt der Edle durch die Ewigkeit des Endes das Vergängliche."
+    },
+    {
+      "n": 55,
+      "name": "Fong",
+      "judgment": "Die Fülle hat Gelingen. Der König erreicht sie. Sei nicht traurig; du mußt sein wie die Sonne am Mittag.",
+      "lines": [
+        "Wenn man seinem bestimmten Herrn begegnet, so mag man zehn Tage beisammen sein, und es ist kein Fehler. Hingehen findet Anerkennung.",
+        "Der Vorhang ist von solcher Fülle, daß man am Mittag die Polsterne sieht. Durch Hingehen erreicht man Mißtrauen und Haß. Wenn man durch Wahrheit ihn erweckt, kommt Heil.",
+        "Das Gestrüpp ist von solcher Fülle, daß man am Mittag die kleinen Sterne sieht. Er bricht seinen rechten Arm. Kein Makel.",
+        "Der Vorhang ist von solcher Fülle, daß man am Mittag die Polsterne sieht. Er begegnet seinem gleichen Herrn. Heil!",
+        "Es kommen Linien, es naht Segen und Ruhm. Heil!",
+        "Sein Haus ist in Fülle. Er verdeckt seine Sippe. Er späht durch das Tor und merkt niemand mehr. Drei Jahre lang sieht er nichts. Unheil!"
+      ],
+      "image": "Donner und Blitz kommen beide: das Bild der Fülle. So entscheidet der Edle die Prozesse und führt die Strafen aus."
+    },
+    {
+      "n": 56,
+      "name": "Lü",
+      "judgment": "Der Wanderer. Durch Kleinheit Gelingen. Dem Wanderer ist Beharrlichkeit von Heil.",
+      "lines": [
+        "Wenn der Wanderer sich mit kleinlichen Dingen abgibt, so zieht er sich dadurch Unglück zu.",
+        "Der Wanderer kommt zur Herberge. Er hat seinen Besitz bei sich. Er erlangt eines jungen Dieners Beharrlichkeit.",
+        "Dem Wanderer verbrennt seine Herberge. Er verliert die Beharrlichkeit seines jungen Dieners. Gefahr.",
+        "Der Wanderer ruht an einem Unterkunftsort. Er erlangt seinen Besitz und eine Axt. Mein Herz ist nicht froh.",
+        "Er schießt einen Fasan; auf den ersten Pfeil fällt er. Schließlich kommt dadurch Lob und Amt.",
+        "Dem Vogel verbrennt sein Nest. Der Wanderer lacht erst, dann muß er klagen und weinen. Er verliert die Kuh im Leichtsinn. Unheil!"
+      ],
+      "image": "Auf dem Berg ist Feuer: das Bild des Wanderers. So ist der Edle klar und vorsichtig in der Anwendung von Strafen und verschleppt keine Streitigkeiten."
+    },
+    {
+      "n": 57,
+      "name": "Sun",
+      "judgment": "Das Sanfte. Durch Kleines Gelingen. Fördernd ist es, zu haben, wohin man geht. Fördernd ist es, den großen Mann zu sehen.",
+      "lines": [
+        "Beim Vorgehen und Rückweichen ist fördernd die Beharrlichkeit eines Kriegers.",
+        "Eindringen unter das Bett. Man benützt Priester und Magier in großer Zahl. Heil! Kein Makel.",
+        "Wiederholtes Eindringen. Beschämung.",
+        "Reue schwindet. Auf der Jagd fängt man drei Arten von Wild.",
+        "Beharrlichkeit bringt Heil. Reue schwindet. Nichts, das nicht fördernd ist. Kein Anfang, aber ein Ende. Vor der Änderung drei Tage, nach der Änderung drei Tage. Heil!",
+        "Eindringen unter das Bett. Er verliert seinen Besitz und seine Axt. Beharrlichkeit bringt Unheil."
+      ],
+      "image": "Einander folgende Winde: das Bild des Sanft-Eindringenden. So verbreitet der Edle seine Gebote und wirkt seine Geschäfte."
+    },
+    {
+      "n": 58,
+      "name": "Dui",
+      "judgment": "Das Heitere. Gelingen. Günstig ist Beharrlichkeit.",
+      "lines": [
+        "Zufriedene Heiterkeit. Heil!",
+        "Wahrhaftige Heiterkeit. Heil! Die Reue schwindet.",
+        "Kommende Heiterkeit. Unheil!",
+        "Überlegte Heiterkeit ist nicht beruhigt. Nach Abtun der Fehler hat man Freude.",
+        "Wahrhaftigkeit gegen das Zersetzende ist gefährlich.",
+        "Verführende Heiterkeit."
+      ],
+      "image": "Aufeinander beruhende Seen: das Bild des Heiteren. So tut sich der Edle mit seinen Freunden zusammen zur Besprechung und Einübung."
+    },
+    {
+      "n": 59,
+      "name": "Huan",
+      "judgment": "Die Auflösung. Gelingen. Der König naht seinem Tempel. Fördernd ist es, das große Wasser zu durchqueren. Fördernd ist Beharrlichkeit.",
+      "lines": [
+        "Er bringt Hilfe mit der Macht eines Pferdes.",
+        "Bei der Auflösung läuft er seiner Stütze zu. Die Reue schwindet.",
+        "Er löst sein Ich auf. Keine Reue.",
+        "Er löst sich von seiner Schar. Erhabenes Heil! Durch Auflösung folgt Anhäufung. Das ist etwas, an das Gewöhnliche nicht denken.",
+        "Auflösend wie Schweiß sind seine lauten Rufe. Auflösung! Ein König weilt ohne Makel.",
+        "Er löst sein Blut auf. Weggehen, Sichfernhalten, Hinausgehen ist ohne Makel."
+      ],
+      "image": "Der Wind fährt über das Wasser: das Bild der Auflösung. So opferten die alten Könige dem Herrn und bauten Tempel."
+    },
+    {
+      "n": 60,
+      "name": "Dsië",
+      "judgment": "Beschränkung. Gelingen. Bittere Beschränkung darf man nicht beharrlich üben.",
+      "lines": [
+        "Nicht zu Tür und Hof hinausgehen ist kein Makel.",
+        "Nicht zu Tor und Hof hinausgehen bringt Unheil.",
+        "Wer keine Beschränkung kennt, wird zu klagen haben. Kein Makel.",
+        "Zufriedene Beschränkung. Gelingen.",
+        "Süße Beschränkung bringt Heil. Hingehen bringt Achtung.",
+        "Bittere Beschränkung: Beharrlichkeit bringt Unheil. Reue schwindet."
+      ],
+      "image": "Oberhalb des Sees ist Wasser: das Bild der Beschränkung. So schafft der Edle Zahl und Maß und untersucht, was Tugend und rechter Wandel ist."
+    },
+    {
+      "n": 61,
+      "name": "Dschung Fu",
+      "judgment": "Innere Wahrheit. Schweine und Fische. Heil! Fördernd ist es, das große Wasser zu durchqueren. Fördernd ist Beharrlichkeit.",
+      "lines": [
+        "Bereitsein bringt Heil. Sind Hintergedanken da, so ist das beunruhigend.",
+        "Ein rufender Kranich im Schatten. Sein Junges antwortet ihm. Ich habe einen guten Becher. Ich will ihn mit dir teilen.",
+        "Er findet einen Genossen, bald trommelt er, bald hört er auf. Bald schluchzt er, bald singt er.",
+        "Der Mond, der beinahe voll ist. Das Gespannpferd geht verloren. Kein Makel.",
+        "Er besitzt Wahrheit, die verkettet. Kein Makel.",
+        "Hahnenruf, der zum Himmel dringt. Beharrlichkeit bringt Unheil."
+      ],
+      "image": "Über dem See ist der Wind: das Bild der inneren Wahrheit. So bespricht der Edle die Strafsachen, um Hinrichtungen aufzuhalten."
+    },
+    {
+      "n": 62,
+      "name": "Siau Go",
+      "judgment": "Des Kleinen Übergewicht. Gelingen. Fördernd ist Beharrlichkeit. Man mag kleine Dinge tun, man soll nicht große Dinge tun. Der fliegende Vogel bringt die Botschaft: Es ist nicht gut, nach oben zu streben, es ist gut, unten zu bleiben. Großes Heil!",
+      "lines": [
+        "Der Vogel kommt durch Fliegen ins Unheil.",
+        "Sie geht an ihrem Ahnherrn vorbei und trifft die Ahnfrau. Er erreicht nicht seinen Fürsten und trifft den Beamten. Kein Makel.",
+        "Wenn man sich nicht außerordentlich vorsieht, so kommt etwa einer von hinten und schlägt einen. Unheil!",
+        "Kein Makel. Ohne vorbeizugehen, trifft er ihn. Hingehen bringt Gefahr. Man muß sich hüten. Handle nicht. Sei dauernd beharrlich.",
+        "Dichte Wolken, kein Regen von unserm westlichen Gebiet. Der Fürst schießt und trifft jenen in der Höhle.",
+        "Ohne ihn zu treffen, geht er an ihm vorbei. Der fliegende Vogel verläßt ihn. Unheil! Das bedeutet Unglück und Schaden."
+      ],
+      "image": "Auf dem Berg ist der Donner: das Bild von des Kleinen Übergewicht. So legt der Edle im Wandel das Übergewicht auf die Ehrerbietung. Bei Trauerfällen legt er das Übergewicht auf die Trauer. Bei seinen Ausgaben legt er das Übergewicht auf die Sparsamkeit."
+    },
+    {
+      "n": 63,
+      "name": "Gi Dsi",
+      "judgment": "Gelingen im Kleinen. Fördernd ist Beharrlichkeit. Im Anfang Heil, am Ende Wirren.",
+      "lines": [
+        "Er hemmt seine Räder. Er kommt mit dem Schwanz ins Wasser. Kein Makel.",
+        "Die Frau verliert ihren Wagenvorhang. Lauf ihm nicht nach, am siebten Tage bekommst du es.",
+        "Der hohe Ahn züchtigt das Teufelsland. Nach drei Jahren überwindet er es. Gemeine darf man nicht verwenden.",
+        "Die schönsten Kleider geben Lumpen. Den ganzen Tag sei vorsichtig.",
+        "Der Nachbar im Osten, der einen Ochsen schlachtet, bekommt nicht soviel wirkliches Glück wie der Nachbar im Westen mit seinem kleinen Opfer.",
+        "Er kommt mit dem Haupt ins Wasser. Gefahr."
+      ],
+      "image": "Das Wasser ist oberhalb des Feuers: das Bild des Zustands nach der Vollendung. So bedenkt der Edle das Unglück und rüstet sich im voraus dagegen."
+    },
+    {
+      "n": 64,
+      "name": "We Dsi",
+      "judgment": "Vor der Vollendung. Gelingen. Wenn aber der kleine Fuchs, wenn er beinahe den Übergang vollendet hat, mit dem Schwanz ins Wasser kommt, dann ist nichts, das fördernd wäre.",
+      "lines": [
+        "Er kommt mit dem Schwanz ins Wasser. Beschämend.",
+        "Er hemmt seine Räder. Beharrlichkeit bringt Heil.",
+        "Vor der Vollendung bringt Angriff Unheil. Fördernd ist es, das große Wasser zu durchqueren.",
+        "Beharrlichkeit bringt Heil. Reue schwindet. Erschütterung, um das Teufelsland zu züchtigen. Drei Jahre lang gibt es Belohnungen mit großen Reichen.",
+        "Beharrlichkeit bringt Heil. Keine Reue. Das Licht des Edlen ist wahrhaftig. Heil!",
+        "In wahrem Vertrauen trinkt man Wein. Kein Makel. Wenn man aber sein Haupt naß macht, so verliert man das in Wahrheit."
+      ],
+      "image": "Das Feuer ist oberhalb des Wassers: das Bild des Zustands vor dem Übergang. So ist der Edle vorsichtig in der Unterscheidung der Dinge, damit jedes auf seinen Platz kommt."
+    }
+  ]
+}
