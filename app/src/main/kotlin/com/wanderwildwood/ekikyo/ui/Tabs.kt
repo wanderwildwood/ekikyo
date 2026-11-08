@@ -162,41 +162,44 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
         for (e in entries) {
             item(key = e.id) {
                 val r = e.reading
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .clickable { go(Screen.Reading(e.id)) }
-                        .padding(horizontal = SIDE, vertical = 12.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Box(Modifier.width(SmallFigure), contentAlignment = Alignment.Center) {
-                        Figure(e.lines, SmallFigure, marks = false)
-                    }
-                    Spacer(Modifier.width(16.dp))
-                    Column(Modifier.weight(1f)) {
-                        TextMMD(
-                            text = if (e.daily) "${shortDate(e.epochDay)} · $daily" else shortDate(e.epochDay),
-                            style = MaterialTheme.typography.labelSmall, maxLines = 1,
-                        )
-                        TextMMD(
-                            text = "${r.primary.number} ${names.of(r.primary)}", style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis,
-                        )
-                        r.relating?.let {
-                            TextMMD(
-                                text = "→ ${it.number} ${names.of(it)}", style = MaterialTheme.typography.bodyMedium,
-                                maxLines = 1, overflow = TextOverflow.Ellipsis,
-                            )
+                Column {
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable { go(Screen.Reading(e.id)) }
+                            .padding(horizontal = SIDE, vertical = 12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Box(Modifier.width(SmallFigure), contentAlignment = Alignment.Center) {
+                            Figure(e.lines, SmallFigure, marks = false)
                         }
-                        val second = e.question.ifBlank { e.note }
-                        if (second.isNotBlank()) {
+                        Spacer(Modifier.width(16.dp))
+                        Column(Modifier.weight(1f)) {
                             TextMMD(
-                                text = second, style = MaterialTheme.typography.labelSmall.copy(fontFamily = BookFont, fontStyle = FontStyle.Italic),
-                                maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 2.dp),
+                                text = if (e.daily) "${shortDate(e.epochDay)} · $daily" else shortDate(e.epochDay),
+                                style = MaterialTheme.typography.labelSmall, maxLines = 1,
                             )
+                            TextMMD(
+                                text = "${r.primary.number} ${names.of(r.primary)}", style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                            )
+                            r.relating?.let {
+                                TextMMD(
+                                    text = "→ ${it.number} ${names.of(it)}", style = MaterialTheme.typography.bodyMedium,
+                                    maxLines = 1, overflow = TextOverflow.Ellipsis,
+                                )
+                            }
+                            val second = e.question.ifBlank { e.note }
+                            if (second.isNotBlank()) {
+                                TextMMD(
+                                    text = second, style = MaterialTheme.typography.labelSmall.copy(fontFamily = BookFont, fontStyle = FontStyle.Italic),
+                                    maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 2.dp),
+                                )
+                            }
                         }
+                        Chevron()
                     }
-                    Chevron()
+                    DottedRule(start = SIDE, end = SIDE)
                 }
             }
         }
@@ -210,25 +213,28 @@ fun BookTab(go: (Screen) -> Unit) {
     PagedColumn(state = rememberLazyListState(), modifier = Modifier.fillMaxSize().testTag("book"), showCutRow = true) {
         for (h in KingWen.all) {
             item(key = h.number) {
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .clickable { go(Screen.Hexagram(h.number)) }
-                        .padding(horizontal = SIDE, vertical = 10.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Figure(youngLines(h.bits), SmallFigure, marks = false)
-                    Spacer(Modifier.width(8.dp))
-                    TextMMD(
-                        text = h.hanzi, style = MaterialTheme.typography.titleLarge, fontFamily = HanziFont,
-                        textAlign = TextAlign.Center, maxLines = 1, modifier = Modifier.width(40.dp),
-                    )
-                    Spacer(Modifier.width(6.dp))
-                    Column(Modifier.weight(1f)) {
-                        TextMMD(text = names.of(h), style = nameStyle, fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                        TextMMD(text = "${h.number} · ${h.pinyin}", style = MaterialTheme.typography.labelSmall, maxLines = 1)
+                Column {
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable { go(Screen.Hexagram(h.number)) }
+                            .padding(horizontal = SIDE, vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Figure(youngLines(h.bits), SmallFigure, marks = false)
+                        Spacer(Modifier.width(8.dp))
+                        TextMMD(
+                            text = h.hanzi, style = MaterialTheme.typography.titleLarge, fontFamily = HanziFont,
+                            textAlign = TextAlign.Center, maxLines = 1, modifier = Modifier.width(40.dp),
+                        )
+                        Spacer(Modifier.width(6.dp))
+                        Column(Modifier.weight(1f)) {
+                            TextMMD(text = names.of(h), style = nameStyle, fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                            TextMMD(text = "${h.number} · ${h.pinyin}", style = MaterialTheme.typography.labelSmall, maxLines = 1)
+                        }
+                        Chevron()
                     }
-                    Chevron()
+                    DottedRule(start = SIDE, end = SIDE)
                 }
             }
         }
