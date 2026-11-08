@@ -5,6 +5,8 @@
 
     <!-- To see whether anything can open a web address, so the About links can say so. -->
     <queries>
+        <!-- Files (Cabinet): opens and saves files on e-ink screens when it is there. -->
+        <package android:name="com.wanderwildwood.tana" />
         <intent>
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.BROWSABLE" />

@@ -3,7 +3,6 @@ package com.wanderwildwood.ekikyo.ui
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -31,7 +30,7 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
     BackHandler { onBack() }
     val context = LocalContext.current
     val names = rememberNames()
-    val save = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
+    val save = rememberLauncherForActivityResult(FilesCreateDocument("application/json")) { uri ->
         if (uri == null) return@rememberLauncherForActivityResult
         val json = JournalCodec.encode(state.entries) { names.of(it) }
         runCatching {
@@ -42,7 +41,7 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
             Toast.makeText(context, context.getString(R.string.export_failed), Toast.LENGTH_LONG).show()
         }
     }
-    val restore = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+    val restore = rememberLauncherForActivityResult(FilesOpenDocument()) { uri ->
         if (uri == null) return@rememberLauncherForActivityResult
         val text = runCatching {
             context.contentResolver.openInputStream(uri)?.use { s ->
