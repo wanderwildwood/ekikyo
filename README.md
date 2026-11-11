@@ -10,10 +10,16 @@ install on any Android 12 device.
 | ![A reading: the hexagram cast, the one it becomes, and Legge's text](screenshots/1-reading.png) | ![A cast in progress, line by line](screenshots/2-cast.png) |
 | ![The journal of readings](screenshots/3-journal.png) | ![A hexagram on its own page, with its two trigrams](screenshots/4-hexagram.png) |
 
-## Install
+## Getting it, and keeping it
 
-Download `ekikyo.apk` from the [latest release](https://github.com/wanderwildwood/ekikyo/releases/latest)
-and open it on the phone. Its SHA-256 is published beside it as `ekikyo.apk.sha256`.
+Download <https://github.com/wanderwildwood/ekikyo/releases/latest/download/ekikyo.apk>
+and sideload it. That address always points at the newest release, and every release
+publishes a `.sha256` beside the APK if you would rather check than trust.
+
+For updates without doing this by hand, add this repository to
+[Obtainium](https://github.com/ImranR98/Obtainium):
+
+    https://github.com/wanderwildwood/ekikyo
 
 ## What it does
 
