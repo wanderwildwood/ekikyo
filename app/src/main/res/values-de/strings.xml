@@ -248,4 +248,6 @@
     <string name="privacy_rights_title">Deine Rechte</string>
     <string name="privacy_rights">Nach der DSGVO kannst du Auskunft über die zu dir gespeicherten Daten verlangen, ihre Berichtigung oder Löschung, die Einschränkung ihrer Verwendung oder Widerspruch dagegen, eine Kopie zur Mitnahme, den Widerruf einer Einwilligung und Beschwerde bei einer Datenschutzbehörde einlegen. Da die App ihre Daten nur auf deinem Telefon speichert, kannst du das meiste selbst tun: die Notiz einer Lesung ändern oder eine Lesung in der App löschen, eine Kopie mit „Das Journal exportieren“ speichern, die Daten der App in Androids Einstellungen löschen oder die App deinstallieren.</string>
     <!-- /shared-about -->
+    <string name="settings_dark">Dunkelmodus</string>
+    <string name="settings_dark_note">Weiß auf Schwarz, in dieser App. Home hat einen Schalter für alle Apps.</string>
 </resources>
