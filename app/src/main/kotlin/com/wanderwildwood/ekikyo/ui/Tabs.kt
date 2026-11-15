@@ -29,6 +29,10 @@ import com.wanderwildwood.ekikyo.R
 import com.wanderwildwood.ekikyo.iching.KingWen
 import com.wanderwildwood.ekikyo.iching.Reading
 import java.time.LocalDate
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.text.input.ImeAction
 
 /** The hexagram for today: cast once with a press, then the same all day. */
 @Composable
@@ -78,6 +82,7 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
 @Composable
 fun CastTab(state: AppState, go: (Screen) -> Unit) {
     val n = state.building.size
+    val focus = LocalFocusManager.current
     PagedColumn(Modifier.fillMaxSize().testTag("cast"), showCutRow = true) {
         item(key = "question") {
             TextFieldMMD(
@@ -85,6 +90,9 @@ fun CastTab(state: AppState, go: (Screen) -> Unit) {
                 onValueChange = { state.question = it },
                 placeholder = { TextMMD(text = stringResource(R.string.cast_question_hint), style = MaterialTheme.typography.bodyMedium) },
                 maxLines = 3,
+                // Done puts the keyboard away, so the cast buttons under the question show again.
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                keyboardActions = KeyboardActions(onDone = { focus.clearFocus() }),
                 modifier = Modifier.fillMaxWidth().padding(horizontal = SIDE).padding(top = 6.dp).testTag("question_field"),
             )
         }
