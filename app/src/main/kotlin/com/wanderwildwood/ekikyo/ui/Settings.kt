@@ -1,6 +1,5 @@
 package com.wanderwildwood.ekikyo.ui
 
-import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.foundation.layout.Spacer
@@ -12,6 +11,16 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.ui.semantics.LiveRegionMode
+import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -30,15 +39,18 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
     BackHandler { onBack() }
     val context = LocalContext.current
     val names = rememberNames()
+    // What the last save or restore did, in words along the foot. It stays until the next press:
+    // on this panel a message on a timer could be gone before it had been read.
+    var notice by remember { mutableStateOf<String?>(null) }
     val save = rememberLauncherForActivityResult(FilesCreateDocument("application/json")) { uri ->
         if (uri == null) return@rememberLauncherForActivityResult
         val json = JournalCodec.encode(state.entries) { names.of(it) }
         runCatching {
             context.contentResolver.openOutputStream(uri, "wt")?.use { it.write(json.toByteArray()) } ?: error("no stream")
         }.onSuccess {
-            Toast.makeText(context, context.getString(R.string.export_done), Toast.LENGTH_SHORT).show()
+            notice = context.getString(R.string.export_done)
         }.onFailure {
-            Toast.makeText(context, context.getString(R.string.export_failed), Toast.LENGTH_LONG).show()
+            notice = context.getString(R.string.export_failed)
         }
     }
     val restore = rememberLauncherForActivityResult(FilesOpenDocument()) { uri ->
@@ -68,7 +80,7 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
                 context.getString(R.string.restore_unreadable)
             }
         }
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        notice = message
     }
     val fileName = stringResource(R.string.export_file_name)
 
@@ -81,6 +93,7 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
                 actions = { BarButton(Icons.Info, stringResource(R.string.cd_about), onAbout) },
             )
         },
+        bottomBar = { notice?.let { NoticeLine(it) { notice = null } } },
     ) { padding ->
         PagedColumn(
             modifier = Modifier.padding(padding).fillMaxSize().testTag("settings"),
@@ -121,6 +134,24 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
             }
         }
     }
+}
+
+/** A short thing to say along the foot, in plain words, until the next press. */
+@Composable
+private fun NoticeLine(text: String, onSeen: () -> Unit) {
+    LaunchedEffect(text) {
+        NextPress.await()
+        onSeen()
+    }
+    TextMMD(
+        text = text,
+        style = MaterialTheme.typography.bodySmall,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onSeen)
+            .semantics { liveRegion = LiveRegionMode.Polite }
+            .padding(horizontal = 20.dp, vertical = 12.dp),
+    )
 }
 
 private val GUIDE = listOf(

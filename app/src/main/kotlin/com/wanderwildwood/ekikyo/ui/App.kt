@@ -130,6 +130,8 @@ fun IChingApp(store: Store) {
     fun back() { if (stack.size > 1) stack.removeAt(stack.lastIndex) }
 
     if (stack.size > 1) BackHandler { back() }
+    // Back from Cast, Journal or All 64 goes to Today; only Back from Today leaves the app.
+    BackHandler(enabled = stack.size == 1 && tab != 0) { state.forgetDeleted(); tab = 0 }
 
     when (val s = stack.last()) {
         Screen.Tabs -> Tabs(state, tab, onTab = { tab = it }, go = ::go)

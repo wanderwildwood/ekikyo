@@ -17,6 +17,17 @@ import com.wanderwildwood.ekikyo.ui.monochrome
 import com.wanderwildwood.ekikyo.ui.ArmedScope
 
 class MainActivity : ComponentActivity() {
+    // A notice stays until the next press; see NextPress.
+    override fun dispatchTouchEvent(ev: android.view.MotionEvent): Boolean {
+        com.wanderwildwood.ekikyo.ui.NextPress.seen(ev)
+        return super.dispatchTouchEvent(ev)
+    }
+
+    override fun dispatchKeyEvent(event: android.view.KeyEvent): Boolean {
+        com.wanderwildwood.ekikyo.ui.NextPress.seen(event)
+        return super.dispatchKeyEvent(event)
+    }
+
 
     @OptIn(ExperimentalComposeUiApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
