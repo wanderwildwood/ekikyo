@@ -15,6 +15,7 @@ import com.wanderwildwood.ekikyo.ui.IChingApp
 import com.wanderwildwood.ekikyo.ui.houseTypography
 import com.wanderwildwood.ekikyo.ui.monochrome
 import com.wanderwildwood.ekikyo.ui.ArmedScope
+import com.wanderwildwood.ekikyo.ui.DarkSelection
 
 class MainActivity : ComponentActivity() {
     // A notice stays until the next press; see NextPress.
@@ -37,14 +38,14 @@ class MainActivity : ComponentActivity() {
             // A steady cursor: a blinking one is a repaint twice a second on an e-ink panel
             // for as long as a field has focus.
             CompositionLocalProvider(LocalCursorBlinkEnabled provides false) {
-                ThemeMMD(colorScheme = monochrome, typography = houseTypography) {
+                ThemeMMD(colorScheme = monochrome, typography = houseTypography) { DarkSelection {
                     ArmedScope {
                         // A debug build names its places for the emulator tests; a release names none.
                         Box(Modifier.semantics { testTagsAsResourceId = BuildConfig.DEBUG }) {
                             IChingApp(store)
                         }
                     }
-                }
+                } }
             }
         }
     }
