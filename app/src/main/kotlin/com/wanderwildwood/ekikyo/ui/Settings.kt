@@ -56,10 +56,7 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
     val restore = rememberLauncherForActivityResult(FilesOpenDocument()) { uri ->
         if (uri == null) return@rememberLauncherForActivityResult
         val text = runCatching {
-            context.contentResolver.openInputStream(uri)?.use { s ->
-                val bytes = s.readBytes()
-                if (bytes.size > 20 * 1024 * 1024) null else String(bytes, Charsets.UTF_8)
-            }
+            context.contentResolver.openInputStream(uri)?.use { s -> readAtMost(s, 20 * 1024 * 1024) }
         }.getOrNull()
         val message = if (text == null) {
             context.getString(R.string.restore_unreadable)
@@ -199,4 +196,17 @@ fun GuideScreen(onBack: () -> Unit) {
             }
         }
     }
+}
+
+/** The stream as text, or null once it runs past [limit] bytes: read no further than that. */
+internal fun readAtMost(input: java.io.InputStream, limit: Int): String? {
+    val out = java.io.ByteArrayOutputStream()
+    val buffer = ByteArray(1 shl 16)
+    while (true) {
+        val n = input.read(buffer)
+        if (n < 0) break
+        if (out.size() + n > limit) return null
+        out.write(buffer, 0, n)
+    }
+    return out.toString(Charsets.UTF_8.name())
 }

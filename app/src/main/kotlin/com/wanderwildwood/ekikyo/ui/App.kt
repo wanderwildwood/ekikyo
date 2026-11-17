@@ -39,7 +39,11 @@ sealed interface Screen {
 }
 
 /** The journal, the setting, the day's cast and a cast in progress, held so a change redraws what shows them. */
-class AppState(val store: Store, val book: Book, val germanBook: Book) {
+class AppState(val store: Store, english: () -> Book, german: () -> Book) {
+    /** Each translation is read from the app the first time it is shown, not both at start. */
+    val book: Book by lazy(english)
+    val germanBook: Book by lazy(german)
+
     var version by mutableIntStateOf(0)
         private set
     val entries get() = version.let { store.entries() }
@@ -118,8 +122,8 @@ fun IChingApp(store: Store) {
     val state = remember {
         AppState(
             store,
-            Book.parse(context.assets.open("legge.json").bufferedReader().use { it.readText() }),
-            Book.parse(context.assets.open("wilhelm.json").bufferedReader().use { it.readText() }),
+            { Book.parse(context.assets.open("legge.json").bufferedReader().use { it.readText() }) },
+            { Book.parse(context.assets.open("wilhelm.json").bufferedReader().use { it.readText() }) },
         )
     }
     val stack = remember { mutableStateListOf<Screen>(Screen.Tabs) }
