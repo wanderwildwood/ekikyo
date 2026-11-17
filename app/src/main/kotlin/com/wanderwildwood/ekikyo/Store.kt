@@ -46,9 +46,22 @@ class Store(context: Context) {
 
     /** Newest first. */
     fun entries(): List<Entry> =
-        cache ?: (if (file.isFile) JournalCodec.decode(file.readText()) else emptyList())
-            .sortedByDescending { it.id }
-            .also { cache = it }
+        cache ?: read().sortedByDescending { it.id }.also { cache = it }
+
+    /**
+     * The journal file, read. One that cannot be read at all is moved aside as journal.json.bad,
+     * not thrown away, and the journal starts empty: a crash at every start would leave clearing
+     * the app's data, and the file with it, as the only way on.
+     */
+    private fun read(): List<Entry> {
+        if (!file.isFile) return emptyList()
+        return try {
+            JournalCodec.decode(file.readText())
+        } catch (e: org.json.JSONException) {
+            file.renameTo(File(file.parentFile, "journal.json.bad"))
+            emptyList()
+        }
+    }
 
     fun put(e: Entry) = write(listOf(e) + entries().filter { it.id != e.id })
 
@@ -69,7 +82,11 @@ class Store(context: Context) {
     private fun write(list: List<Entry>) {
         val sorted = list.sortedByDescending { it.id }
         val tmp = File(file.parentFile, "journal.json.tmp")
-        tmp.writeText(JournalCodec.encode(sorted))
+        java.io.FileOutputStream(tmp).use { out ->
+            out.write(JournalCodec.encode(sorted).toByteArray(Charsets.UTF_8))
+            // On the disk before the rename, so a power cut cannot leave an empty journal behind it.
+            out.fd.sync()
+        }
         if (!tmp.renameTo(file)) error("could not save the journal")
         cache = sorted
     }
