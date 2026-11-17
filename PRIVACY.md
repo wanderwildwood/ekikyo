@@ -4,11 +4,15 @@ I Ching collects nothing and sends nothing anywhere. It asks for no permissions,
 internet permission, so it cannot.
 
 It keeps, in its own private storage on the phone: the journal of readings (each one's date,
-lines, question and note), the day's hexagram, and its one setting, coins or yarrow-stalk odds. None of it is
+lines, question and note), the day's hexagram, and its settings (coins or yarrow-stalk odds, which translation, dark mode). None of it is
 backed up by the app, and uninstalling it removes all of it.
 
 **Export the journal** writes a copy to a file you choose through the phone's own file picker,
-and only when you ask. **Restore a journal** reads a file you pick the same way and adds its readings to the journal; it checks the whole file first and changes nothing if the file is wrong.
+or through Cabinet when it is installed, and only when you ask. **Restore a journal** reads a file you pick the same way and adds its readings to the journal; it checks the whole file first and changes nothing if the file is wrong.
+
+When Home is installed, the app asks it only whether its dark mode switch is on. Text you
+select in a reading can be handed to another app on the phone, such as Dictionary or Translate,
+only when you choose that app's action from the menu over the selection.
 
 The About dialog's addresses (the source, the author's site and the donation page) open in your browser, and Write to email@wanderthe.dev opens your email app, only when you press them. The app itself never goes online.
 
