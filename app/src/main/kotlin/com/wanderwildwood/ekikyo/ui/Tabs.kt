@@ -14,6 +14,15 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalView
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.findViewTreeLifecycleOwner
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
@@ -37,7 +46,16 @@ import androidx.compose.ui.text.input.ImeAction
 /** The hexagram for today: cast once with a press, then the same all day. */
 @Composable
 fun TodayTab(state: AppState, go: (Screen) -> Unit) {
-    val today = LocalDate.now().toEpochDay()
+    // Read again each time the app comes back: opened the next morning, it shows that day.
+    var today by remember { mutableLongStateOf(LocalDate.now().toEpochDay()) }
+    val owner = LocalView.current.findViewTreeLifecycleOwner()
+    DisposableEffect(owner) {
+        val watcher = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) today = LocalDate.now().toEpochDay()
+        }
+        owner?.lifecycle?.addObserver(watcher)
+        onDispose { owner?.lifecycle?.removeObserver(watcher) }
+    }
     val daily = state.daily(today)
     if (daily == null) {
         Column(
@@ -50,7 +68,11 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
             Spacer(Modifier.height(20.dp))
             TextMMD(text = stringResource(R.string.today_intro), style = bookStyle, textAlign = TextAlign.Center)
             Spacer(Modifier.height(16.dp))
-            HouseButton(stringResource(R.string.today_cast), on = true, modifier = WideRow, onClick = { state.castDaily(today) })
+            HouseButton(stringResource(R.string.today_cast), on = true, modifier = WideRow, onClick = {
+                // The day of the press, not of the last redraw: past midnight they differ.
+                today = LocalDate.now().toEpochDay()
+                state.castDaily(today)
+            })
         }
         return
     }
