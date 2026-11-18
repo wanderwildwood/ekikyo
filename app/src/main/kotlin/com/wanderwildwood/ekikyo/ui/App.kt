@@ -105,6 +105,14 @@ class AppState(val store: Store, english: () -> Book, german: () -> Book) {
 
     private fun nextId() = maxOf(System.currentTimeMillis(), (store.entries().maxOfOrNull { it.id } ?: 0) + 1)
 
+    /** The copy kept of a journal that was not read whole, while there is one. */
+    val keptCopy: java.io.File? get() = version.let { store.keptCopy() }
+
+    /** That copy, if the Journal tab has not yet said it was kept. */
+    val keptUntold: java.io.File? get() = keptCopy?.takeIf { it.name != store.keptToldOf }
+
+    fun keptTold(name: String) { store.keptToldOf = name; version++ }
+
     /** Adds the readings of a restored journal; returns how many were new. */
     fun restore(readings: List<Entry>): Int = store.merge(readings).also { version++ }
 

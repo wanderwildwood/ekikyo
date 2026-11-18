@@ -9,6 +9,7 @@ backed up by the app, and uninstalling it removes all of it.
 
 **Export the journal** writes a copy to a file you choose through the phone's own file picker,
 or through Cabinet when it is installed, and only when you ask. **Restore a journal** reads a file you pick the same way and adds its readings to the journal; it checks the whole file first and changes nothing if the file is wrong.
+If part of the journal ever cannot be read, a copy of the file as it was is kept beside it in the same private storage, and **Save the copy that could not be read** in Settings saves it to a file you choose the same way, only when you ask.
 
 When Home is installed, the app asks it only whether its dark mode switch is on. Text you
 select in a reading can be handed to another app on the phone, such as Dictionary or Translate,

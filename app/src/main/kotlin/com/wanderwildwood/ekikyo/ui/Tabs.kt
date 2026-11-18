@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.remember
@@ -199,6 +200,7 @@ fun CastTab(state: AppState, go: (Screen) -> Unit) {
 fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
     val names = rememberNames()
     val entries = state.entries
+    state.keptUntold?.let { kept -> KeptLine { state.keptTold(kept.name) } }
     if (entries.isEmpty()) {
         Column(Modifier.padding(horizontal = SIDE, vertical = 16.dp).testTag("journal_empty")) {
             TextMMD(text = stringResource(R.string.journal_empty), style = MaterialTheme.typography.bodyMedium)
@@ -254,6 +256,27 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
             }
         }
     }
+}
+
+/**
+ * Once, above the journal, after part of it could not be read: a copy was kept, and Settings
+ * saves it. It goes with the next press, as the notices along the foot of Settings do.
+ */
+@Composable
+private fun KeptLine(onSeen: () -> Unit) {
+    LaunchedEffect(Unit) {
+        NextPress.await()
+        onSeen()
+    }
+    TextMMD(
+        text = stringResource(R.string.journal_kept),
+        style = MaterialTheme.typography.bodyMedium,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onSeen)
+            .padding(horizontal = SIDE, vertical = 12.dp)
+            .testTag("journal_kept"),
+    )
 }
 
 /** All 64 in King Wen order, each opening its page. */

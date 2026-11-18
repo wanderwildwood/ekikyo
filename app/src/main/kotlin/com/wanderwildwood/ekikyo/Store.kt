@@ -87,6 +87,22 @@ class Store(context: Context) {
         }.isSuccess
     }
 
+    /**
+     * The newest copy kept of a journal that was not read whole, if there is one, so it can be
+     * saved out of the app's private storage without adb. The journal is read first, as that is
+     * when a copy is made.
+     */
+    fun keptCopy(): File? {
+        entries()
+        val dir = file.parentFile ?: return null
+        return dir.listFiles { f -> f.isFile && isKeptCopy(f.name) }?.maxByOrNull { it.lastModified() }
+    }
+
+    /** The name of the kept copy the Journal tab has already told about, so it says so once. */
+    var keptToldOf: String?
+        get() = prefs.getString("kept_told_of", null)
+        set(v) { prefs.edit().putString("kept_told_of", v).apply() }
+
     fun put(e: Entry) = write(listOf(e) + entries().filter { it.id != e.id })
 
     fun delete(id: Long) = write(entries().filter { it.id != id })
@@ -117,3 +133,7 @@ class Store(context: Context) {
         cache = sorted
     }
 }
+
+/** A copy kept by Store.keepAside, not the temporary file it is written to first. */
+internal fun isKeptCopy(name: String): Boolean =
+    name.startsWith("journal.json.bad-") && name.length > "journal.json.bad-".length

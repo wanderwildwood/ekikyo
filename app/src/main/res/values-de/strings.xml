@@ -154,6 +154,7 @@
 
     <string name="journal_empty">Jeder Wurf bleibt hier mit seinem Datum, seiner Frage und einer eventuellen Notiz. Noch gibt es keinen.</string>
     <string name="journal_empty_cast">Ein Hexagramm werfen</string>
+    <string name="journal_kept">Ein Teil des Journals konnte nicht gelesen werden. Eine Kopie der Datei, wie sie war, ist aufbewahrt; in den Einstellungen kannst du sie speichern, wo du willst.</string>
 
     <!-- ============================================================ -->
     <!-- Settings -->
@@ -177,6 +178,11 @@
     <string name="export_done">Das Journal ist gespeichert.</string>
     <string name="export_failed">Das Journal konnte dort nicht gespeichert werden.</string>
     <string name="export_file_name">iching-journal.json</string>
+    <string name="settings_kept">Die nicht lesbare Kopie speichern</string>
+    <string name="settings_kept_note">Die Journal-Datei, wie sie war, als ein Teil davon nicht gelesen werden konnte, gespeichert, wo du willst, zum Ansehen oder Einsenden.</string>
+    <string name="kept_done">Die Kopie ist gespeichert.</string>
+    <string name="kept_failed">Die Kopie konnte dort nicht gespeichert werden.</string>
+    <string name="kept_file_name">iching-journal-unread.json</string>
 
     <!-- ============================================================ -->
     <!-- Guide -->

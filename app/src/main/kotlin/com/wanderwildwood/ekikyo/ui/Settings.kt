@@ -80,6 +80,22 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
         notice = message
     }
     val fileName = stringResource(R.string.export_file_name)
+    // The copy kept of a journal that could not be read whole, handed out the way Export saves.
+    val kept = state.keptCopy
+    val saveKept = rememberLauncherForActivityResult(FilesCreateDocument("application/json")) { uri ->
+        val from = state.keptCopy
+        if (uri == null || from == null) return@rememberLauncherForActivityResult
+        runCatching {
+            context.contentResolver.openOutputStream(uri, "wt")?.use { out ->
+                from.inputStream().use { it.copyTo(out) }
+            } ?: error("no stream")
+        }.onSuccess {
+            notice = context.getString(R.string.kept_done)
+        }.onFailure {
+            notice = context.getString(R.string.kept_failed)
+        }
+    }
+    val keptName = stringResource(R.string.kept_file_name)
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.surface,
@@ -129,6 +145,15 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
             item(key = "restore") {
                 SettingRow(stringResource(R.string.settings_restore), stringResource(R.string.settings_restore_note)) {
                     runCatching { restore.launch(arrayOf("application/json", "text/plain", "application/octet-stream")) }
+                }
+            }
+            if (kept != null) {
+                item(key = "kept") {
+                    SettingRow(stringResource(R.string.settings_kept), stringResource(R.string.settings_kept_note)) {
+                        runCatching { saveKept.launch(keptName) }.onFailure {
+                            notice = context.getString(R.string.kept_failed)
+                        }
+                    }
                 }
             }
         }
