@@ -78,8 +78,12 @@ class AppState(val store: Store, english: () -> Book, german: () -> Book) {
 
     fun castRest() { while (building.size < 6) building.add(Cast.line(store.method)) }
 
-    /** Keeps the finished cast in the journal and clears the Cast tab for the next. */
-    fun finish(): Entry {
+    /**
+     * Keeps the finished cast in the journal and clears the Cast tab for the next. Null when
+     * there is no finished cast, as for a second press on Read handled before the redraw.
+     */
+    fun finish(): Entry? {
+        if (building.size != 6) return null
         val e = Entry(
             id = nextId(),
             epochDay = LocalDate.now().toEpochDay(),
@@ -93,8 +97,11 @@ class AppState(val store: Store, english: () -> Book, german: () -> Book) {
         return e
     }
 
-    fun keepDaily(epochDay: Long, lines: List<Int>, method: Method) =
+    /** Keeps the day's hexagram in the journal, once: a second press before the redraw adds nothing. */
+    fun keepDaily(epochDay: Long, lines: List<Int>, method: Method) {
+        if (store.entries().any { it.daily && it.epochDay == epochDay && it.lines == lines }) return
         put(Entry(nextId(), epochDay, lines, method, daily = true))
+    }
 
     private fun nextId() = maxOf(System.currentTimeMillis(), (store.entries().maxOfOrNull { it.id } ?: 0) + 1)
 

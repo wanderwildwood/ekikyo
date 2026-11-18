@@ -136,7 +136,7 @@ fun CastTab(state: AppState, go: (Screen) -> Unit) {
                     HouseButton(
                         stringResource(R.string.cast_read),
                         on = true, modifier = WideRow.testTag("cast_read"),
-                        onClick = { go(Screen.Reading(state.finish().id)) },
+                        onClick = { state.finish()?.let { go(Screen.Reading(it.id)) } },
                     )
                 }
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
