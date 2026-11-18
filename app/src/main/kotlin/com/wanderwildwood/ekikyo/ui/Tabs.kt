@@ -1,5 +1,9 @@
 package com.wanderwildwood.ekikyo.ui
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,6 +23,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -55,6 +60,21 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
         }
         owner?.lifecycle?.addObserver(watcher)
         onDispose { owner?.lifecycle?.removeObserver(watcher) }
+    }
+    // And while it stays open: past midnight, or when the clock or time zone is changed.
+    val context = LocalContext.current
+    DisposableEffect(context) {
+        val dayChange = object : BroadcastReceiver() {
+            override fun onReceive(c: Context?, i: Intent?) { today = LocalDate.now().toEpochDay() }
+        }
+        val filter = IntentFilter().apply {
+            addAction(Intent.ACTION_DATE_CHANGED)
+            addAction(Intent.ACTION_TIME_CHANGED)
+            addAction(Intent.ACTION_TIMEZONE_CHANGED)
+        }
+        // Only the system sends these, so nothing else can reach the receiver.
+        context.registerReceiver(dayChange, filter)
+        onDispose { context.unregisterReceiver(dayChange) }
     }
     val daily = state.daily(today)
     if (daily == null) {
