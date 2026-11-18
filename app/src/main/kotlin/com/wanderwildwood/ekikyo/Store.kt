@@ -49,18 +49,42 @@ class Store(context: Context) {
         cache ?: read().sortedByDescending { it.id }.also { cache = it }
 
     /**
-     * The journal file, read. One that cannot be read at all is moved aside as journal.json.bad,
-     * not thrown away, and the journal starts empty: a crash at every start would leave clearing
-     * the app's data, and the file with it, as the only way on.
+     * The journal file, read. When it cannot be read at all, or only in part (readings skipped,
+     * or written by a newer version), a copy of it as it is is kept first, under a name taken
+     * from its contents (journal.json.bad-<hash>), so a second damaged journal never replaces
+     * the copy of the first and the same file is not copied again at each start. The journal
+     * then goes on with what could be read: a crash at every start would leave clearing the
+     * app's data, and the file with it, as the only way on. If the copy cannot be made, the
+     * journal is not saved over until it can, rather than lose what was not read.
      */
     private fun read(): List<Entry> {
         if (!file.isFile) return emptyList()
-        return try {
-            JournalCodec.decode(file.readText())
+        val bytes = file.readBytes()
+        val got = try {
+            JournalCodec.decodeOwn(String(bytes, Charsets.UTF_8))
         } catch (e: org.json.JSONException) {
-            file.renameTo(File(file.parentFile, "journal.json.bad"))
-            emptyList()
+            null
         }
+        if (got == null || !got.whole) keepAside(bytes)
+        return got?.entries ?: emptyList()
+    }
+
+    /** Set when a journal that was not read whole could not be copied aside. */
+    private var unkept = false
+
+    private fun keepAside(bytes: ByteArray) {
+        val hash = java.security.MessageDigest.getInstance("SHA-256").digest(bytes)
+            .take(8).joinToString("") { "%02x".format(it) }
+        val kept = File(file.parentFile, "journal.json.bad-$hash")
+        if (kept.isFile && kept.length() == bytes.size.toLong()) return
+        val tmp = File(file.parentFile, "journal.json.bad.tmp")
+        unkept = !runCatching {
+            java.io.FileOutputStream(tmp).use { out ->
+                out.write(bytes)
+                out.fd.sync()
+            }
+            if (!tmp.renameTo(kept)) error("could not keep the journal")
+        }.isSuccess
     }
 
     fun put(e: Entry) = write(listOf(e) + entries().filter { it.id != e.id })
@@ -80,6 +104,8 @@ class Store(context: Context) {
     }
 
     private fun write(list: List<Entry>) {
+        // Saving now would replace readings that could not be read and could not be kept.
+        if (unkept) error("could not keep the unread journal")
         val sorted = list.sortedByDescending { it.id }
         val tmp = File(file.parentFile, "journal.json.tmp")
         java.io.FileOutputStream(tmp).use { out ->

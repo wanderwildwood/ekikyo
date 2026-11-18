@@ -48,14 +48,25 @@ object JournalCodec {
     }
 
     /** Entries that cannot be read are skipped rather than losing the rest. */
-    fun decode(text: String): List<Entry> {
-        if (text.isBlank()) return emptyList()
-        val list = JSONObject(text).optJSONArray("readings") ?: return emptyList()
+    fun decode(text: String): List<Entry> = decodeOwn(text).entries
+
+    /**
+     * The app's own file as read: the entries, and whether they are the whole of it. [whole]
+     * is false when something in the file was not taken in (no readings list, a newer version,
+     * or readings skipped), so the file is kept as it was before the next save rewrites it.
+     * Text that is not JSON at all throws org.json.JSONException.
+     */
+    class Decoded(val entries: List<Entry>, val whole: Boolean)
+
+    fun decodeOwn(text: String): Decoded {
+        if (text.isBlank()) return Decoded(emptyList(), true)
+        val root = JSONObject(text)
+        val list = root.optJSONArray("readings") ?: return Decoded(emptyList(), false)
         val out = ArrayList<Entry>(list.length())
         for (i in 0 until list.length()) {
             runCatching { out += entry(list.getJSONObject(i)) }
         }
-        return out
+        return Decoded(out, out.size == list.length() && root.optInt("version", VERSION) <= VERSION)
     }
 
     private fun entry(o: JSONObject): Entry {

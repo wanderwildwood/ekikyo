@@ -1,6 +1,7 @@
 package com.wanderwildwood.ekikyo.iching
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -23,6 +24,20 @@ class JournalTest {
         val text = org.json.JSONObject(JournalCodec.encode(listOf(a, b)))
             .also { it.getJSONArray("readings").getJSONObject(1).put("method", "sticks") }.toString()
         assertEquals(listOf(a), JournalCodec.decode(text))
+    }
+
+    @Test fun theAppsOwnFileSaysWhenItWasNotReadWhole() {
+        val good = JournalCodec.encode(listOf(a, b))
+        assertTrue(JournalCodec.decodeOwn(good).whole)
+        assertTrue(JournalCodec.decodeOwn("").whole)
+        val skipped = org.json.JSONObject(good)
+            .also { it.getJSONArray("readings").getJSONObject(1).put("method", "sticks") }.toString()
+        assertEquals(listOf(a), JournalCodec.decodeOwn(skipped).entries)
+        assertFalse(JournalCodec.decodeOwn(skipped).whole)
+        val newer = org.json.JSONObject(good).put("version", JournalCodec.VERSION + 1).toString()
+        assertEquals(listOf(a, b), JournalCodec.decodeOwn(newer).entries)
+        assertFalse(JournalCodec.decodeOwn(newer).whole)
+        assertFalse(JournalCodec.decodeOwn("{\"version\":1}").whole)
     }
 
     private fun kind(text: String) = try {
