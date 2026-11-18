@@ -45,7 +45,7 @@ app. Thanks to [baud-9600](https://github.com/baud-9600) for bringing in the Ger
 
 ## Privacy
 
-No permissions, no internet. See [PRIVACY.md](PRIVACY.md).
+No permissions you are asked for, no internet. See [PRIVACY.md](PRIVACY.md).
 
 ## License
 

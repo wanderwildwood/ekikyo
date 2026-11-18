@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- No permissions at all. -->
+    <!-- No permissions of its own: the support library adds DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,
+         which the user is never asked for (see PRIVACY.md). -->
 
     <!-- To see whether anything can open a web address, so the About links can say so. -->
     <queries>
