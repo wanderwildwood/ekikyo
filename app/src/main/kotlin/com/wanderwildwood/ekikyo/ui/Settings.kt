@@ -120,7 +120,10 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
             item(key = "guide") { SettingRow(stringResource(R.string.settings_guide), null, onGuide) }
             item(key = "export") {
                 SettingRow(stringResource(R.string.settings_export), stringResource(R.string.settings_export_note)) {
-                    save.launch(fileName)
+                    // With no app on the phone to save a file, say so rather than close.
+                    runCatching { save.launch(fileName) }.onFailure {
+                        notice = context.getString(R.string.export_failed)
+                    }
                 }
             }
             item(key = "restore") {
