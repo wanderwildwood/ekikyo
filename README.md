@@ -21,6 +21,8 @@ For updates without doing this by hand, add this repository to
 
     https://github.com/wanderwildwood/ekikyo
 
+Questions, ideas, or just saying hello: the wander the dev Discord, <https://discord.gg/UMW8yJg7dQ>
+
 ## What it does
 
 - **Today**: one hexagram for the day, cast once and kept until midnight.
