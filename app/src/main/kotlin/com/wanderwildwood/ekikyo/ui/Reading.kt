@@ -194,16 +194,25 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
             )
         },
     ) { padding ->
-        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading").textActions(), showCutRow = true) {
+        val fit = rememberWholeLineFit()
+        val body = MaterialTheme.typography.bodyMedium
+        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading").textActions().wholeLinePage(fit), showCutRow = true) {
             item(key = "date") { ReadingHead(entry.epochDay, method, entry.question) }
             readingItems(entry.reading, state.textBook, words, set, go)
-            item(key = "note") {
-                Column(Modifier.padding(horizontal = SIDE)) {
-                    if (entry.note.isNotBlank()) {
+            if (entry.note.isNotBlank()) {
+                item(key = "note-head") {
+                    Column(Modifier.padding(horizontal = SIDE)) {
                         Rule(Modifier.padding(top = 18.dp, bottom = 10.dp))
                         TextMMD(text = stringResource(R.string.note), style = rubricStyle, modifier = Modifier.padding(bottom = 6.dp))
-                        TextMMD(text = entry.note, style = MaterialTheme.typography.bodyMedium)
                     }
+                }
+                // A long note in rows of whole lines, so a turn never opens on half a line.
+                wholeLineItems("note", entry.note, body, fit) { run, _, textModifier ->
+                    TextMMD(text = run, style = body, modifier = Modifier.padding(horizontal = SIDE).then(textModifier))
+                }
+            }
+            item(key = "note-actions") {
+                Column(Modifier.padding(horizontal = SIDE)) {
                     Spacer(Modifier.height(20.dp))
                     HouseButton(stringResource(if (entry.note.isBlank()) R.string.note_add else R.string.note_edit), onClick = { editing = true }, modifier = WideRow)
                     ArmedRow(stringResource(R.string.delete_reading), stringResource(R.string.delete_reading_armed)) {
