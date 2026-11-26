@@ -7,8 +7,8 @@ install on any Android 12 device.
 
 | | |
 |---|---|
-| ![A reading: the hexagram cast, the one it becomes, and Legge's text](screenshots/1-reading.png) | ![A cast in progress, line by line](screenshots/2-cast.png) |
-| ![The journal of readings](screenshots/3-journal.png) | ![A hexagram on its own page, with its two trigrams](screenshots/4-hexagram.png) |
+| ![Today's reading, cast with three coins](screenshots/1-today.png) | ![Casting a line at a time, the question written above](screenshots/2-cast.png) |
+| ![A reading: the hexagram cast, the one it becomes, and the judgment](screenshots/3-reading.png) | ![All sixty-four hexagrams](screenshots/4-hexagrams.png) |
 
 ## Getting it, and keeping it
 
